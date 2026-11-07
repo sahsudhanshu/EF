@@ -1,0 +1,638 @@
+{
+  "source": "IND_2024_FINDEX_v02_M",
+  "survey_year": 2024,
+  "n": 3000,
+  "data_sha256": "0e5275bfc374ecc8328a41e8850416e051336b0aa071cc457660af1a4c93df93",
+  "script_sha256": "321c0c7f4b011f63e4a147814b45116edec6cac73696925f075544986a1ea38e",
+  "model_n": 2145,
+  "model_positive": 219,
+  "iterations": 7,
+  "max_score": 1.7951889107796877e-13,
+  "descriptives": [
+    {
+      "comparison": "All adults: account",
+      "n": 3000,
+      "positives": 2710,
+      "weighted_percent": 89.02482245025465,
+      "weight_denominator": 3000.0000000082064,
+      "weight_numerator": 2670.744673514945
+    },
+    {
+      "comparison": "All adults: anydigpayment",
+      "n": 3000,
+      "positives": 1539,
+      "weighted_percent": 48.4579645683561,
+      "weight_denominator": 3000.0000000082064,
+      "weight_numerator": 1453.7389370546596
+    },
+    {
+      "comparison": "All adults: con1",
+      "n": 3000,
+      "positives": 2145,
+      "weighted_percent": 66.47355300085117,
+      "weight_denominator": 3000.0000000082064,
+      "weight_numerator": 1994.2065900309904
+    },
+    {
+      "comparison": "Phone owners: con18",
+      "n": 2141,
+      "positives": 1321,
+      "weighted_percent": 57.669260180484386,
+      "weight_denominator": 1990.180579398488,
+      "weight_numerator": 1147.7224163947853
+    },
+    {
+      "comparison": "Phone owners: con21",
+      "n": 2145,
+      "positives": 219,
+      "weighted_percent": 9.353669800919304,
+      "weight_denominator": 1994.2065900309904,
+      "weight_numerator": 186.53149957967133
+    },
+    {
+      "comparison": "Reported unsolicited request: con22",
+      "n": 219,
+      "positives": 45,
+      "weighted_percent": 20.97299545072612,
+      "weight_denominator": 186.53149957967133,
+      "weight_numerator": 39.121242921015686
+    },
+    {
+      "comparison": "Phone owners, anydigpayment=0: con21",
+      "n": 862,
+      "positives": 46,
+      "weighted_percent": 4.3150012919366,
+      "weight_denominator": 852.8096403034608,
+      "weight_numerator": 36.79874699685421
+    },
+    {
+      "comparison": "Phone owners, anydigpayment=0: con18",
+      "n": 859,
+      "positives": 416,
+      "weighted_percent": 44.63957177296252,
+      "weight_denominator": 850.5299319811506,
+      "weight_numerator": 379.672919437255
+    },
+    {
+      "comparison": "Phone owners, anydigpayment=1: con21",
+      "n": 1283,
+      "positives": 173,
+      "weighted_percent": 13.118376794204753,
+      "weight_denominator": 1141.3969497275298,
+      "weight_numerator": 149.73275258281714
+    },
+    {
+      "comparison": "Phone owners, anydigpayment=1: con18",
+      "n": 1282,
+      "positives": 905,
+      "weighted_percent": 67.39341557854374,
+      "weight_denominator": 1139.6506474173375,
+      "weight_numerator": 768.0494969575304
+    },
+    {
+      "comparison": "female=1: account",
+      "n": 1526,
+      "positives": 1374,
+      "weighted_percent": 89.24823280791465,
+      "weight_denominator": 1487.013757547008,
+      "weight_numerator": 1327.1335002212732
+    },
+    {
+      "comparison": "female=1: anydigpayment",
+      "n": 1526,
+      "positives": 679,
+      "weighted_percent": 42.66692845618722,
+      "weight_denominator": 1487.013757547008,
+      "weight_numerator": 634.4630960662432
+    },
+    {
+      "comparison": "female=1: con1",
+      "n": 1526,
+      "positives": 920,
+      "weighted_percent": 54.299342226487255,
+      "weight_denominator": 1487.013757547008,
+      "weight_numerator": 807.4386891653974
+    },
+    {
+      "comparison": "Phone owners, female=1: con18",
+      "n": 919,
+      "positives": 505,
+      "weighted_percent": 50.31537795147673,
+      "weight_denominator": 805.6923868552051,
+      "weight_numerator": 405.3871695724704
+    },
+    {
+      "comparison": "Phone owners, female=1: con21",
+      "n": 920,
+      "positives": 59,
+      "weighted_percent": 5.732632806716354,
+      "weight_denominator": 807.4386891653974,
+      "weight_numerator": 46.28749518921606
+    },
+    {
+      "comparison": "female=2: account",
+      "n": 1474,
+      "positives": 1336,
+      "weighted_percent": 88.80524723793916,
+      "weight_denominator": 1512.986242461198,
+      "weight_numerator": 1343.6111732936724
+    },
+    {
+      "comparison": "female=2: anydigpayment",
+      "n": 1474,
+      "positives": 860,
+      "weighted_percent": 54.14958959941948,
+      "weight_denominator": 1512.986242461198,
+      "weight_numerator": 819.2758409884163
+    },
+    {
+      "comparison": "female=2: con1",
+      "n": 1474,
+      "positives": 1225,
+      "weighted_percent": 78.43877674228284,
+      "weight_denominator": 1512.986242461198,
+      "weight_numerator": 1186.7679008655932
+    },
+    {
+      "comparison": "Phone owners, female=2: con18",
+      "n": 1222,
+      "positives": 816,
+      "weighted_percent": 62.6713927159041,
+      "weight_denominator": 1184.4881925432828,
+      "weight_numerator": 742.335246822315
+    },
+    {
+      "comparison": "Phone owners, female=2: con21",
+      "n": 1225,
+      "positives": 160,
+      "weighted_percent": 11.817306845606918,
+      "weight_denominator": 1186.7679008655932,
+      "weight_numerator": 140.2440043904553
+    },
+    {
+      "comparison": "age_group=15\u201324: anydigpayment",
+      "n": 722,
+      "positives": 338,
+      "weighted_percent": 43.507979053292765,
+      "weight_denominator": 820.1368044504406,
+      "weight_numerator": 356.82494908864237
+    },
+    {
+      "comparison": "Phone owners, age_group=15\u201324: con18",
+      "n": 497,
+      "positives": 385,
+      "weighted_percent": 75.65153496525429,
+      "weight_denominator": 545.2492232353575,
+      "weight_numerator": 412.48940676367386
+    },
+    {
+      "comparison": "Phone owners, age_group=15\u201324: con21",
+      "n": 497,
+      "positives": 51,
+      "weighted_percent": 8.273547487892097,
+      "weight_denominator": 545.2492232353575,
+      "weight_numerator": 45.11145341174009
+    },
+    {
+      "comparison": "age_group=25\u201339: anydigpayment",
+      "n": 1134,
+      "positives": 594,
+      "weighted_percent": 51.3116968785193,
+      "weight_denominator": 982.0341204702388,
+      "weight_numerator": 503.8983711393221
+    },
+    {
+      "comparison": "Phone owners, age_group=25\u201339: con18",
+      "n": 893,
+      "positives": 591,
+      "weighted_percent": 62.745627686978,
+      "weight_denominator": 739.8975257453756,
+      "weight_numerator": 464.25334676935563
+    },
+    {
+      "comparison": "Phone owners, age_group=25\u201339: con21",
+      "n": 894,
+      "positives": 94,
+      "weighted_percent": 11.076584722888203,
+      "weight_denominator": 740.8892619618334,
+      "weight_numerator": 82.06522680398359
+    },
+    {
+      "comparison": "age_group=40\u201359: anydigpayment",
+      "n": 858,
+      "positives": 441,
+      "weighted_percent": 46.57184405887993,
+      "weight_denominator": 846.2874964777839,
+      "weight_numerator": 394.1316931494325
+    },
+    {
+      "comparison": "Phone owners, age_group=40\u201359: con18",
+      "n": 597,
+      "positives": 307,
+      "weighted_percent": 43.56251507134258,
+      "weight_denominator": 530.0375802709402,
+      "weight_numerator": 230.89770078930786
+    },
+    {
+      "comparison": "Phone owners, age_group=40\u201359: con21",
+      "n": 599,
+      "positives": 64,
+      "weighted_percent": 9.812885700229733,
+      "weight_denominator": 532.176330144014,
+      "weight_numerator": 52.22185500070931
+    },
+    {
+      "comparison": "age_group=60+: anydigpayment",
+      "n": 286,
+      "positives": 166,
+      "weighted_percent": 56.574793930151266,
+      "weight_denominator": 351.54157860974277,
+      "weight_numerator": 198.88392367726271
+    },
+    {
+      "comparison": "Phone owners, age_group=60+: con18",
+      "n": 154,
+      "positives": 38,
+      "weighted_percent": 22.90446911795028,
+      "weight_denominator": 174.99625014681473,
+      "weight_numerator": 40.081962072448206
+    },
+    {
+      "comparison": "Phone owners, age_group=60+: con21",
+      "n": 155,
+      "positives": 10,
+      "weighted_percent": 4.055314340774903,
+      "weight_denominator": 175.89177468978562,
+      "weight_numerator": 7.132964363238358
+    },
+    {
+      "comparison": "educ=1: anydigpayment",
+      "n": 1680,
+      "positives": 697,
+      "weighted_percent": 40.723482991417626,
+      "weight_denominator": 2035.6973097201158,
+      "weight_numerator": 829.0068476806175
+    },
+    {
+      "comparison": "Phone owners, educ=1: con18",
+      "n": 1007,
+      "positives": 424,
+      "weighted_percent": 41.239578040520755,
+      "weight_denominator": 1181.3753651370519,
+      "weight_numerator": 487.19421565718153
+    },
+    {
+      "comparison": "Phone owners, educ=1: con21",
+      "n": 1011,
+      "positives": 88,
+      "weighted_percent": 8.392438298707065,
+      "weight_denominator": 1185.4013757695543,
+      "weight_numerator": 99.48407905348449
+    },
+    {
+      "comparison": "educ=2: anydigpayment",
+      "n": 1016,
+      "positives": 619,
+      "weighted_percent": 62.7485018921824,
+      "weight_denominator": 796.7755521530244,
+      "weight_numerator": 499.9647224191872
+    },
+    {
+      "comparison": "Phone owners, educ=2: con18",
+      "n": 853,
+      "positives": 650,
+      "weighted_percent": 79.86736046651377,
+      "weight_denominator": 651.7557459412394,
+      "weight_numerator": 520.5401109721055
+    },
+    {
+      "comparison": "Phone owners, educ=2: con21",
+      "n": 853,
+      "positives": 83,
+      "weighted_percent": 9.033451426251467,
+      "weight_denominator": 651.7557459412394,
+      "weight_numerator": 58.87603872740479
+    },
+    {
+      "comparison": "educ=3: anydigpayment",
+      "n": 304,
+      "positives": 223,
+      "weighted_percent": 74.4759137795712,
+      "weight_denominator": 167.52713813506585,
+      "weight_numerator": 124.76736695485482
+    },
+    {
+      "comparison": "Phone owners, educ=3: con18",
+      "n": 281,
+      "positives": 247,
+      "weighted_percent": 89.1363028877544,
+      "weight_denominator": 157.04946832019672,
+      "weight_numerator": 139.98808976549844
+    },
+    {
+      "comparison": "Phone owners, educ=3: con21",
+      "n": 281,
+      "positives": 48,
+      "weighted_percent": 17.937903324413348,
+      "weight_denominator": 157.04946832019672,
+      "weight_numerator": 28.171381798782058
+    },
+    {
+      "comparison": "inc_q=1: anydigpayment",
+      "n": 515,
+      "positives": 195,
+      "weighted_percent": 34.82954725780772,
+      "weight_denominator": 599.5210216319151,
+      "weight_numerator": 208.81045754977953
+    },
+    {
+      "comparison": "Phone owners, inc_q=1: con18",
+      "n": 298,
+      "positives": 135,
+      "weighted_percent": 40.586120192328146,
+      "weight_denominator": 327.1350719961174,
+      "weight_numerator": 132.7714335116034
+    },
+    {
+      "comparison": "Phone owners, inc_q=1: con21",
+      "n": 300,
+      "positives": 42,
+      "weighted_percent": 12.486693972680788,
+      "weight_denominator": 328.51925577545677,
+      "weight_numerator": 41.02119411000975
+    },
+    {
+      "comparison": "inc_q=2: anydigpayment",
+      "n": 562,
+      "positives": 222,
+      "weighted_percent": 38.0023422477479,
+      "weight_denominator": 600.8462599594263,
+      "weight_numerator": 228.33565209257426
+    },
+    {
+      "comparison": "Phone owners, inc_q=2: con18",
+      "n": 347,
+      "positives": 171,
+      "weighted_percent": 45.51712443522713,
+      "weight_denominator": 341.7975053866326,
+      "weight_numerator": 155.57639584333572
+    },
+    {
+      "comparison": "Phone owners, inc_q=2: con21",
+      "n": 348,
+      "positives": 31,
+      "weighted_percent": 6.650621864400554,
+      "weight_denominator": 343.5438076968249,
+      "weight_numerator": 22.847799588479223
+    },
+    {
+      "comparison": "inc_q=3: anydigpayment",
+      "n": 603,
+      "positives": 269,
+      "weighted_percent": 43.447819062757624,
+      "weight_denominator": 598.5485656614486,
+      "weight_numerator": 260.05629781131717
+    },
+    {
+      "comparison": "Phone owners, inc_q=3: con18",
+      "n": 410,
+      "positives": 236,
+      "weighted_percent": 54.87301429738294,
+      "weight_denominator": 378.5897211793598,
+      "weight_numerator": 207.7435918311723
+    },
+    {
+      "comparison": "Phone owners, inc_q=3: con21",
+      "n": 410,
+      "positives": 33,
+      "weighted_percent": 7.84694261212344,
+      "weight_denominator": 378.5897211793598,
+      "weight_numerator": 29.707718156342505
+    },
+    {
+      "comparison": "inc_q=4: anydigpayment",
+      "n": 608,
+      "positives": 360,
+      "weighted_percent": 58.62292706180454,
+      "weight_denominator": 600.791124919489,
+      "weight_numerator": 352.20134295534706
+    },
+    {
+      "comparison": "Phone owners, inc_q=4: con18",
+      "n": 463,
+      "positives": 306,
+      "weighted_percent": 61.96840979041225,
+      "weight_denominator": 433.8759873702573,
+      "weight_numerator": 268.8660498357983
+    },
+    {
+      "comparison": "Phone owners, inc_q=4: con21",
+      "n": 463,
+      "positives": 44,
+      "weighted_percent": 8.41451277275285,
+      "weight_denominator": 433.8759873702573,
+      "weight_numerator": 36.50855037517784
+    },
+    {
+      "comparison": "inc_q=5: anydigpayment",
+      "n": 712,
+      "positives": 493,
+      "weighted_percent": 67.3563023217646,
+      "weight_denominator": 600.293027835927,
+      "weight_numerator": 404.3351866456415
+    },
+    {
+      "comparison": "Phone owners, inc_q=5: con18",
+      "n": 623,
+      "positives": 473,
+      "weighted_percent": 75.23157749167298,
+      "weight_denominator": 508.7822934661208,
+      "weight_numerator": 382.7649453728757
+    },
+    {
+      "comparison": "Phone owners, inc_q=5: con21",
+      "n": 624,
+      "positives": 69,
+      "weighted_percent": 11.074886007429724,
+      "weight_denominator": 509.67781800909165,
+      "weight_numerator": 56.44623734966203
+    },
+    {
+      "comparison": "urbanicity=1: anydigpayment",
+      "n": 2040,
+      "positives": 1024,
+      "weighted_percent": 48.202272011869404,
+      "weight_denominator": 2057.340349230827,
+      "weight_numerator": 991.6847913461871
+    },
+    {
+      "comparison": "Phone owners, urbanicity=1: con18",
+      "n": 1386,
+      "positives": 812,
+      "weighted_percent": 55.02509198596762,
+      "weight_denominator": 1286.3600509267526,
+      "weight_numerator": 707.8208012931856
+    },
+    {
+      "comparison": "Phone owners, urbanicity=1: con21",
+      "n": 1389,
+      "positives": 149,
+      "weighted_percent": 9.845919674774919,
+      "weight_denominator": 1289.4905370162842,
+      "weight_numerator": 126.96220248844708
+    },
+    {
+      "comparison": "urbanicity=2: anydigpayment",
+      "n": 960,
+      "positives": 515,
+      "weighted_percent": 49.01600968360449,
+      "weight_denominator": 942.659650777379,
+      "weight_numerator": 462.0541457084724
+    },
+    {
+      "comparison": "Phone owners, urbanicity=2: con18",
+      "n": 755,
+      "positives": 509,
+      "weighted_percent": 62.50195856844291,
+      "weight_denominator": 703.8205284717353,
+      "weight_numerator": 439.9016151015999
+    },
+    {
+      "comparison": "Phone owners, urbanicity=2: con21",
+      "n": 756,
+      "positives": 70,
+      "weighted_percent": 8.452950211137189,
+      "weight_denominator": 704.7160530147062,
+      "weight_numerator": 59.56929709122428
+    },
+    {
+      "comparison": "emp_in=1: anydigpayment",
+      "n": 1793,
+      "positives": 1049,
+      "weighted_percent": 54.90477006253938,
+      "weight_denominator": 1792.5005735495793,
+      "weight_numerator": 984.168318277096
+    },
+    {
+      "comparison": "Phone owners, emp_in=1: con18",
+      "n": 1417,
+      "positives": 898,
+      "weighted_percent": 58.47924509725041,
+      "weight_denominator": 1341.2037568142907,
+      "weight_numerator": 784.3258322009593
+    },
+    {
+      "comparison": "Phone owners, emp_in=1: con21",
+      "n": 1421,
+      "positives": 159,
+      "weighted_percent": 10.060912655331112,
+      "weight_denominator": 1345.2297674467932,
+      "weight_numerator": 135.3423919163357
+    },
+    {
+      "comparison": "emp_in=2: anydigpayment",
+      "n": 1207,
+      "positives": 490,
+      "weighted_percent": 38.88785439465819,
+      "weight_denominator": 1207.4994264586267,
+      "weight_numerator": 469.57061877756354
+    },
+    {
+      "comparison": "Phone owners, emp_in=2: con18",
+      "n": 724,
+      "positives": 423,
+      "weighted_percent": 55.99531008623651,
+      "weight_denominator": 648.9768225841972,
+      "weight_numerator": 363.39658419382613
+    },
+    {
+      "comparison": "Phone owners, emp_in=2: con21",
+      "n": 724,
+      "positives": 60,
+      "weighted_percent": 7.887663454528751,
+      "weight_denominator": 648.9768225841972,
+      "weight_numerator": 51.18910766333561
+    },
+    {
+      "comparison": "Unsolicited request, phone lock=1: sent money",
+      "n": 170,
+      "positives": 39,
+      "weighted_percent": 25.032474005483486,
+      "weight_denominator": 139.5792519923885,
+      "weight_numerator": 34.940139972042935
+    },
+    {
+      "comparison": "Unsolicited request, phone lock=2: sent money",
+      "n": 49,
+      "positives": 6,
+      "weighted_percent": 8.905011290886971,
+      "weight_denominator": 46.952247587282855,
+      "weight_numerator": 4.181102948972744
+    }
+  ],
+  "model": [
+    {
+      "variable": "Intercept",
+      "odds_ratio": 0.11592635133545731,
+      "low_95": 0.05565809427611613,
+      "high_95": 0.2414548882554673,
+      "p_approx": 8.608002533380294e-09
+    },
+    {
+      "variable": "Digital payment",
+      "odds_ratio": 3.4479383882152574,
+      "low_95": 2.24382148363692,
+      "high_95": 5.298228587088486,
+      "p_approx": 1.6302230149037664e-08
+    },
+    {
+      "variable": "Female",
+      "odds_ratio": 0.46608938874739936,
+      "low_95": 0.3155094686518505,
+      "high_95": 0.6885350199826729,
+      "p_approx": 0.00012576510958041103
+    },
+    {
+      "variable": "Age per 10 years",
+      "odds_ratio": 0.9233589325987296,
+      "low_95": 0.8236643707616756,
+      "high_95": 1.0351203095278232,
+      "p_approx": 0.17135512471543676
+    },
+    {
+      "variable": "Secondary education",
+      "odds_ratio": 0.8356804252956236,
+      "low_95": 0.5577552150366168,
+      "high_95": 1.252093668324422,
+      "p_approx": 0.3842004582554197
+    },
+    {
+      "variable": "Tertiary education",
+      "odds_ratio": 1.6960471759638254,
+      "low_95": 1.0275815979120617,
+      "high_95": 2.799365061557903,
+      "p_approx": 0.03878853906790775
+    },
+    {
+      "variable": "Income quintile",
+      "odds_ratio": 0.9055438362448177,
+      "low_95": 0.7928890973449946,
+      "high_95": 1.0342047104781744,
+      "p_approx": 0.14324621002005816
+    },
+    {
+      "variable": "In workforce",
+      "odds_ratio": 0.8934496009772386,
+      "low_95": 0.6056020905083522,
+      "high_95": 1.3181133321655494,
+      "p_approx": 0.5701261841940546
+    },
+    {
+      "variable": "Urban",
+      "odds_ratio": 0.9096361115456801,
+      "low_95": 0.6346811060459083,
+      "high_95": 1.303706455960096,
+      "p_approx": 0.6060230214624958
+    }
+  ]
+}

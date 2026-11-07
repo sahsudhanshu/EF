@@ -8,10 +8,12 @@ assert len(df)==3000 and (df.wgt>0).all()
 df['age_group']=pd.cut(df.age,[14,24,39,59,120],labels=['15–24','25–39','40–59','60+'])
 assert ((df.con21==1)==df.con22.notna()).all()
 rows=[]
+audit_rows=[]
 def add(label, mask, outcome, positive):
     z=df.loc[mask & df[outcome].isin([0,1] if outcome in ['account','anydigpayment'] else [1,2])]
     value=100*np.average((z[outcome]==positive).astype(float),weights=z.wgt)
     rows.append(dict(comparison=label, n=len(z), positives=int((z[outcome]==positive).sum()), weighted_percent=round(value,2)))
+    audit_rows.append(dict(comparison=label, n=len(z), positives=int((z[outcome]==positive).sum()), weighted_percent=float(value), weight_denominator=float(z.wgt.sum()), weight_numerator=float(z.loc[z[outcome]==positive,'wgt'].sum())))
 allrows=pd.Series(True,index=df.index)
 phone=df.con1.eq(1)
 for var,positive in [('account',1),('anydigpayment',1),('con1',1)]: add('All adults: '+var,allrows,var,positive)
@@ -54,3 +56,14 @@ p=1/(1+np.exp(-np.clip(x@b,-30,30))); bread=np.linalg.inv(x.T@((w*p*(1-p))[:,Non
 score=x*(w*(y-p))[:,None]; cov=bread@(score.T@score)@bread; se=np.sqrt(np.diag(cov))
 model=pd.DataFrame({'variable':X.columns,'odds_ratio':np.exp(b),'low_95':np.exp(b-1.96*se),'high_95':np.exp(b+1.96*se),'p_approx':[erfc(abs(a/s)/sqrt(2)) for a,s in zip(b,se)]})
 model.to_csv('Group_31_exploratory_model.csv',index=False); print('\nModel n=',len(z)); print(model.to_string(index=False))
+
+# Full precision audit output for consistent one-decimal report rounding.
+# Statistical formulas and the existing two-decimal CSV outputs are unchanged.
+import json, hashlib
+audit={'source':'IND_2024_FINDEX_v02_M','survey_year':2024,'n':len(df),
+       'data_sha256':hashlib.sha256(Path('data/Findex_Microdata_2025_updateIndia.dta').read_bytes()).hexdigest(),
+       'script_sha256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
+       'model_n':len(z),'model_positive':int(y.sum()),'iterations':_+1,
+       'max_score':float(np.max(np.abs(x.T@(w*(y-p))))),
+       'descriptives':audit_rows,'model':model.to_dict(orient='records')}
+Path('Group_31_analysis_audit.json').write_text(json.dumps(audit,indent=2),encoding='utf-8')

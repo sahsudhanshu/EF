@@ -1,0 +1,23 @@
+Group 31 term paper revision - 7 November 2026
+
+Final deliverables
+- Group_31_Term_Paper_Revised.pdf
+- Group_31_Term_Paper_Revised.docx
+
+Changes
+1. Replaced mixed-source empirical comparisons with one consistent set of weighted India 2024 microdata estimates. Explained the dashboard's narrower payment definition and independent rounding of shares and gaps.
+2. Preserved authors Rushal Verma, Vichanshu Raj and Sudhanshu. Preserved the original dataset, statistical formulas and computed CSV results.
+3. Added a title page, 143-word abstract, contents, one-page key findings, three compact results tables and four numbered body charts. Supplementary tables remain in Appendix A.
+4. Added a business model canvas, alternatives comparison, pilot-to-scale plan, institutional pricing, monthly costs, acquisition costs, break-even analysis, three-year scenarios, sensitivity analysis, seed funding and risks. Every financial assumption is explicitly illustrative and unvalidated.
+5. Clarified the secondary-source qualitative method and consolidated the common research limitations. No primary qualitative fieldwork, verified losses, commercial demand or partnership was invented.
+6. Standardized eight numbered references and preserved working hyperlink destinations in both formats.
+
+Verification
+- Reran analysis_group31.py against the original licensed India data.
+- Original weighted-results CSV and model CSV reproduced byte for byte.
+- Checked table values, regression intervals, finance arithmetic, citations and PDF hyperlinks: 72 automated checks passed.
+- Exported the PDF directly from the final DOCX using Microsoft Word 16.0.
+- Rendered all 16 PDF pages as images and visually inspected them. Rechecked both pages affected by the final corrections; the other 14 rendered identically.
+
+Input and remaining validation
+No further user input is required for this revision. The institutional price, acquisition and delivery costs, customer growth, no-churn assumption, funding budget and pilot design need real partner validation before being treated as a viable business forecast. No institution has committed to a pilot. Primary interviews and a pilot have not been conducted; the paper states this explicitly.

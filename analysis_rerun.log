@@ -1,0 +1,83 @@
+                                   comparison    n  positives  weighted_percent
+                          All adults: account 3000       2710             89.02
+                    All adults: anydigpayment 3000       1539             48.46
+                             All adults: con1 3000       2145             66.47
+                          Phone owners: con18 2141       1321             57.67
+                          Phone owners: con21 2145        219              9.35
+          Reported unsolicited request: con22  219         45             20.97
+         Phone owners, anydigpayment=0: con21  862         46              4.32
+         Phone owners, anydigpayment=0: con18  859        416             44.64
+         Phone owners, anydigpayment=1: con21 1283        173             13.12
+         Phone owners, anydigpayment=1: con18 1282        905             67.39
+                            female=1: account 1526       1374             89.25
+                      female=1: anydigpayment 1526        679             42.67
+                               female=1: con1 1526        920             54.30
+                Phone owners, female=1: con18  919        505             50.32
+                Phone owners, female=1: con21  920         59              5.73
+                            female=2: account 1474       1336             88.81
+                      female=2: anydigpayment 1474        860             54.15
+                               female=2: con1 1474       1225             78.44
+                Phone owners, female=2: con18 1222        816             62.67
+                Phone owners, female=2: con21 1225        160             11.82
+               age_group=15–24: anydigpayment  722        338             43.51
+         Phone owners, age_group=15–24: con18  497        385             75.65
+         Phone owners, age_group=15–24: con21  497         51              8.27
+               age_group=25–39: anydigpayment 1134        594             51.31
+         Phone owners, age_group=25–39: con18  893        591             62.75
+         Phone owners, age_group=25–39: con21  894         94             11.08
+               age_group=40–59: anydigpayment  858        441             46.57
+         Phone owners, age_group=40–59: con18  597        307             43.56
+         Phone owners, age_group=40–59: con21  599         64              9.81
+                 age_group=60+: anydigpayment  286        166             56.57
+           Phone owners, age_group=60+: con18  154         38             22.90
+           Phone owners, age_group=60+: con21  155         10              4.06
+                        educ=1: anydigpayment 1680        697             40.72
+                  Phone owners, educ=1: con18 1007        424             41.24
+                  Phone owners, educ=1: con21 1011         88              8.39
+                        educ=2: anydigpayment 1016        619             62.75
+                  Phone owners, educ=2: con18  853        650             79.87
+                  Phone owners, educ=2: con21  853         83              9.03
+                        educ=3: anydigpayment  304        223             74.48
+                  Phone owners, educ=3: con18  281        247             89.14
+                  Phone owners, educ=3: con21  281         48             17.94
+                       inc_q=1: anydigpayment  515        195             34.83
+                 Phone owners, inc_q=1: con18  298        135             40.59
+                 Phone owners, inc_q=1: con21  300         42             12.49
+                       inc_q=2: anydigpayment  562        222             38.00
+                 Phone owners, inc_q=2: con18  347        171             45.52
+                 Phone owners, inc_q=2: con21  348         31              6.65
+                       inc_q=3: anydigpayment  603        269             43.45
+                 Phone owners, inc_q=3: con18  410        236             54.87
+                 Phone owners, inc_q=3: con21  410         33              7.85
+                       inc_q=4: anydigpayment  608        360             58.62
+                 Phone owners, inc_q=4: con18  463        306             61.97
+                 Phone owners, inc_q=4: con21  463         44              8.41
+                       inc_q=5: anydigpayment  712        493             67.36
+                 Phone owners, inc_q=5: con18  623        473             75.23
+                 Phone owners, inc_q=5: con21  624         69             11.07
+                  urbanicity=1: anydigpayment 2040       1024             48.20
+            Phone owners, urbanicity=1: con18 1386        812             55.03
+            Phone owners, urbanicity=1: con21 1389        149              9.85
+                  urbanicity=2: anydigpayment  960        515             49.02
+            Phone owners, urbanicity=2: con18  755        509             62.50
+            Phone owners, urbanicity=2: con21  756         70              8.45
+                      emp_in=1: anydigpayment 1793       1049             54.90
+                Phone owners, emp_in=1: con18 1417        898             58.48
+                Phone owners, emp_in=1: con21 1421        159             10.06
+                      emp_in=2: anydigpayment 1207        490             38.89
+                Phone owners, emp_in=2: con18  724        423             56.00
+                Phone owners, emp_in=2: con21  724         60              7.89
+Unsolicited request, phone lock=1: sent money  170         39             25.03
+Unsolicited request, phone lock=2: sent money   49          6              8.91
+
+Model n= 2145
+           variable  odds_ratio   low_95  high_95     p_approx
+          Intercept    0.115926 0.055658 0.241455 8.608003e-09
+    Digital payment    3.447938 2.243821 5.298229 1.630223e-08
+             Female    0.466089 0.315509 0.688535 1.257651e-04
+   Age per 10 years    0.923359 0.823664 1.035120 1.713551e-01
+Secondary education    0.835680 0.557755 1.252094 3.842005e-01
+ Tertiary education    1.696047 1.027582 2.799365 3.878854e-02
+    Income quintile    0.905544 0.792889 1.034205 1.432462e-01
+       In workforce    0.893450 0.605602 1.318113 5.701262e-01
+              Urban    0.909636 0.634681 1.303706 6.060230e-01

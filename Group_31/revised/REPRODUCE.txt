@@ -1,0 +1,15 @@
+Run from C:\Users\Sudhanshu\Desktop\EF, using the existing licensed file:
+data\Findex_Microdata_2025_updateIndia.dta
+
+Survey analysis: analysis_group31.py
+Financial calculations: revision_finance.py
+Figures: revision_figures.py
+Editable report: build_revised_paper.py
+Word PDF export: render_revised_word.ps1
+Verification and page rendering: verify_revised_paper.py
+
+Python analysis requires pandas and numpy; document authoring requires python-docx. Figures require matplotlib. PDF verification requires pypdf and Poppler. Microsoft Word exports the PDF from the DOCX.
+
+Copies of the analysis script, full-precision audit, original results CSVs and financial calculations are included in this folder. They are supporting files, not substitute submission documents. The scripts use the project root as their working directory.
+
+The source data have not been copied into this revision folder. Dataset access conditions continue to apply. The original data file and its SHA-256 fingerprint are recorded in Group_31_analysis_audit.json and final_verification.json.

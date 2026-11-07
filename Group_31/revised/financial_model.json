@@ -1,0 +1,211 @@
+{
+  "notice": "ILLUSTRATIVE ASSUMPTIONS TO BE VALIDATED; NOT SURVEY FINDINGS OR FORECASTS",
+  "unit": "INR lakh; 1 lakh = INR 100,000",
+  "projection": [
+    {
+      "scenario": "Conservative",
+      "year": 1,
+      "price_monthly_lakh": 0.4,
+      "start_institutions": 0,
+      "end_institutions": 4,
+      "average_institutions": 2.0,
+      "new_institutions": 4,
+      "revenue_lakh": 9.6,
+      "fixed_cost_lakh": 36.0,
+      "variable_cost_lakh": 2.4,
+      "acquisition_cost_lakh": 8,
+      "total_cost_lakh": 46.4,
+      "surplus_lakh": -36.8
+    },
+    {
+      "scenario": "Conservative",
+      "year": 2,
+      "price_monthly_lakh": 0.4,
+      "start_institutions": 4,
+      "end_institutions": 10,
+      "average_institutions": 7.0,
+      "new_institutions": 6,
+      "revenue_lakh": 33.6,
+      "fixed_cost_lakh": 43.2,
+      "variable_cost_lakh": 8.4,
+      "acquisition_cost_lakh": 12,
+      "total_cost_lakh": 63.6,
+      "surplus_lakh": -30.0
+    },
+    {
+      "scenario": "Conservative",
+      "year": 3,
+      "price_monthly_lakh": 0.4,
+      "start_institutions": 10,
+      "end_institutions": 18,
+      "average_institutions": 14.0,
+      "new_institutions": 8,
+      "revenue_lakh": 67.2,
+      "fixed_cost_lakh": 51.84,
+      "variable_cost_lakh": 16.8,
+      "acquisition_cost_lakh": 16,
+      "total_cost_lakh": 84.64,
+      "surplus_lakh": -17.44
+    },
+    {
+      "scenario": "Base",
+      "year": 1,
+      "price_monthly_lakh": 0.5,
+      "start_institutions": 0,
+      "end_institutions": 8,
+      "average_institutions": 4.0,
+      "new_institutions": 8,
+      "revenue_lakh": 24.0,
+      "fixed_cost_lakh": 36.0,
+      "variable_cost_lakh": 4.8,
+      "acquisition_cost_lakh": 16,
+      "total_cost_lakh": 56.8,
+      "surplus_lakh": -32.8
+    },
+    {
+      "scenario": "Base",
+      "year": 2,
+      "price_monthly_lakh": 0.5,
+      "start_institutions": 8,
+      "end_institutions": 20,
+      "average_institutions": 14.0,
+      "new_institutions": 12,
+      "revenue_lakh": 84.0,
+      "fixed_cost_lakh": 43.2,
+      "variable_cost_lakh": 16.8,
+      "acquisition_cost_lakh": 24,
+      "total_cost_lakh": 84.0,
+      "surplus_lakh": 0.0
+    },
+    {
+      "scenario": "Base",
+      "year": 3,
+      "price_monthly_lakh": 0.5,
+      "start_institutions": 20,
+      "end_institutions": 40,
+      "average_institutions": 30.0,
+      "new_institutions": 20,
+      "revenue_lakh": 180.0,
+      "fixed_cost_lakh": 51.84,
+      "variable_cost_lakh": 36.0,
+      "acquisition_cost_lakh": 40,
+      "total_cost_lakh": 127.84,
+      "surplus_lakh": 52.16
+    },
+    {
+      "scenario": "Optimistic",
+      "year": 1,
+      "price_monthly_lakh": 0.6,
+      "start_institutions": 0,
+      "end_institutions": 12,
+      "average_institutions": 6.0,
+      "new_institutions": 12,
+      "revenue_lakh": 43.2,
+      "fixed_cost_lakh": 36.0,
+      "variable_cost_lakh": 7.2,
+      "acquisition_cost_lakh": 24,
+      "total_cost_lakh": 67.2,
+      "surplus_lakh": -24.0
+    },
+    {
+      "scenario": "Optimistic",
+      "year": 2,
+      "price_monthly_lakh": 0.6,
+      "start_institutions": 12,
+      "end_institutions": 32,
+      "average_institutions": 22.0,
+      "new_institutions": 20,
+      "revenue_lakh": 158.4,
+      "fixed_cost_lakh": 43.2,
+      "variable_cost_lakh": 26.4,
+      "acquisition_cost_lakh": 40,
+      "total_cost_lakh": 109.6,
+      "surplus_lakh": 48.8
+    },
+    {
+      "scenario": "Optimistic",
+      "year": 3,
+      "price_monthly_lakh": 0.6,
+      "start_institutions": 32,
+      "end_institutions": 65,
+      "average_institutions": 48.5,
+      "new_institutions": 33,
+      "revenue_lakh": 349.2,
+      "fixed_cost_lakh": 51.84,
+      "variable_cost_lakh": 58.2,
+      "acquisition_cost_lakh": 66,
+      "total_cost_lakh": 176.04,
+      "surplus_lakh": 173.16
+    }
+  ],
+  "sensitivity": [
+    {
+      "price_lakh": 0.4,
+      "variable_cost_lakh": 0.08,
+      "breakeven_institutions": 10,
+      "monthly_surplus_at_10_lakh": 0.2
+    },
+    {
+      "price_lakh": 0.5,
+      "variable_cost_lakh": 0.08,
+      "breakeven_institutions": 8,
+      "monthly_surplus_at_10_lakh": 1.2
+    },
+    {
+      "price_lakh": 0.6,
+      "variable_cost_lakh": 0.08,
+      "breakeven_institutions": 6,
+      "monthly_surplus_at_10_lakh": 2.2
+    },
+    {
+      "price_lakh": 0.4,
+      "variable_cost_lakh": 0.1,
+      "breakeven_institutions": 10,
+      "monthly_surplus_at_10_lakh": 0.0
+    },
+    {
+      "price_lakh": 0.5,
+      "variable_cost_lakh": 0.1,
+      "breakeven_institutions": 8,
+      "monthly_surplus_at_10_lakh": 1.0
+    },
+    {
+      "price_lakh": 0.6,
+      "variable_cost_lakh": 0.1,
+      "breakeven_institutions": 6,
+      "monthly_surplus_at_10_lakh": 2.0
+    },
+    {
+      "price_lakh": 0.4,
+      "variable_cost_lakh": 0.15,
+      "breakeven_institutions": 12,
+      "monthly_surplus_at_10_lakh": -0.5
+    },
+    {
+      "price_lakh": 0.5,
+      "variable_cost_lakh": 0.15,
+      "breakeven_institutions": 9,
+      "monthly_surplus_at_10_lakh": 0.5
+    },
+    {
+      "price_lakh": 0.6,
+      "variable_cost_lakh": 0.15,
+      "breakeven_institutions": 7,
+      "monthly_surplus_at_10_lakh": 1.5
+    }
+  ],
+  "seed_uses_lakh": {
+    "Year 1 base operating deficit": 32.8,
+    "Prelaunch product and integration": 10.0,
+    "Prelaunch pilot and evaluation": 5.0,
+    "Working capital reserve": 12.0,
+    "Contingency and runway reserve": 15.2
+  },
+  "seed_total_lakh": 75.0,
+  "base_contribution_monthly_lakh": 0.4,
+  "base_contribution_margin_percent": 80,
+  "base_CAC_lakh": 2,
+  "base_CAC_payback_months": 5,
+  "base_steady_state_breakeven_institutions": 8,
+  "base_breakeven_with_one_new_customer_per_month": 13
+}
