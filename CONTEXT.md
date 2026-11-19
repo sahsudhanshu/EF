@@ -3,7 +3,7 @@
 Share this file with anyone (or any AI session) picking up the work. Last updated 20 November 2026.
 
 ## 1. What this is
-- **Course:** Entrepreneurial Finance. **Group 31.** **Authors:** Rushal Verma, Vichanshu Raj, Sudhanshu (the name "Sah" was removed on request).
+- **Course:** Entrepreneurial Finance. **Group 31.** **Authors:** Rushal Verma, Vichanshu Raj, Sudhanshu (use "Sudhanshu" only; "Sah" removed on request).
 - **Topic:** Mobile banking, financial inclusion and cybersecurity risk in India.
 - **Title:** *Mobile Banking, Financial Inclusion and Cybersecurity Risk in India: A Survey-Weighted Analysis of the 2024 Global Findex and an Institutional Payment-Safety Service Proposal.*
 - **Goal:** a term paper that follows the TA's required structure (`Paper structure.pdf`), plus a presentation. A friend's submission (folder `Friend/`) was the quality reference.
@@ -20,10 +20,11 @@ The TA confirmed there is **no page limit** and to use a **standard citation sty
 | `Group_31/revised/` | Working files: paper builder (`build_structured_paper.py`), deck builder (`build_structured_deck.py`), patch scripts, QA images (`qa2/`), earlier 16-page paper |
 | `Group_31/data/Findex_Microdata_2025_updateIndia.dta` | India household microdata (3,000 adults). **Not redistributed** (World Bank access conditions) |
 | `Group_31/analysis_extra.py`, `manual_coding_fraud_reviews.py`, `fetch_data.py` | Peer comparison, app-review coding, open-data download |
-| `Group_31_Term_Paper_Progress_Report.pdf` | Early progress report (still lists "Sudhanshu Sah"; not in the submission folder) |
+| `Group_31_Term_Paper_Progress_Report.pdf` | Original progress report as submitted (still lists "Sudhanshu Sah"; not in the submission folder). Corrected copy with "Sudhanshu": `Group_31_Term_Paper_Progress_Report_corrected.pdf`/`.docx` |
+| `Completion_Pack/` | Plan to finish (`PLAN.md`), proofreading record, human second-coder pack (`second_coder/`) and interview pack (`interviews/`) |
 | `Friend/` | Friend's submission, reference only |
 
-Final deliverables: `Group_31_Final_Submission/Research_Report.pdf` (25 pages, 18 tables, 6 figures, 47 references) and `slides/Group_31_Presentation_Final.pptx` (18 slides with speaker notes).
+Final deliverables: `Group_31_Final_Submission/Research_Report.pdf` (27 pages in the LibreOffice render, 25 in the earlier Word render; 18 tables, 6 figures, 47 references) and `slides/Group_31_Presentation_Final.pptx` (18 slides with speaker notes).
 Rebuild commands (run from `C:\Users\Sudhanshu\Desktop\EF`): `python Group_31/revised/build_structured_paper.py` then export the DOCX to PDF with Word; `python Group_31/revised/build_structured_deck.py`. The final folder was assembled by a helper script kept in the session scratchpad, not in the project.
 
 ## 4. Research questions (as in the paper)
@@ -60,6 +61,15 @@ Rebuild commands (run from `C:\Users\Sudhanshu\Desktop\EF`): `python Group_31/re
 - All financial inputs are unvalidated assumptions; no churn, tax or financing flows; no partner, investor or willingness-to-pay claimed. The NPCI count comes from a search snippet.
 - Scraping Google Play reviews may conflict with the store's terms of service; the group should be comfortable with this.
 - Microdata is not included in the submission (access conditions).
+
+## 7b. Verification added 20 Nov 2026 (second session)
+- **Reproduction:** `analysis_group31.py` re-run on the microdata (Linux, Python 3.13, pandas 3.1). Weighted results CSV is byte-identical; model CSV differs only at floating-point noise (max 3.6e-15); headline numbers (89.0, 48.5, 57.7, 13.1 vs 4.3, 21.0, OR 3.45) match the paper. The audit JSON differs only in the script SHA-256 (likely line endings).
+- **Second-pass review coding:** all 118 fraud-keyword reviews were re-coded blind to the first-pass labels (`results/review_fraud_second_pass.csv`, column `second_pass`). Agreement 112/118 = 94.9%, Cohen's kappa 0.93. The 6 disagreements do not change any headline: unauthorised access/theft stays at 6, reward/cashback is 59 vs 60. **Caveat: both passes were done by AI sessions, so this is a consistency check, not an independent human second rater.** The paper (Methodology 3.5, table note, limitations) and deck now report the second pass. Rebuilt on Linux: PDFs were rendered with LibreOffice (27 pages) because Word is not available; the earlier Word-made PDF was 25 pages. Re-export from Word if the exact earlier layout matters.
+- Progress report vs paper: report RQ1-4 became RQ1-6; the uploaded aggregate file (8,577 x 438) is replaced by World Bank API peer indicators; the report says "Sudhanshu Sah", the paper "Sudhanshu".
+
+## 7c. Fixed 20 Nov 2026 (third pass)
+- Discussion RQ1 wrongly said digital use was lower for older adults (Table 7: payment use is highest at 60+); corrected. Stray "and" removed in 3.1.
+- Interviews and a human second coder are NOT done: they need people. Ready-to-use packs and the step-by-step plan are in `Completion_Pack/`. The paper still states that no interviews were conducted.
 
 ## 8. Open items (human steps)
 1. Read the final PDF and slides once: names, dates, numbers, anything that reads oddly or cannot be defended.

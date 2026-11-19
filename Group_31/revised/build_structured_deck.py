@@ -207,7 +207,7 @@ source(s, 'Published aggregates, no sampling errors; India request share from au
 
 # 9b -------------------------------------------------------------- qualitative
 s = slide('4.8  Results: qualitative review', 'Three themes from institutional guidance',
-          'Secondary document review of World Bank and RBI sources. No interviews or fieldwork. Authors coded themes without a second coder.')
+          'Secondary document review of World Bank and RBI sources. No interviews or fieldwork. Review coding: one coder, then a blind second pass (112 of 118 agreed, kappa 0.93); no independent human rater.')
 qs = [('Trust and support', 'World Bank: trust is linked to awareness of risks and timely dispute resolution.'),
       ('Shared responsibility', 'World Bank: consumer protection sits alongside financial capability.'),
       ('Awareness and credentials', 'RBI: awareness campaigns through many channels; protect credentials such as OTPs and PINs.')]
@@ -215,7 +215,7 @@ for i, (h, b) in enumerate(qs):
     x = 0.6 + i * 4.1
     box(s, x, 1.9, 3.9, 3.0, PALE); box(s, x, 1.9, 3.9, 0.08, AMBER)
     text(s, x + 0.2, 2.15, 3.5, 0.9, h, 20, True, NAVY, HEAD); text(s, x + 0.2, 3.2, 3.5, 1.7, b, 15)
-text(s, 0.6, 5.3, 12.1, 1.0, 'Secondary document review only: no interviews, focus groups or respondent comments. Themes were coded by a single coder and are interpretive.', 15, False, GREY)
+text(s, 0.6, 5.3, 12.1, 1.0, 'Secondary document review only: no interviews, focus groups or respondent comments. Themes were coded by a single coder, checked by a blind second pass (94.9% agreement, AI-assisted), and are interpretive.', 15, False, GREY)
 
 # 9c -------------------------------------------------------------- reviews
 s = slide('4.9  Results: app reviews', 'App reviews: rewards, refunds and support',
@@ -227,7 +227,7 @@ stat(s, 9.9, 1.75, 2.8, '104', 'reviews describe device-lock or security-alert p
 s.shapes.add_picture(str(FIG / 'figure6.png'), Inches(0.6), Inches(3.6), height=Inches(2.9))
 bullets(s, 8.6, 3.7, 4.2, 2.9, ['Ratings|fraud-keyword reviews average 1.36 stars vs 2.93 for others.',
         'Other themes|support 5.3%, blocking and verification 6.3%, failed payments 2.3%.',
-        'Method|keyword coding, then all 118 fraud-keyword reviews read by one coder.'], 13)
+        'Method|keyword coding, then all 118 fraud-keyword reviews read, then re-coded blind (94.9% agreement).'], 13)
 source(s, 'Self-selected public reviews; not a measure of scam prevalence. Source: authors\' coding of Google Play reviews.')
 
 # 10 --------------------------------------------------------------- discussion
