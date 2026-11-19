@@ -1,0 +1,10 @@
+scenario,year,price_monthly_lakh,start_institutions,end_institutions,average_institutions,new_institutions,revenue_lakh,fixed_cost_lakh,variable_cost_lakh,acquisition_cost_lakh,total_cost_lakh,surplus_lakh
+Conservative,1,0.4,0,4,2.0,4,9.6,36.0,2.4,8,46.4,-36.8
+Conservative,2,0.4,4,10,7.0,6,33.6,43.2,8.4,12,63.6,-30.0
+Conservative,3,0.4,10,18,14.0,8,67.2,51.84,16.8,16,84.64,-17.44
+Base,1,0.5,0,8,4.0,8,24.0,36.0,4.8,16,56.8,-32.8
+Base,2,0.5,8,20,14.0,12,84.0,43.2,16.8,24,84.0,0.0
+Base,3,0.5,20,40,30.0,20,180.0,51.84,36.0,40,127.84,52.16
+Optimistic,1,0.6,0,12,6.0,12,43.2,36.0,7.2,24,67.2,-24.0
+Optimistic,2,0.6,12,32,22.0,20,158.4,43.2,26.4,40,109.6,48.8
+Optimistic,3,0.6,32,65,48.5,33,349.2,51.84,58.2,66,176.04,173.16
