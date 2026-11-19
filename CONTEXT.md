@@ -56,7 +56,7 @@ Rebuild commands (run from `C:\Users\Sudhanshu\Desktop\EF`): `python Group_31/re
 - Cross-sectional, self-reported; no causal claims; unsolicited requests are not verified fraud; sending money is not a loss amount.
 - Findex describes individuals, not businesses.
 - **No interviews or surveys of our own.** Qualitative evidence = institutional document themes + public app reviews (self-selected, seven weeks, five apps, English, keyword-coded then manually classified).
-- **App-review coding was done by a single coder (an AI assistant) with no second rater.** The group should audit `results/review_fraud_manual_codes.csv`.
+- **App-review coding:** first pass by an AI assistant; blind AI second pass on all 118 (94.9%); human coder on a sample of 40 (95.0%). App Store reviews: AI first pass and blind AI second pass (82.5%), no human check.
 - Peer values are published aggregates without sampling errors; no statistical test.
 - All financial inputs are unvalidated assumptions; no churn, tax or financing flows; no partner, investor or willingness-to-pay claimed. The NPCI count comes from a search snippet.
 - Scraping Google Play reviews may conflict with the store's terms of service; the group should be comfortable with this.
@@ -82,7 +82,8 @@ Rebuild commands (run from `C:\Users\Sudhanshu\Desktop\EF`): `python Group_31/re
 - **Intervals:** `scripts/analysis_sensitivity.py` adds a Kish design effect (1.43, effective n 1,501) and variance inflation for assumed extra design effects 1.5, 2, 3. Payment-user and gender results survive; tertiary education does not (Section 4.3, limitations).
 - **App Store coding:** a separate AI instance re-coded the 57 reviews blind: 82.5% agreement, kappa 0.78; unauthorised access 2 vs 4 (0.1% vs 0.2%).
 - **Notebook** now has App Store and sensitivity cells (outputs stored). **TA note** on progress-report differences: `Completion_Pack/TA_NOTE.md`; the paper also states the differences (1.4, 3.3).
-- **Still not fixable by software:** all review coding is AI-assisted (no human rater yet), no own fieldwork, all finance inputs are assumptions.
+- **Human second coder done** (reported by the group as a person outside the group who did not see the first-pass labels): stratified sample of 40 of the 118 Google Play fraud-keyword reviews, 38/40 agreement with the first pass (95.0%, kappa 0.93), 39/40 with the AI second pass; 0 of 60 non-keyword reviews described fraud (`results/human_second_coder_partA.csv`, `_partB.csv`). Disagreements: A21 and A25. The coder's identity is not recorded in the repo. Human reliability rests on 40 reviews only; the 57 App Store reviews have no human check.
+- **Still not fixable by software:** no own fieldwork, all finance inputs are assumptions.
 
 ## 8. Open items (human steps)
 1. Read the final PDF and slides once: names, dates, numbers, anything that reads oddly or cannot be defended.

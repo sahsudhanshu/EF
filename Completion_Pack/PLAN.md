@@ -18,7 +18,9 @@ If the deadline is close, do 1 and 2 only and submit. Since 20 Nov 2026 the pape
 - Open `report/Group_31_Research_Paper.docx` in Word and export the PDF yourselves if you want the original 25-page layout.
 - Make sure every member can explain one weakness: single-source review coding, illustrative finance inputs, no design-based intervals.
 
-## Step 2: Human second coder (folder `second_coder/`)
+## Step 2: Human second coder (DONE 20 Nov 2026: 40 reviews, 95.0% agreement; see results/human_second_coder_partA.csv)
+The instructions below are kept for anyone who wants a larger sample or a human check of the App Store reviews.
+
 1. One person who did not take part in the first coding reads `CODEBOOK.md` and fills `PartA_coding_sheet_BLANK.csv` (40 reviews) and `PartB_missed_fraud_check_BLANK.csv` (60 reviews). Do not open the answer key.
 2. Run `compute_agreement.py` (command in the codebook). Expect agreement above 80% and kappa above 0.6; if lower, discuss the disagreements and refine the categories, then recode all 118 and update the tables.
 3. Paper edits (Methodology 3.5, Table 14 source note, limitations 5.4): replace "no independent human rater" with the real result, e.g. "a human coder re-coded a stratified random sample of 40 of the 118 reviews; agreement with the first pass was x% (kappa y)". Edit `Group_31/revised/build_structured_paper.py` (search for "second pass") and rebuild.
