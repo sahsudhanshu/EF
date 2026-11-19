@@ -18,3 +18,6 @@
 - Wording you are not comfortable defending. Everything in the paper is yours to defend.
 
 **Known limitations kept in the text:** single first-pass coder, illustrative finance model, approximate (non-design-based) intervals, no interviews yet.
+
+## Added 20 Nov 2026: secondary qualitative evidence
+Check by hand before submitting: (1) Table 17 against the five studies (counts of studies per theme and every quoted figure: 32%/24%/20% of 50 users, 12 of 24 and 3 of 24 merchants, 45 of 46 twice, badge mean 8.26 vs 4.78, 60% of net-banking users); (2) the CIS India row, which was coded from its summary page only; (3) the App Store category counts (57 reviews, `results/appstore_fraud_manual_codes.csv`), classified by one coder with no second pass; (4) that you are comfortable citing the MicroSave policy brief and CIS report as grey literature.

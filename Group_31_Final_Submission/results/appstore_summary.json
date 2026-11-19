@@ -1,0 +1,16 @@
+{
+  "n_reviews": 2090,
+  "apps": {
+    "BHIM": 499,
+    "SBI YONO": 493,
+    "Paytm": 400,
+    "Google Pay": 370,
+    "PhonePe": 328
+  },
+  "date_min": "2026-04-30",
+  "date_max": "2026-11-18",
+  "mean_rating": 3.31,
+  "any_theme_pct": 20.7,
+  "fraud_theme_mean_rating": 1.51,
+  "non_fraud_mean_rating": 3.36
+}

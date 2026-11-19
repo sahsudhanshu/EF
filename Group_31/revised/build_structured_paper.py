@@ -63,6 +63,12 @@ REFS = {
  'kopp': "Kopp, E., Kaffenberger, L., & Wilson, C. (2017). Cyber risk, market failures, and financial stability (IMF Working Paper No. 2017/185). International Monetary Fund. https://doi.org/10.5089/9781484313787.001",
  'burke': "Burke, J., Kieffer, C., Mottola, G., & Perez-Arce, F. (2022). Can educational interventions reduce susceptibility to financial fraud? Journal of Economic Behavior & Organization, 198, 250–266. https://doi.org/10.1016/j.jebo.2022.03.028",
  'robinson': "Robinson, J., Park, J., & Blumenstock, J. (2023). The impact of digital credit in developing economies: A review of recent evidence. SSRN. https://doi.org/10.2139/ssrn.4540063",
+ 'mungara': "Mungara, D., Ramulu, H. S., & Acar, Y. (2025). Security and privacy advice for UPI users in India. In Proceedings of the 34th USENIX Security Symposium (pp. 6085–6103). USENIX Association. https://www.usenix.org/conference/usenixsecurity25/presentation/mungara",
+ 'asiaccs': "Bajaj, N., De, S., Sharma, K., Page, X., Knijnenburg, B., & Mondal, M. (2026). “To pay or not to pay?”: Understanding user decision-making and influence of nudges in UPI apps. In Proceedings of the ACM Asia Conference on Computer and Communications Security (pp. 1632–1648). ACM. https://doi.org/10.1145/3779208.3785285",
+ 'jain': "Jain, P., Varanasi, R. A., & Dell, N. (2021). “Who is protecting us? No one!” Vulnerabilities experienced by low-income Indian merchants using digital payments. In ACM SIGCAS Conference on Computing and Sustainable Societies (pp. 261–274). ACM. https://doi.org/10.1145/3460112.3471961",
+ 'microsave': "Aadil, A., Ahuja, G., Sah, R., & Dhumal, S. (2023). Decoding the extent and exposure of financial fraud among DFS customers (MSC Policy Brief No. 28). MicroSave Consulting. https://www.microsave.net/wp-content/uploads/2023/09/230829-PB_understanding-the-extent-and-exposure-to-frauds-among-DFS-customers_V8-RGGAAA_PK_V03.pdf",
+ 'cis': "Sengupta, A., Furtado, C., Agrawal, G., Sekhar, N., Sneha, P. P., & Kharbanda, V. (2025). Navigating the digitalisation of finance: User experiences of risks and harms. Centre for Internet and Society. https://cis-india.org/raw/navigating-the-digitalisation-of-finance",
+ 'appstore': "Apple Inc. (2026). Apple App Store customer reviews feed, India storefront: PhonePe, Google Pay, Paytm, BHIM and YONO SBI, 30 April to 18 November 2026 [Data set collected by the authors from the public feed; reviewer names not stored]. https://itunes.apple.com/in/rss/customerreviews/",
  'bada': "Bada, M., Sasse, A. M., & Nurse, J. R. C. (2019). Cyber security awareness campaigns: Why do they fail to change behaviour? arXiv:1901.02672. https://arxiv.org/abs/1901.02672",
 }
 order = []  # keys in order of first citation
@@ -155,7 +161,7 @@ def H1(t): return doc.add_heading(t, level=1)
 def H2(t): return doc.add_heading(t, level=2)
 
 
-T = dict(defs=1, fin=2, adopt=3, lock=4, model=5, send=6, gap=7, unit=8, proj=9, bridge=10, sens=11, peers=12, themes=13, manual=14, canvas=15, alt=16, seed=17, risk=18)
+T = dict(defs=1, fin=2, adopt=3, lock=4, model=5, send=6, gap=7, unit=8, proj=9, bridge=10, sens=11, peers=12, themes=13, manual=14, ios=15, studies=16, sthemes=17, canvas=18, alt=19, seed=20, risk=21)
 F = dict(gender=1, income=2, exposure=3, surplus=4, peers=5, themes=6)
 _t = [0]; _f = [0]
 
@@ -170,6 +176,8 @@ def table(key, title, rows, widths, note=None, bold_first_col=False):
     tb.style = 'Table Grid'
     tb.alignment = WD_TABLE_ALIGNMENT.CENTER
     tb.autofit = False
+    for ci, w in enumerate(widths):
+        tb.columns[ci].width = Inches(w)
     for ri, row in enumerate(rows):
         for ci, val in enumerate(row):
             c = tb.cell(ri, ci)
@@ -224,10 +232,10 @@ P('20 November 2026', align='c')
 H1('Abstract')
 ABSTRACT = ("This study examines how financial inclusion, digital payment use and reported cybersecurity exposure relate to one another in India, "
  "and what this implies for entrepreneurs who serve first-time digital users. We analyse the 2024 India Global Findex survey of 3,000 adults using survey weights and an exploratory logistic model, "
- "compare India with peer economies, review 35 academic papers and several institutional sources, and code 5,758 public reviews of five payment apps. "
+ "compare India with peer economies, review 35 academic papers and several institutional sources, code 7,848 public reviews of five payment apps, and synthesise five published interview studies. "
  "Account ownership was 89.0%, but only 48.5% made or received a digital payment, and 57.7% of phone owners reported a device lock. "
  "Unsolicited money requests were reported by 13.1% of payment-using phone owners and 4.3% of non-users (adjusted odds ratio 3.45). "
- "App reviews rarely described third-party fraud; complaints centred on unpaid rewards, failed payments and weak support. "
+ "App reviews rarely described third-party fraud; complaints centred on unpaid rewards, failed payments and weak support, whereas published interviews stress social engineering, trust and slow redress. "
  "An illustrative financial model for a bank-sold safety service breaks even at eight paying institutions under stated assumptions. "
  "The data cannot show causation or verified losses, and the commercial assumptions need pilot validation.")
 P(ABSTRACT, align='j')
@@ -256,7 +264,7 @@ P("**RQ1.** How do account ownership, digital payment use and device protection 
 P("**RQ2.** Are digital payment users more likely than non-users to report unsolicited money requests, after adjusting for demographic and economic characteristics?", after=2)
 P("**RQ3.** Among people who report an unsolicited money request, is having a device lock associated with a lower share reporting that they sent money?", after=2)
 P("**RQ4.** Which groups show the largest gap between digital payment use and device protection?", after=2)
-P("**RQ5.** What do public app reviews and institutional documents reveal about fraud-related grievances, security friction and support experiences?", after=2)
+P("**RQ5.** What do public app reviews, institutional documents and published interview studies reveal about fraud-related grievances, security friction and support experiences?", after=2)
 P("**RQ6.** What financial conditions (price, costs and customer numbers) would allow an institution-funded payment-safety service to break even, and how sensitive is that result to its assumptions?")
 
 # ================================================================= 2 LITERATURE REVIEW
@@ -306,10 +314,10 @@ P("Three conclusions emerge. First, inclusion benefits depend on use, not just o
 H1('3. Methodology')
 P("The study combines a secondary analysis of survey microdata with a focused review of institutional documents and a scenario-based financial model. "
   "A quantitative, observational design was chosen because the research questions concern the distribution of, and association between, adoption and reported exposure in a national population; "
-  "an experiment or interview study was not feasible within a term project. Each choice is justified below.", align='j')
+  "an experiment or interview study of our own was not feasible within a term project, so published interview studies are used as secondary evidence. Each choice is justified below.", align='j')
 
 H2('3.1 Research design')
-P("The design is cross-sectional, observational and descriptive-analytical. It has five components: (i) weighted descriptive statistics and subgroup comparisons for RQ1; (ii) an exploratory weighted logistic regression for RQ2 and a weighted comparison of sending money by lock status for RQ3; (iii) a side-by-side comparison of payment use and device protection by group for RQ4; (iv) a peer-economy comparison of published Findex aggregates and a qualitative analysis of documents and public app reviews for RQ1 and RQ5; and (v) a deterministic, assumption-based financial model with scenarios and sensitivity analysis for RQ6. "
+P("The design is cross-sectional, observational and descriptive-analytical. It has five components: (i) weighted descriptive statistics and subgroup comparisons for RQ1; (ii) an exploratory weighted logistic regression for RQ2 and a weighted comparison of sending money by lock status for RQ3; (iii) a side-by-side comparison of payment use and device protection by group for RQ4; (iv) a peer-economy comparison of published Findex aggregates and a qualitative analysis of documents, public app reviews and published interview studies for RQ1 and RQ5; and (v) a deterministic, assumption-based financial model with scenarios and sensitivity analysis for RQ6. "
   "**Justification:** a population survey is the only available source that records adoption and exposure for the same adults; scenario modelling is the standard way to test the viability of a venture before any commercial data exist.", align='j')
 
 H2('3.2 Sampling method and participants')
@@ -319,13 +327,15 @@ P("The study uses the India file of the Global Findex Database 2025 (survey cond
   "**Justification:** the survey is the standard, publicly available benchmark for financial inclusion and is the only source that links payments to phone-safety items in India.", align='j')
 
 H2('3.3 Data collection methods')
-P("Four data sources were used. (1) **Survey microdata.** The India microdata were downloaded from the World Bank microdata library on 4 November 2026 under its access conditions {fxdata}. "
+P("Six data sources were used. (1) **Survey microdata.** The India microdata were downloaded from the World Bank microdata library on 4 November 2026 under its access conditions {fxdata}. "
   "(2) **Peer-economy aggregates.** Published Global Findex 2025 country values for 2024 (account ownership, mobile phone ownership, phone lock and unsolicited money requests) were retrieved from the World Bank open data API for India, China, Indonesia, Bangladesh, Pakistan, Brazil, South Africa, South Asia, lower-middle-income economies and the world {wdi}; the script fetch_data.py reproduces the download. "
   "(3) **Public app reviews.** The newest English-language reviews in the India Google Play store for PhonePe, Google Pay, Paytm, BHIM and SBI YONO were collected with the google-play-scraper package (up to 3,000 per app; 15,000 retrieved) {reviews}. Only app, date, rating and text were stored; usernames were not, and email addresses and phone numbers in text were masked. "
   "Reviews shorter than 15 characters and duplicates were removed, leaving 5,758 reviews posted between 2 October and 19 November 2026. "
   "(4) **Institutional documents.** Three documents were selected for relevance to trust, shared responsibility and fraud awareness: the World Bank's discussion of trust {wbtrust}, its responsible financial access overview {wbcp} and the Reserve Bank of India's awareness circular {rbi}. "
   "A documented in-app warning feature {gpay}, the national cyber-fraud helpline {mha}, published global aggregates {wbblog} and the NPCI list of live UPI members {npci} were used only for context. "
-  "No interviews, focus groups or surveys of our own were conducted. **Justification:** public microdata and open APIs permit transparent reproduction, and public reviews give unprompted user language that the Findex questionnaire cannot provide.", align='j')
+  "(5) **Apple App Store reviews.** To test whether the Google Play pattern holds on another platform, public customer reviews of the same five apps in the India App Store were retrieved from Apple's customer-review feed {appstore}: 2,090 reviews remained after removing reviews shorter than 15 characters and duplicates, posted between 30 April and 18 November 2026 (the feed returns only the most recent reviews per app, so older reviews of BHIM and SBI YONO are included). Only app, date, rating, version, title and text were stored; reviewer names were not. "
+  "(6) **Published interview studies.** Because we conducted no interviews of our own, five published qualitative studies of Indian digital-payment users, merchants and fraud victims were used as secondary evidence: 26 user interviews with an analysis of official advice {mungara}; 46 scenario-based interviews on fraudulent payment requests {asiaccs}; observations and interviews with 24 low-income merchants and 10 payment agents {jain}; a qualitative study of 50 users in Delhi with 10 institutional stakeholders {microsave}; and a mixed-methods study with 18 interviews, 7 focus groups and a survey of 3,784 users {cis}. They were found through targeted searches of publisher and institutional sites on 20 November 2026 and chosen because they are India-specific, concern fraud, trust or support in digital payments, and are openly accessible. They are not a systematic review. "
+  "We conducted no interviews, focus groups or surveys of our own. **Justification:** public microdata and open APIs permit transparent reproduction, public reviews give unprompted user language that the Findex questionnaire cannot provide, and published interview studies supply the experiences of victims, merchants and institution staff that reviews rarely contain.", align='j')
 
 H2('3.4 Materials and instruments')
 P("Analysis used Python (pandas and numpy for weighted calculations and the logistic model, matplotlib for figures) and python-docx for document production. "
@@ -346,10 +356,12 @@ P("**Descriptive analysis.** A weighted share is 100 × (sum of weights of posit
 P("**Exploratory logistic model.** The outcome is con21 (unsolicited request) among phone owners. Predictors are digital payment use, gender, age (per ten years), education, income quintile, workforce status and urban residence; age and income enter linearly. All 2,145 eligible observations have complete inputs. "
   "The model is estimated by weighted maximum likelihood with an independent-observation sandwich covariance. The public file lacks strata and primary sampling unit identifiers, so the reported intervals are approximate and not design-based.", align='j')
 P("**Peer comparison.** Published aggregates are set beside our India estimates without statistical testing, because sampling errors and country microdata are not available. India's unsolicited-request share is not published in the API, so the value from our microdata (9.4%) is used and marked.", align='j')
-P("**Qualitative analysis.** Two qualitative sources were analysed. First, passages in the three institutional documents {wbtrust,wbcp,rbi} on adoption barriers, protection mechanisms and responsibilities were extracted and grouped into themes. "
+P("**Qualitative analysis.** Four qualitative sources were analysed. First, passages in the three institutional documents {wbtrust,wbcp,rbi} on adoption barriers, protection mechanisms and responsibilities were extracted and grouped into themes. "
   "Second, the 5,758 app reviews were coded in two steps. A dictionary of regular expressions flagged five themes (fraud, scam or unauthorised transactions; money deducted or failed payment; support and complaint handling; account blocking, verification or login barriers; safety and trust language), and a review could carry several themes. "
   "Because keyword matches can mislead, all 118 reviews that matched the fraud keywords were then read in full and assigned to one of seven manually defined categories. A further dictionary counted reviews describing device-lock or security-alert prompts. "
-  "The first pass was done by a single coder. To check consistency, all 118 reviews were then re-classified in a second pass made without sight of the first labels; the two passes agreed on 112 of 118 reviews (94.9%; Cohen's kappa 0.93), and the six disagreements did not change the unauthorised-access total (6 in both passes) or the reward and cashback total (60 against 59). Both passes were AI-assisted and no independent human rater was used, so this shows consistency of the coding rules, not external validity. The full classification and the second-pass labels are supplied so that they can be audited. Review text is treated as unprompted user opinion, not as verified evidence of fraud.", align='j')
+  "The first pass was done by a single coder. To check consistency, all 118 reviews were then re-classified in a second pass made without sight of the first labels; the two passes agreed on 112 of 118 reviews (94.9%; Cohen's kappa 0.93), and the six disagreements did not change the unauthorised-access total (6 in both passes) or the reward and cashback total (60 against 59). Both passes were AI-assisted and no independent human rater was used, so this shows consistency of the coding rules, not external validity. The full classification and the second-pass labels are supplied so that they can be audited. Review text is treated as unprompted user opinion, not as verified evidence of fraud. "
+  "**Apple App Store reviews** were coded with the same dictionary and category scheme; the 57 fraud-keyword reviews were classified in a single pass by one coder with no second pass. "
+  "**Published studies.** For each of the five published studies we extracted the findings on adoption, scams, trust, support and redress and mapped them to eight themes defined from our research questions (S1 to S8, Table " + str(T['sthemes']) + "). A theme was recorded for a study only when its text reported it, and counts are of studies (maximum five), not of respondents. Extraction was done by one coder from the full text of four studies and from the publisher's summary page for {cis}; no participant quotations are reproduced.", align='j')
 P("**Financial model.** The financial model is deterministic and illustrative. No input is estimated from Findex. Amounts are in INR lakh (1 lakh = INR 100,000). Table " + str(T['fin']) + " lists the base assumptions. "
   "Three scenarios (conservative, base, optimistic) assume zero starting institutions, linear growth within each year, no churn and constant scenario pricing of INR 40,000, 50,000 and 60,000 per month. "
   "Annual revenue = 12 × average institutions × monthly fee. Annual cost = fixed cost + 12 × average institutions × monthly variable cost + new institutions × acquisition cost. Fixed cost grows 20% per year. Tax, interest, depreciation and prelaunch spending are excluded from operating results.", align='j')
@@ -368,9 +380,9 @@ P("**Justification:** weighting is required for population statements; an adjust
 
 H2('3.6 Ethical considerations')
 P("The study uses de-identified, publicly released microdata under the World Bank's access terms; no attempt was made to identify respondents, and no personal data were collected. Raw data are not redistributed with this paper. "
-  "App reviews are public; no usernames were stored, and short quotations are anonymous. Responses on unsolicited requests are described as reports, not verified fraud, and the model is not presented as a customer risk score or as grounds for price discrimination. The commercial figures are labelled illustrative, and no partner, investor or willingness-to-pay is claimed. "
+  "App reviews from both stores are public; no usernames were stored, and short quotations are anonymous. The published interview studies are cited and summarised, not reproduced. Responses on unsolicited requests are described as reports, not verified fraud, and the model is not presented as a customer risk score or as grounds for price discrimination. The commercial figures are labelled illustrative, and no partner, investor or willingness-to-pay is claimed. "
   "Any future interviews or pilots would require informed consent and review, and would not collect account credentials.", align='j')
-P("**Justification summary:** each method links to a research question: weighted descriptives (RQ1 and RQ4), adjusted association (RQ2), lock-status comparison (RQ3), review coding (RQ5), scenario and sensitivity modelling (RQ6), with ethics and limits stated so that conclusions stay within what the data can support.", align='j')
+P("**Justification summary:** each method links to a research question: weighted descriptives (RQ1 and RQ4), adjusted association (RQ2), lock-status comparison (RQ3), review coding and the secondary synthesis (RQ5), scenario and sensitivity modelling (RQ6), with ethics and limits stated so that conclusions stay within what the data can support.", align='j')
 
 # ================================================================= 4 RESULTS
 H1('4. Results')
@@ -552,6 +564,43 @@ table('manual', 'Manual classification of the 118 fraud-keyword reviews', [
 P("A separate dictionary found 104 reviews (1.8%) describing device-lock or security-alert prompts, 86 for BHIM and 18 for SBI YONO, with a mean rating of 1.88. "
   "Typical wording reports the app asking the user to enable a device lock that is already set.", align='j')
 
+H2('4.10 Apple App Store reviews')
+P("The App Store dataset contains 2,090 reviews: BHIM 499, SBI YONO 493, Paytm 400, Google Pay 370 and PhonePe 328, posted between 30 April and 18 November 2026. The mean rating was 3.31, against 2.90 on Google Play. At least one theme matched 20.7% of reviews. "
+  "Reviews matching the fraud keywords numbered 57 (2.7%) and had a mean rating of 1.51, against 3.36 for the other reviews. Table " + str(T['ios']) + " sets the five themes beside the Google Play shares.", align='j')
+table('ios', 'Keyword themes in 2,090 App Store reviews, with Google Play shares for comparison', [
+    ['Theme', 'App Store reviews', 'App Store share', 'Google Play share', 'App Store mean rating'],
+    ['Fraud, scam or unauthorised transactions', '57', '2.7%', '2.0%', '1.51'],
+    ['Money deducted or failed payment', '32', '1.5%', '2.3%', '1.41'],
+    ['Support and complaint handling', '133', '6.4%', '5.3%', '1.55'],
+    ['Account blocking, verification or login barriers', '162', '7.8%', '6.3%', '1.80'],
+    ['Safety and trust language', '134', '6.4%', '5.2%', '3.99'],
+], [2.4, 0.9, 0.9, 1.0, 1.0], note="Source: authors' keyword coding of {appstore}; Google Play shares from Table " + str(T['themes']) + ". The platforms were sampled over different windows (App Store 30 April to 18 November, Google Play 2 October to 19 November 2026). A review can match several themes.")
+P("Of the 57 fraud-keyword App Store reviews, manual reading assigned 17 (29.8%) to rewards, cashback or offers not honoured, 11 (19.3%) to money debited, failed payments or missing refunds, 10 (17.5%) to blocked accounts, mis-selling or poor grievance handling, "
+  "7 (12.3%) to spam, permissions, privacy or intrusive security controls, 6 (10.5%) to general accusations without an incident, 4 (7.0%) to praise or no complaint, and 2 (3.5%) to unauthorised access, theft or hacking, reported or feared. "
+  "The two reviews of unauthorised access or theft are 0.1% of all 2,090 App Store reviews. This classification was made in one pass by one coder.", align='j')
+
+H2('4.11 Published qualitative studies')
+P("Five published studies were analysed as secondary evidence (Table " + str(T['studies']) + "). Table " + str(T['sthemes']) + " shows which of eight themes each study reports. Counts are of studies, not respondents, and the figures quoted are those reported by the study authors.", align='j')
+table('studies', 'Published qualitative studies used as secondary evidence', [
+    ['Study', 'Design and sample', 'Setting and year'],
+    ['Mungara et al. {mungara}', '26 semi-structured interviews with UPI users; content analysis of 16 official security information sources', 'India; 2025'],
+    ['Bajaj et al. {asiaccs}', 'Scenario-based semi-structured interviews with 46 participants testing interface nudges against fraudulent payment requests', 'India; 2026'],
+    ['Jain et al. {jain}', 'Observations and interviews with 24 low-income merchants and 10 payment agents', 'India; 2021'],
+    ['Aadil et al. {microsave}', 'Qualitative study with 50 digital financial service users and consultations with 10 cyber-cell and bank officials; percentages indicative, small sample', 'Delhi and other sites; 2023'],
+    ['Sengupta et al. {cis}', 'Survey of 3,784 users, 18 in-depth interviews and 7 focus groups; purposively weighted towards marginalised groups', 'India; 2025'],
+], [1.0, 4.0, 1.5], note="Source: authors' summary of the cited studies.")
+table('sthemes', 'Themes reported by the published studies (counts are of studies)', [
+    ['Theme', 'Studies reporting', 'Count', 'Reported detail'],
+    ['S1 Social engineering through calls, messages, links, QR codes or OTP requests', '{mungara,asiaccs,jain,microsave}', '4 of 5', 'Among 50 respondents, 32% were deceived into sharing an OTP, 24% had UPI-related fraud and 20% link phishing (indicative) {microsave}; 12 of 24 merchants reported fake payment confirmations and 3 fake QR stickers {jain}'],
+    ['S2 Trust in the counterparty, bank or brand shapes decisions', '{mungara,asiaccs,jain,microsave,cis}', '5 of 5', '45 of 46 participants said trust in the receiver matters {asiaccs}; participants preferred bank-integrated apps to stand-alone apps {mungara}; victims lost trust in their provider and some switched {microsave}'],
+    ['S3 Low awareness or digital literacy', '{mungara,asiaccs,jain,microsave,cis}', '5 of 5', '45 of 46 believed low digital literacy raises susceptibility {asiaccs}; victims showed lower awareness, with little link to education or income {microsave}'],
+    ['S4 Weak support, grievance handling or redress', '{mungara,jain,microsave,cis}', '4 of 5', 'Complaints to banks or police recovered partial sums or stayed open {mungara}; merchants struggled with customer care and agent visits arrived about two days late on average {jain}; recovery rates were very low {microsave}; ineffective redress deterred reporting {cis}'],
+    ['S5 Reliance on family, peers or informal channels', '{mungara,jain,microsave,cis}', '4 of 5', 'Family, friends and online search were the main advice sources {mungara}; WhatsApp was the most used channel for fraud information {microsave}; 60% of surveyed net-banking users sought help to complete transactions {cis}'],
+    ['S6 Differences by gender, age or vulnerability', '{asiaccs,microsave,cis}', '3 of 5', 'Participants thought older people more vulnerable {asiaccs}; women hesitated to report without a male relative, and women and elderly victims came to rely on relatives for transactions {microsave}; women and gender minorities faced disproportionate harm after loss {cis}'],
+    ['S7 Protective advice and design cues', '{mungara,asiaccs}', '2 of 5', 'Participants recalled mainly advice not to share OTPs or PINs, and most kept default settings {mungara}; a recipient trust badge was rated highest of four nudges (mean 8.26 of 10, against 4.78 with none) {asiaccs}'],
+    ['S8 Merchant and business-user harms', '{jain,microsave}', '2 of 5', 'Merchants developed protective routines that added work and burden {jain}; business users kept using digital services after fraud but some switched providers {microsave}'],
+], [1.7, 1.2, 0.6, 3.0], note="Source: authors' coding of the five studies. {cis} was coded from the publisher's summary page, the other four from their full text.")
+
 # ================================================================= 5 DISCUSSION
 H1('5. Discussion')
 P("The results answer the research questions as follows. For RQ1, ownership is high (89.0%) but digital use is much lower (48.5%); digital payment use is lower among women and lower-income adults, and device protection is lower among women, older adults and lower-income adults (payment use is highest, not lowest, at ages 60 and above). "
@@ -562,6 +611,12 @@ P("For RQ2, payment users reported more unsolicited requests than non-users, and
   "The device-lock result is similarly descriptive. A lock restricts physical access to a handset but does not protect against deception, which usable-security research shows works through trust and routine rather than technical failure {adams,dhamija,button}; "
   "for RQ3, the higher share of senders among locked phones in Table " + str(T['send']) + " rests on 45 senders and should not be read as a protective or harmful effect of locking. "
   "For RQ4, the largest mismatch is at the oldest ages, where payment use is relatively high (which may include receiving transfers, since the indicator counts receipts) while device protection is lowest; among the youngest the pattern is reversed. Because the two shares use different denominators, this identifies where to test guidance rather than measuring a precise risk gap. For RQ5, the app reviews show that user grievances are dominated by unpaid rewards (about half of fraud-keyword reviews), failed or unrefunded payments and weak support or account-blocking experiences, while reviews describing unauthorised access or theft are very rare (6 of 5,758). Two readings are plausible: genuine scam victims may not write app-store reviews, or the apps' reviewers focus on service failures. The reviews therefore do not measure scam prevalence, but they do show where trust breaks down (refunds, support and verification), which fits the trust and dispute-resolution themes in the documents {wbtrust}. They also show that safety controls can create friction: 104 reviews describe device-lock or security-alert prompts, mostly for one app, so a lock requirement that cannot be met or recognised can block legitimate use. The document review points the same way: guidance that links trust, dispute resolution, shared responsibility and credential protection supports a service built around understandable advice and verified routes to support {wbtrust,wbcp,rbi}. Its accessibility implication (audio, local-language and assisted channels) is our design inference from the group differences in Section 4, not a reported user preference. For RQ6, the model indicates that viability depends mainly on price, support cost and acquisition efficiency, not on the technical concept, in line with the economics of security investment {gl}.", align='j')
+
+P("**Evidence beyond Google Play.** The App Store reviews repeat the Google Play pattern: unpaid rewards, failed payments, grievance handling and spam outnumber reviews of unauthorised access (2 of 2,090), so the finding does not depend on one platform. "
+  "The five published interview studies (Tables " + str(T['studies']) + " and " + str(T['sthemes']) + ") describe a different part of the problem. Social engineering through calls, links, OTP requests, fake payment requests and tampered QR codes appears in four of the five studies, and trust in the counterparty or the bank appears in all five. "
+  "This is consistent with the possibility that people who lose money to scams seldom write app-store reviews: the harms interview participants describe are largely absent from the review data, while support and redress failures appear in both sources. "
+  "Two details bear on the proposed service. Participants in one study rated a recipient trust badge highest of four nudges {asiaccs}, and participants in another preferred bank-integrated apps because problems could be raised with the bank {mungara}; both point to verified cues and verified routes to the institution, which the proposed design includes. "
+  "Family and WhatsApp were prominent information sources in two studies {microsave,mungara}, which suggests testing distribution through those channels. These studies are secondary evidence from convenience or purposive samples, were not designed to answer our questions, and say nothing about willingness to pay.", align='j')
 
 H2('5.1 Academic implications')
 P("The study connects two literatures that are usually kept apart: the economics of financial inclusion {suri,jack,dks17} and the behavioural study of scams {dhamija,button,bada}. "
@@ -627,7 +682,7 @@ table('risk', 'Key venture risks and responses', [
 H2('5.4 Future scope and limitations')
 P("**Limitations.** The survey is cross-sectional and self-reported, so it cannot establish causation, timing or verified losses. Unsolicited requests are not confirmed fraud, and sending money is not a measured loss amount. "
   "Phone-owner and request-recipient analyses concern subsets of the sample, and subgroup cells such as the 45 senders are small. Intervals are approximate because design variables are missing. The data describe individuals, not enterprises. "
-  "The qualitative component rests on a secondary document review and on public app reviews, which are self-selected, cover seven weeks, come from five apps with unequal review counts, are English-language and keyword-coded by a single coder with only an AI-assisted consistency check in place of an independent human second rater, and are not linked to Findex respondents. No interviews or surveys of our own were conducted. Peer values are published aggregates without sampling errors. All financial inputs are unvalidated assumptions with no churn, tax or financing flows.", align='j')
+  "The qualitative component rests on a secondary document review and on public app reviews, which are self-selected, cover seven weeks, come from five apps with unequal review counts, are English-language and keyword-coded by a single coder with only an AI-assisted consistency check in place of an independent human second rater, and are not linked to Findex respondents. We conducted no interviews or surveys of our own: the interview evidence is secondary, drawn from five studies we selected through targeted searches, and the App Store reviews were coded by one coder without a second pass. Peer values are published aggregates without sampling errors. All financial inputs are unvalidated assumptions with no churn, tax or financing flows.", align='j')
 P("**Future scope.** Priority extensions are (i) consent-based interviews with merchants, first-time users and institutional budget owners to test willingness to pay; (ii) design-based estimation if strata and cluster identifiers become available; (iii) pooling Findex rounds {singer15,fx17,fx25} and extending the comparison from published aggregates to country-level microdata for peer economies; "
   "(iv) an evaluated pilot with pre-specified outcomes and a power calculation before treating verified loss as an outcome {burke}; and (v) extending the venture model with churn, taxes, receivable timing and month-by-month cash flow.", align='j')
 
@@ -637,11 +692,11 @@ P("This paper set out to understand how mobile banking inclusion and cybersecuri
   "Payment users reported more unsolicited money requests than non-users (13.1% versus 4.3%), and the association remained after adjustment (odds ratio 3.45). "
   "The literature shows that benefits of digital finance depend on use and trust, and that scams exploit ordinary behaviour; the results are consistent with both ideas, although they do not prove causation.", align='j')
 P("For entrepreneurs and institutions, the evidence supports testing an accessible, institution-funded payment-safety service in a staged pilot. An illustrative model reaches steady-state break-even at eight paying institutions and a three-year surplus in the base case, but the result is highly sensitive to price, support cost, acquisition cost and renewal, and it is not evidence of demand. "
-  "App reviews added that user grievances concern rewards, refunds, support and verification far more than third-party fraud, and a peer comparison placed India near the top on account ownership but below peers on phone ownership. The contribution of the study is therefore a transparent description of where access and safe use diverge, and a validated-assumption-first path from that pattern to a testable venture. Pilot evidence on willingness to pay, retention and effectiveness is the necessary next step.", align='j')
+  "App reviews on both major platforms added that user grievances concern rewards, refunds, support and verification far more than third-party fraud, while five published interview studies describe the social engineering, trust and slow redress that reviews rarely capture, and a peer comparison placed India near the top on account ownership but below peers on phone ownership. The contribution of the study is therefore a transparent description of where access and safe use diverge, and a validated-assumption-first path from that pattern to a testable venture. Pilot evidence on willingness to pay, retention and effectiveness is the necessary next step.", align='j')
 
 # ================================================================= REFERENCES
 H1('References')
-P("Academic references were checked against Crossref bibliographic records on 20 November 2026; institutional web sources were last checked on 7 November 2026. References are numbered in order of first citation.", after=4)
+P("Academic references with DOIs were checked against Crossref bibliographic records on 20 November 2026; other institutional web sources were last checked on 7 November 2026, and the web sources and data added for the App Store and published-study analyses were checked on 20 November 2026. References are numbered in order of first citation.", after=4)
 assert len(order) == len(REFS), set(REFS) - set(order)
 for i, k in enumerate(order, 1):
     p = doc.add_paragraph()

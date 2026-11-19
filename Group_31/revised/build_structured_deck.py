@@ -110,7 +110,7 @@ rqs = [('RQ1', 'How do ownership, digital payment use and device protection diff
        ('RQ2', 'Are payment users more likely to report unsolicited money requests, after adjustment?'),
        ('RQ3', 'Among request recipients, is a device lock linked to fewer reporting that they sent money?'),
        ('RQ4', 'Which groups show the largest gap between payment use and device protection?'),
-       ('RQ5', 'What do public app reviews and institutional documents reveal about fraud grievances, security friction and support?'),
+       ('RQ5', 'What do public app reviews, institutional documents and published interviews reveal about fraud grievances, friction and support?'),
        ('RQ6', 'What price, cost and customer numbers let an institution-funded safety service break even?')]
 for i, (k, q) in enumerate(rqs):
     y = 1.6 + i * 0.8
@@ -139,7 +139,7 @@ stat(s, 4.7, 1.8, 3.9, 'Weighted', 'all percentages use the survey weight; n is 
 stat(s, 8.8, 1.8, 3.9, 'Logistic', 'adjusted model on 2,145 phone owners (approximate intervals)', AMBER)
 bullets(s, 0.6, 3.7, 12.1, 2.9, [
     'Design|weighted descriptives (RQ1, RQ4), adjusted association (RQ2), lock-status comparison (RQ3), document and review coding (RQ5), financial scenarios (RQ6).',
-    'Qualitative|World Bank and RBI documents plus 5,758 public app reviews, keyword-coded and manually classified; no interviews.',
+    'Qualitative|World Bank and RBI documents, 5,758 Google Play and 2,090 App Store reviews, and five published interview studies; no interviews of our own.',
     'Ethics|public de-identified data, results framed as reports not verified fraud, finance figures labelled illustrative.'], 16)
 
 # 6 ---------------------------------------------------------------- results 1
@@ -208,7 +208,7 @@ source(s, 'Published aggregates, no sampling errors; India request share from au
 
 # 9b -------------------------------------------------------------- qualitative
 s = slide('4.8  Results: qualitative review', 'Three themes from institutional guidance',
-          'Secondary document review of World Bank and RBI sources. No interviews or fieldwork. Review coding: one coder, then a blind second pass (112 of 118 agreed, kappa 0.93); no independent human rater.')
+          'Secondary document review of World Bank and RBI sources. No interviews or fieldwork of our own. Review coding: one coder, then a blind second pass (112 of 118 agreed, kappa 0.93); no independent human rater.')
 qs = [('Trust and support', 'World Bank: trust is linked to awareness of risks and timely dispute resolution.'),
       ('Shared responsibility', 'World Bank: consumer protection sits alongside financial capability.'),
       ('Awareness and credentials', 'RBI: awareness campaigns through many channels; protect credentials such as OTPs and PINs.')]
@@ -216,7 +216,7 @@ for i, (h, b) in enumerate(qs):
     x = 0.6 + i * 4.1
     box(s, x, 1.9, 3.9, 3.0, PALE); box(s, x, 1.9, 3.9, 0.08, AMBER)
     text(s, x + 0.2, 2.15, 3.5, 0.9, h, 20, True, NAVY, HEAD); text(s, x + 0.2, 3.2, 3.5, 1.7, b, 15)
-text(s, 0.6, 5.3, 12.1, 1.0, 'Secondary document review only: no interviews, focus groups or respondent comments. Themes were coded by a single coder, checked by a blind second pass (94.9% agreement, AI-assisted), and are interpretive.', 15, False, GREY)
+text(s, 0.6, 5.3, 12.1, 1.0, 'Secondary document review only: no interviews, focus groups or respondent comments of our own. Themes were coded by a single coder, checked by a blind second pass (94.9% agreement, AI-assisted), and are interpretive.', 15, False, GREY)
 
 # 9c -------------------------------------------------------------- reviews
 s = slide('4.9  Results: app reviews', 'App reviews: rewards, refunds and support',
@@ -230,6 +230,21 @@ bullets(s, 8.6, 3.7, 4.2, 2.9, ['Ratings|fraud-keyword reviews average 1.36 star
         'Other themes|support 5.3%, blocking and verification 6.3%, failed payments 2.3%.',
         'Method|keyword coding, then all 118 fraud-keyword reviews read, then re-coded blind (94.9% agreement).'], 13)
 source(s, 'Self-selected public reviews; not a measure of scam prevalence. Source: authors\' coding of Google Play reviews.')
+
+# 9d -------------------------------------------------------------- beyond Google Play
+s = slide('4.10-4.11  Results: more evidence', 'App Store reviews and published interview studies',
+          'App Store: 2,090 reviews, same five apps, 30 Apr to 18 Nov 2026. 57 fraud-keyword reviews: 17 rewards, 11 failed payments, 10 blocked/support, 7 spam, 6 general, 4 praise, 2 unauthorised access. Published studies: Mungara 2025 (26 interviews), Bajaj 2026 (46), Jain 2021 (24 merchants, 10 agents), Aadil 2023 (50 users, 10 officials), Sengupta 2025 (18 interviews, 7 focus groups, survey of 3,784). Secondary evidence, not our interviews.')
+stat(s, 0.6, 1.75, 2.9, '2,090', 'App Store reviews of the same five apps; mean rating 3.31', TEAL)
+stat(s, 3.7, 1.75, 2.9, '2 of 2,090', 'reviews describe unauthorised access or theft (0.1%)', AMBER)
+stat(s, 6.8, 1.75, 2.9, '5', 'published interview studies analysed as secondary evidence', BLUE)
+stat(s, 9.9, 1.75, 2.8, '5 of 5', 'studies report that trust shapes decisions', NAVY)
+bullets(s, 0.6, 3.6, 6.0, 3.0, ['Same pattern on iOS|rewards, failed payments, support and spam outnumber theft reports.',
+        'Scams in interviews|OTP sharing, links, fake payment requests, tampered QR codes (4 of 5 studies).',
+        'Redress|weak support and slow recovery reported in 4 of 5 studies and in the app reviews.'], 15)
+bullets(s, 6.9, 3.6, 5.9, 3.0, ['Design cue|a recipient trust badge rated highest of four nudges (8.26 of 10).',
+        'Channels|family and WhatsApp prominent in two studies: test them for distribution.',
+        'Limit|secondary evidence from small purposive samples; says nothing about willingness to pay.'], 15)
+source(s, 'Counts are of studies, not respondents. Sources: Apple App Store feed; Mungara et al. 2025; Bajaj et al. 2026; Jain et al. 2021; Aadil et al. 2023; Sengupta et al. 2025.')
 
 # 10 --------------------------------------------------------------- discussion
 s = slide('5  Discussion', 'What the results mean, and what they do not',

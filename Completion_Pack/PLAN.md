@@ -6,11 +6,11 @@ Status on 20 Nov 2026: paper (27 pages in the LibreOffice render), 18-slide deck
 |---|---|---|---|---|
 | 1 | Final read of PDF and slides | all three, split by section | 2 to 3 hours | any submission |
 | 2 | Human second coder on review sample | one person not involved in the first pass | 1.5 hours | RQ5 reliability |
-| 3 | Interviews (8 to 10) | all three, about 3 each | 4 to 6 days incl. recruiting | primary qualitative work |
+| 3 | Own interviews (8 to 10) - OPTIONAL | all three, about 3 each | 4 to 6 days incl. recruiting | only if the course demands primary qualitative work |
 | 4 | Fold results into paper and deck, rebuild | one person | 2 to 3 hours | after 2 and 3 |
 | 5 | Submit | one member | 30 minutes | |
 
-If the deadline is close, do 1 and 2 only and submit; the paper already states honestly that no interviews were done. Do 3 only if the course expects primary qualitative work or you have at least a week.
+If the deadline is close, do 1 and 2 only and submit. Since 20 Nov 2026 the paper also has secondary qualitative evidence (App Store reviews and five published interview studies, Sections 4.10 and 4.11), so it no longer relies on reviews alone; it still says honestly that the group ran no interviews. Do 3 only if the course demands primary qualitative work and you have at least a week.
 
 ## Step 1: Final read (see PROOFREAD.md)
 - Assign sections: Rushal = Sections 1 to 3 and references; Vichanshu = Section 4 and tables; Sudhanshu = Section 5, 6, abstract and slides.
@@ -27,7 +27,7 @@ If the deadline is close, do 1 and 2 only and submit; the paper already states h
 1. Day 0: ask the TA whether interviews need formal ethics approval; read `INTERVIEW_PROTOCOL.md` together; each member practises the guide once.
 2. Days 1 to 4: recruit and interview. Target 8 to 10: 3 merchants, 4 users (include women and 55+), 1 to 3 institution staff. Fill `interview_notes_template.csv` the same day.
 3. Day 5: code themes with `THEME_CODEBOOK.md`; two members independently code 3 interviews and compare. Run `tally_themes.py`.
-4. Day 6: use `PAPER_INTEGRATION_TEMPLATE.md` to write the new Methodology, Results 4.10, Discussion and limitation text. Update every place that says no interviews were conducted: abstract (if mentioned), 3.1, 3.3, 3.6, 5.4, the deck (slides on qualitative method and limits), `CONTEXT.md`, `README.txt`. Run `grep -rn -i "no interviews" Group_31/revised/*.py` to find them.
+4. Day 6: use `PAPER_INTEGRATION_TEMPLATE.md` to write the new Methodology, Results 4.12, Discussion and limitation text. Update every place that says no interviews were conducted: abstract (if mentioned), 3.1, 3.3, 3.6, 5.4, the deck (slides on qualitative method and limits), `CONTEXT.md`, `README.txt`. Run `grep -rn -i "no interviews" Group_31/revised/*.py` to find them.
 5. Only claim what was done. If you complete fewer than 6 interviews, call them "exploratory".
 
 ## Step 4: Rebuild

@@ -24,7 +24,7 @@ The TA confirmed there is **no page limit** and to use a **standard citation sty
 | `Completion_Pack/` | Plan to finish (`PLAN.md`), proofreading record, human second-coder pack (`second_coder/`) and interview pack (`interviews/`) |
 | `Friend/` | Friend's submission, reference only |
 
-Final deliverables: `Group_31_Final_Submission/Research_Report.pdf` (27 pages in the LibreOffice render, 25 in the earlier Word render; 18 tables, 6 figures, 47 references) and `slides/Group_31_Presentation_Final.pptx` (18 slides with speaker notes).
+Final deliverables: `Group_31_Final_Submission/Research_Report.pdf` (30 pages in the LibreOffice render; 21 tables, 6 figures, 53 references) and `slides/Group_31_Presentation_Final.pptx` (19 slides with speaker notes).
 Rebuild commands (run from `C:\Users\Sudhanshu\Desktop\EF`): `python Group_31/revised/build_structured_paper.py` then export the DOCX to PDF with Word; `python Group_31/revised/build_structured_deck.py`. The final folder was assembled by a helper script kept in the session scratchpad, not in the project.
 
 ## 4. Research questions (as in the paper)
@@ -70,6 +70,11 @@ Rebuild commands (run from `C:\Users\Sudhanshu\Desktop\EF`): `python Group_31/re
 ## 7c. Fixed 20 Nov 2026 (third pass)
 - Discussion RQ1 wrongly said digital use was lower for older adults (Table 7: payment use is highest at 60+); corrected. Stray "and" removed in 3.1.
 - Interviews and a human second coder are NOT done: they need people. Ready-to-use packs and the step-by-step plan are in `Completion_Pack/`. The paper still states that no interviews were conducted.
+
+## 7d. Secondary qualitative evidence added 20 Nov 2026 (fourth pass)
+- **Why:** the group could not run interviews. Reddit blocks scripted access (not bypassed), so no Reddit data. Instead: (a) **Apple App Store reviews** of the same five apps via Apple's public customer-review feed (`scripts/fetch_appstore.py`, `scripts/analysis_appstore.py`; 2,090 reviews, 30 Apr to 18 Nov 2026; 57 fraud-keyword reviews classified by one coder, no second pass; 2 describe unauthorised access, 0.1%); (b) **five published qualitative studies** analysed as secondary evidence: Mungara et al. 2025 (USENIX Security, 26 interviews), Bajaj et al. 2026 (ASIA CCS, 46 interviews), Jain et al. 2021 (COMPASS, 24 merchants and 10 agents), Aadil et al. 2023 (MicroSave policy brief 28, 50 users and 10 officials), Sengupta et al. 2025 (CIS India, 18 interviews, 7 focus groups, survey of 3,784).
+- **In the paper:** Methodology 3.3 sources 5 and 6, 3.5; Results 4.10 (Table 15) and 4.11 (Tables 16 and 17: eight themes S1 to S8, counts of studies not respondents); Discussion "Evidence beyond Google Play"; abstract, RQ5, limitations and conclusion updated. Provenance in `results/published_studies*.csv` and `results/appstore_*`.
+- **Caveats:** CIS India study was coded from its publisher summary page only, not the full report. The GSMA India Consumer Scam Report 2025 was read but not used (it is a survey, and the PDF carries a DRAFT watermark). Theme coding is by one coder (AI-assisted); the group should check Table 17 against the papers. One reference author is named Sah (R. Sah, MicroSave) because that is how the source is credited; it is not a group member. Tables 18 to 21 were renumbered (canvas, alternatives, seed, risks).
 
 ## 8. Open items (human steps)
 1. Read the final PDF and slides once: names, dates, numbers, anything that reads oddly or cannot be defended.
