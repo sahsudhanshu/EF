@@ -1,0 +1,37 @@
+extra_design_effect,variable,odds_ratio,low_95,high_95,excludes_1
+1.0,Intercept,0.116,0.056,0.241,True
+1.0,Digital payment,3.448,2.244,5.298,True
+1.0,Female,0.466,0.316,0.689,True
+1.0,Age per 10 years,0.923,0.824,1.035,False
+1.0,Secondary education,0.836,0.558,1.252,False
+1.0,Tertiary education,1.696,1.028,2.799,True
+1.0,Income quintile,0.906,0.793,1.034,False
+1.0,In workforce,0.893,0.606,1.318,False
+1.0,Urban,0.91,0.635,1.304,False
+1.5,Intercept,0.116,0.047,0.285,True
+1.5,Digital payment,3.448,2.037,5.835,True
+1.5,Female,0.466,0.289,0.752,True
+1.5,Age per 10 years,0.923,0.803,1.062,False
+1.5,Secondary education,0.836,0.509,1.371,False
+1.5,Tertiary education,1.696,0.918,3.133,False
+1.5,Income quintile,0.906,0.77,1.066,False
+1.5,In workforce,0.893,0.555,1.438,False
+1.5,Urban,0.91,0.585,1.414,False
+2.0,Intercept,0.116,0.041,0.327,True
+2.0,Digital payment,3.448,1.878,6.33,True
+2.0,Female,0.466,0.268,0.809,True
+2.0,Age per 10 years,0.923,0.786,1.085,False
+2.0,Secondary education,0.836,0.472,1.48,False
+2.0,Tertiary education,1.696,0.835,3.445,False
+2.0,Income quintile,0.906,0.75,1.093,False
+2.0,In workforce,0.893,0.516,1.548,False
+2.0,Urban,0.91,0.547,1.513,False
+3.0,Intercept,0.116,0.033,0.413,True
+3.0,Digital payment,3.448,1.638,7.256,True
+3.0,Female,0.466,0.237,0.916,True
+3.0,Age per 10 years,0.923,0.758,1.125,False
+3.0,Secondary education,0.836,0.415,1.683,False
+3.0,Tertiary education,1.696,0.712,4.04,False
+3.0,Income quintile,0.906,0.719,1.14,False
+3.0,In workforce,0.893,0.456,1.752,False
+3.0,Urban,0.91,0.488,1.697,False

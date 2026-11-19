@@ -12,7 +12,7 @@ data/                      wdi_peers.csv, app_reviews.csv, appstore_reviews.csv 
 figures/                   The six charts used in the paper
 results/                   Weighted results, logistic model, audit file, review coding (first pass and blind second pass), peer table, finance model outputs
 scripts/                   analysis_group31.py (survey), analysis_extra.py (peers + reviews), manual_coding_fraud_reviews.py,
-                           analysis_appstore.py (App Store reviews), revision_finance.py (finance model), build_structured_paper.py / build_structured_deck.py (document builders)
+                           analysis_appstore.py (App Store reviews), analysis_sensitivity.py (design-effect sensitivity), revision_finance.py (finance model), build_structured_paper.py / build_structured_deck.py (document builders)
 
 DATA NOT INCLUDED
 The India household microdata (World Bank, India - The Global Findex Database 2025, 2024 survey, ref. IND_2024_FINDEX_v02_M,
@@ -25,3 +25,6 @@ snapshot (2 Oct to 19 Nov 2026); data/app_reviews.csv holds the snapshot used in
 
 SECONDARY QUALITATIVE EVIDENCE
 No interviews were conducted by the group. results/published_studies.csv and results/published_studies_themes.csv record the five published interview studies and the eight themes used in Section 4.11; results/appstore_* hold the App Store review coding. The App Store feed returns only the newest reviews, so re-running fetch_appstore.py gives different counts from the paper's snapshot (30 Apr to 18 Nov 2026).
+
+DESIGN-EFFECT SENSITIVITY
+results/Group_31_design_sensitivity.csv shows the logistic-model intervals after inflating the variance for assumed extra design effects of 1, 1.5, 2 and 3 (the public file has no strata or cluster identifiers). It needs the microdata file to re-run.

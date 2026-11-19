@@ -1,0 +1,2 @@
+n=2145; Kish design effect from weights=1.429; effective n=1501
+Intervals inflate the sandwich variance by the stated extra design effect (assumed clustering); not design-based.

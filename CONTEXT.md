@@ -76,6 +76,14 @@ Rebuild commands (run from `C:\Users\Sudhanshu\Desktop\EF`): `python Group_31/re
 - **In the paper:** Methodology 3.3 sources 5 and 6, 3.5; Results 4.10 (Table 15) and 4.11 (Tables 16 and 17: eight themes S1 to S8, counts of studies not respondents); Discussion "Evidence beyond Google Play"; abstract, RQ5, limitations and conclusion updated. Provenance in `results/published_studies*.csv` and `results/appstore_*`.
 - **Caveats:** CIS India study was coded from its publisher summary page only, not the full report. The GSMA India Consumer Scam Report 2025 was read but not used (it is a survey, and the PDF carries a DRAFT watermark). Theme coding is by one coder (AI-assisted); the group should check Table 17 against the papers. One reference author is named Sah (R. Sah, MicroSave) because that is how the source is credited; it is not a group member. Tables 18 to 21 were renumbered (canvas, alternatives, seed, risks).
 
+## 7e. Weaknesses addressed 20 Nov 2026 (fifth pass)
+- **CIS India study** now coded from its full 128-page report (S1 becomes 5 of 5; survey figures added to Table 17).
+- **NPCI count replaced:** the undated 758 figure is gone. The paper now uses the Government of India (PIB) UPI factsheet of 24 Aug 2026: 741 live banks in July 2026; Year 3 shares 2.4%, 5.4%, 8.8%.
+- **Intervals:** `scripts/analysis_sensitivity.py` adds a Kish design effect (1.43, effective n 1,501) and variance inflation for assumed extra design effects 1.5, 2, 3. Payment-user and gender results survive; tertiary education does not (Section 4.3, limitations).
+- **App Store coding:** a separate AI instance re-coded the 57 reviews blind: 82.5% agreement, kappa 0.78; unauthorised access 2 vs 4 (0.1% vs 0.2%).
+- **Notebook** now has App Store and sensitivity cells (outputs stored). **TA note** on progress-report differences: `Completion_Pack/TA_NOTE.md`; the paper also states the differences (1.4, 3.3).
+- **Still not fixable by software:** all review coding is AI-assisted (no human rater yet), no own fieldwork, all finance inputs are assumptions.
+
 ## 8. Open items (human steps)
 1. Read the final PDF and slides once: names, dates, numbers, anything that reads oddly or cannot be defended.
 2. Audit the review classification file (and optionally have a second person re-code a sample).

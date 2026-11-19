@@ -233,13 +233,13 @@ source(s, 'Self-selected public reviews; not a measure of scam prevalence. Sourc
 
 # 9d -------------------------------------------------------------- beyond Google Play
 s = slide('4.10-4.11  Results: more evidence', 'App Store reviews and published interview studies',
-          'App Store: 2,090 reviews, same five apps, 30 Apr to 18 Nov 2026. 57 fraud-keyword reviews: 17 rewards, 11 failed payments, 10 blocked/support, 7 spam, 6 general, 4 praise, 2 unauthorised access. Published studies: Mungara 2025 (26 interviews), Bajaj 2026 (46), Jain 2021 (24 merchants, 10 agents), Aadil 2023 (50 users, 10 officials), Sengupta 2025 (18 interviews, 7 focus groups, survey of 3,784). Secondary evidence, not our interviews.')
+          'App Store: 2,090 reviews, same five apps, 30 Apr to 18 Nov 2026. 57 fraud-keyword reviews: 17 rewards, 11 failed payments, 10 blocked/support, 7 spam, 6 general, 4 praise, 2 unauthorised access (4 in a blind second pass, 82.5% agreement). Published studies: Mungara 2025 (26 interviews), Bajaj 2026 (46), Jain 2021 (24 merchants, 10 agents), Aadil 2023 (50 users, 10 officials), Sengupta 2025 (18 interviews, 7 focus groups, survey of 3,784). Secondary evidence, not our interviews.')
 stat(s, 0.6, 1.75, 2.9, '2,090', 'App Store reviews of the same five apps; mean rating 3.31', TEAL)
-stat(s, 3.7, 1.75, 2.9, '2 of 2,090', 'reviews describe unauthorised access or theft (0.1%)', AMBER)
+stat(s, 3.7, 1.75, 2.9, '2 to 4', 'of 2,090 reviews describe unauthorised access or theft (0.1-0.2%)', AMBER)
 stat(s, 6.8, 1.75, 2.9, '5', 'published interview studies analysed as secondary evidence', BLUE)
 stat(s, 9.9, 1.75, 2.8, '5 of 5', 'studies report that trust shapes decisions', NAVY)
 bullets(s, 0.6, 3.6, 6.0, 3.0, ['Same pattern on iOS|rewards, failed payments, support and spam outnumber theft reports.',
-        'Scams in interviews|OTP sharing, links, fake payment requests, tampered QR codes (4 of 5 studies).',
+        'Scams in interviews|OTP sharing, links, impersonation, fake payment requests, tampered QR codes (5 of 5 studies).',
         'Redress|weak support and slow recovery reported in 4 of 5 studies and in the app reviews.'], 15)
 bullets(s, 6.9, 3.6, 5.9, 3.0, ['Design cue|a recipient trust badge rated highest of four nudges (8.26 of 10).',
         'Channels|family and WhatsApp prominent in two studies: test them for distribution.',
