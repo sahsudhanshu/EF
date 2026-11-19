@@ -5,12 +5,15 @@
 **Fixed in this pass**
 1. Discussion (RQ1) said digital use was lower among older adults. Table 7 shows payment use is highest at ages 60+ (56.6%); only device protection is lowest there. Sentence corrected.
 2. Methodology 3.1 had a stray "and" in the list of components.
-3. Surname: the progress report PDF in the repo still said "Sudhanshu Sah". A corrected copy was built: `Group_31_Term_Paper_Progress_Report_corrected.pdf` (the original is untouched).
+3. Slide 3 listed five research questions with RQ5 = break-even; the paper has six (RQ5 = reviews and documents, RQ6 = break-even). Slide 3 and the method slide now match the paper.
+4. Surname: the progress report PDF in the repo still said "Sudhanshu Sah". A corrected copy was built: `Group_31_Term_Paper_Progress_Report_corrected.pdf` (the original is untouched).
+
+**Slides:** all 18 slides were rendered and inspected visually on 20 Nov 2026; no overflow or clipping seen.
 
 **Needs human eyes**
 - Word layout: open the DOCX in Word; check table breaks and figure placement (the PDF here was rendered by LibreOffice, 27 pages, not Word).
 - Slides: open the PPTX in PowerPoint and check text fit on every slide; the checks here were rendering only.
-- Reference list: 47 entries were checked against Crossref on 20 Nov 2026; spot-check three DOIs by clicking them.
+- Reference list: all 35 DOI links were tested on 20 Nov 2026. 34 are registered in Crossref and the World Bank microdata DOI resolves to the World Bank catalogue. Several publisher sites return 403 to scripts but open in a normal browser; click two or three yourselves.
 - Anything in the paper that names your own work (the NPCI count of about 758 UPI entries comes from a search snippet with no stated date: decide whether to keep it).
 - Wording you are not comfortable defending. Everything in the paper is yours to defend.
 

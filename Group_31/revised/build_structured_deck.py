@@ -105,16 +105,17 @@ bullets(s, 7.5, 2.45, 4.9, 3.8, [
     'Reported exposure|an unsolicited call or message asking for money. Not verified fraud.'], 15)
 
 # 3 ---------------------------------------------------------------- RQs
-s = slide('1  Introduction', 'Five research questions', 'Walk through RQ1-RQ5 and note where each is answered.')
+s = slide('1  Introduction', 'Six research questions', 'Walk through RQ1-RQ6 and note where each is answered.')
 rqs = [('RQ1', 'How do ownership, digital payment use and device protection differ by gender, age and income?'),
        ('RQ2', 'Are payment users more likely to report unsolicited money requests, after adjustment?'),
        ('RQ3', 'Among request recipients, is a device lock linked to fewer reporting that they sent money?'),
        ('RQ4', 'Which groups show the largest gap between payment use and device protection?'),
-       ('RQ5', 'What price, cost and customer numbers let a bank-funded safety service break even?')]
+       ('RQ5', 'What do public app reviews and institutional documents reveal about fraud grievances, security friction and support?'),
+       ('RQ6', 'What price, cost and customer numbers let an institution-funded safety service break even?')]
 for i, (k, q) in enumerate(rqs):
-    y = 1.75 + i * 0.97
-    box(s, 0.6, y, 1.1, 0.8, TEAL if i < 4 else AMBER); text(s, 0.6, y + 0.15, 1.1, 0.5, k, 20, True, WHITE, HEAD, PP_ALIGN.CENTER)
-    box(s, 1.8, y, 10.9, 0.8, PALE); text(s, 2.0, y + 0.12, 10.5, 0.6, q, 17, False, INK, anchor=MSO_ANCHOR.MIDDLE)
+    y = 1.6 + i * 0.8
+    box(s, 0.6, y, 1.1, 0.68, TEAL if i < 5 else AMBER); text(s, 0.6, y + 0.1, 1.1, 0.5, k, 20, True, WHITE, HEAD, PP_ALIGN.CENTER)
+    box(s, 1.8, y, 10.9, 0.68, PALE); text(s, 2.0, y + 0.06, 10.5, 0.56, q, 16, False, INK, anchor=MSO_ANCHOR.MIDDLE)
 
 # 4 ---------------------------------------------------------------- literature
 s = slide('2  Literature review', '35 academic sources point to one gap',
@@ -137,7 +138,7 @@ stat(s, 0.6, 1.8, 3.9, '3,000', 'adults aged 15+, India Global Findex 2024 (199 
 stat(s, 4.7, 1.8, 3.9, 'Weighted', 'all percentages use the survey weight; n is unweighted', BLUE)
 stat(s, 8.8, 1.8, 3.9, 'Logistic', 'adjusted model on 2,145 phone owners (approximate intervals)', AMBER)
 bullets(s, 0.6, 3.7, 12.1, 2.9, [
-    'Design|weighted descriptives (RQ1, RQ4), adjusted association (RQ2), lock-status comparison (RQ3), financial scenarios (RQ5).',
+    'Design|weighted descriptives (RQ1, RQ4), adjusted association (RQ2), lock-status comparison (RQ3), document and review coding (RQ5), financial scenarios (RQ6).',
     'Qualitative|World Bank and RBI documents plus 5,758 public app reviews, keyword-coded and manually classified; no interviews.',
     'Ethics|public de-identified data, results framed as reports not verified fraud, finance figures labelled illustrative.'], 16)
 
