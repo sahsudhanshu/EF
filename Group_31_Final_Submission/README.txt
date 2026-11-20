@@ -1,9 +1,9 @@
 GROUP 31 - ENTREPRENEURIAL FINANCE TERM PAPER
 Mobile Banking: Financial Inclusion vs Cybersecurity Risks
-Authors: Rushal Verma (IIT2024045), Vichanshu Raj (IIT2024083), Sudhanshu (IIT2024081)
+Authors: Rushal Verma (IIT2024045), Sudhanshu (IIT2024081), Vichanshu Raj (IIT2024083)
 
 THE SUBMISSION
-Research_Report.pdf        The paper, 15 pages with 9 figures (same file as report/Group_31_Research_Paper.pdf)
+Research_Report.pdf        The paper, 16 pages with 9 figures (APA author-year citations) (same file as report/Group_31_Research_Paper.pdf)
 report/                    The paper as PDF and editable Word file (TA's paper structure; Times New Roman 12)
 slides/                    Presentation, 19 slides with speaker notes (PPTX and PDF)
 
@@ -27,3 +27,5 @@ NOTES
   a further second coder (a person who used software, including AI tools, as an aid but made each coding decision, as reported by the group) re-coded 122 App Store and bank-app reviews.
   The private answer key is not part of this folder.
 - Finance inputs are illustrative assumptions, not findings.
+
+UPDATE (final audit): scripts/analysis_lock_prompts.py now produces results/review_device_lock_prompts.json (the 104 device-lock / security-alert prompt reviews in Section 4.5), and results/hinglish_extra_coded.csv stores the single-coder classification of the 41 Hindi/Hinglish extra reviews (so the 6 to 12 sensitivity figure can be audited).

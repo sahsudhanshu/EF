@@ -97,10 +97,10 @@ def colour(series, rgbs):
 # 1 ---------------------------------------------------------------- title
 s = prs.slides.add_slide(blank); N[0] += 1
 box(s, 0, 0, 13.333, 7.5, NAVY); box(s, 0.9, 4.35, 2.2, 0.06, TEAL)
-text(s, 0.9, 1.3, 11.5, 1.8, 'Mobile Banking: Financial Inclusion vs Cybersecurity Risks', 42, True, WHITE, HEAD)
-text(s, 0.9, 3.25, 11.5, 1.0, "Evidence from India's 2024 Global Findex, public app reviews and published interview studies, with implications for entrepreneurs", 20, False, LIGHT)
-text(s, 0.9, 4.7, 11.5, 1.2, 'Rushal Verma (IIT2024045)   |   Vichanshu Raj (IIT2024083)   |   Sudhanshu (IIT2024081)', 17, False, WHITE)
-text(s, 0.9, 5.25, 11.5, 0.5, 'Group 31  |  Entrepreneurial Finance  |  20 November 2026', 15, False, LIGHT)
+text(s, 0.9, 1.3, 11.5, 1.8, 'Mobile Banking: Financial Inclusion vs Cybersecurity Risks in India', 42, True, WHITE, HEAD)
+text(s, 0.9, 3.25, 11.5, 1.0, "Evidence from the Global Findex Database 2025 (India survey, fielded in 2024), public app reviews and published interview studies, with implications for entrepreneurs", 20, False, LIGHT)
+text(s, 0.9, 4.7, 11.5, 1.2, 'Rushal Verma (IIT2024045)   |   Sudhanshu (IIT2024081)   |   Vichanshu Raj (IIT2024083)', 17, False, WHITE)
+text(s, 0.9, 5.25, 11.5, 0.5, 'Group 31  |  Entrepreneurial Finance', 15, False, LIGHT)
 s.notes_slide.notes_text_frame.text = "Introduce the question in the title: does the spread of mobile banking in India come with higher cybersecurity risk, and for whom? We combine a national survey, 14,088 app reviews and five published interview studies, and end with a venture proposal."
 
 # 2 ---------------------------------------------------------------- introduction
@@ -142,7 +142,7 @@ text(s, 0.85, 5.45, 11.6, 0.95, 'Gap: no recent national view of India joins ado
 # 5 ---------------------------------------------------------------- data
 s = slide('3  Methodology', 'Seven public sources, no data of our own',
           'Cross-sectional observational design. Survey is the only source with adoption and exposure for the same adults. Interviews of our own were not feasible, so published studies are secondary evidence. Reviews: names not stored.')
-items = [('3,000', 'adults, India Findex 2024 microdata (weighted)', TEAL), ('10', 'economies, Findex 2025 country indicators', BLUE),
+items = [('3,000', 'adults, India survey in Global Findex 2025 (fielded 2024), weighted', TEAL), ('10', 'economies, Findex 2025 country indicators', BLUE),
          ('5,758', 'Google Play reviews, five payment apps', AMBER), ('2,090', 'App Store reviews, same five apps', AMBER),
          ('6,240', 'reviews of eight bank apps, both stores', AMBER), ('5', 'published interview studies (26 to 3,784 participants)', NAVY)]
 for i, (big, small, c) in enumerate(items):
@@ -187,7 +187,7 @@ text(s, 8.3, 1.7, 4.4, 0.4, 'GENDER DIFFERENCE IN DIGITAL PAYMENT USE', 12, True
 stat(s, 8.3, 2.15, 2.1, '42.7%', 'women made or received digital payments', TEAL, 1.85)
 stat(s, 10.6, 2.15, 2.1, '54.1%', 'men made or received digital payments', BLUE, 1.85)
 bullets(s, 8.3, 4.2, 4.4, 2.3, ['Gap|11.5 percentage points in the sample.', 'Caution|the survey does not show whether access, confidence or social factors cause the gap.'], 14, 8)
-src(s, 'Account, phone and digital payment shares refer to all 3,000 surveyed adults; survey-weighted. Source: authors\' calculations, India Global Findex 2024 microdata.')
+src(s, 'Account, phone and digital payment shares refer to all 3,000 surveyed adults; survey-weighted. Source: authors\' calculations, India microdata, Global Findex Database 2025 (2024 survey).')
 
 # 7b --------------------------------------------------------------- device lock by group
 s = slide('4  Results: device protection', 'Device-lock adoption differs sharply by group',
@@ -202,7 +202,7 @@ for k, c in enumerate([TEAL, TEAL, BLUE, BLUE, AMBER, AMBER]):
 ch.plots[0].has_data_labels = True; ch.plots[0].data_labels.number_format = '0.0"%"'; ch.plots[0].data_labels.number_format_is_linked = False; ch.plots[0].data_labels.font.size = Pt(15); ch.plots[0].data_labels.font.bold = True
 stat(s, 8.6, 1.75, 4.1, '57.7%', 'of phone owners with valid responses report a PIN, password or fingerprint lock (n = 2,141)', NAVY, 1.9)
 bullets(s, 8.6, 3.9, 4.1, 2.6, ['Age gap|75.7% at ages 15 to 24 vs 22.9% at 60 and above.', 'Careful|subgroups overlap, and lock shares use phone owners as the denominator, not all adults.'], 14, 8)
-src(s, 'Survey-weighted, phone owners with valid responses. Source: authors\' calculations, India Global Findex 2024 microdata.')
+src(s, 'Survey-weighted, phone owners with valid responses. Source: authors\' calculations, India microdata, Global Findex Database 2025 (2024 survey).')
 
 # 8 ---------------------------------------------------------------- results: exposure
 s = slide('4  Results: exposure', 'Payment users report more unsolicited money requests',
@@ -225,7 +225,7 @@ bullets(s, 7.6, 1.8, 5.1, 4.8, ['Weak link|rank correlation 0.38 between payment
         'Protection follows inclusion|rank correlation 0.63 between payment use and lock use.',
         'Where risk concentrates|tertiary-educated (17.9%) and the lowest income quintile (12.5%).',
         'Lowest|ages 60+ (4.1%) and women (5.7%): fewer contacts or less reporting.'], 15, 12)
-src(s, 'Groups overlap and denominators differ: descriptive only. Source: authors\' calculations, India Global Findex 2024 microdata.')
+src(s, 'Groups overlap and denominators differ: descriptive only. Source: authors\' calculations, India microdata, Global Findex Database 2025 (2024 survey).')
 
 # 10 --------------------------------------------------------------- gap by group
 s = slide('4  Results: adoption vs protection', 'Protection lags use at older ages',
@@ -272,7 +272,7 @@ for i, (a, b) in enumerate(th):
     x = 0.6 + (i % 2) * 3.4; y = 1.75 + (i // 2) * 0.95
     box(s, x, y, 3.25, 0.82, PALE); box(s, x, y, 0.08, 0.82, TEAL if i < 4 else BLUE)
     text(s, x + 0.2, y + 0.04, 2.1, 0.75, a, 13, True, NAVY, anchor=MSO_ANCHOR.MIDDLE); text(s, x + 2.2, y + 0.04, 1.0, 0.75, b, 15, True, TEAL, HEAD, PP_ALIGN.RIGHT, MSO_ANCHOR.MIDDLE)
-bullets(s, 7.6, 1.75, 5.1, 3.6, ['Victims|of 91 who reported fraud, 59 could not recover money.', 'Merchants|12 of 24 reported fake payment confirmations.', 'Trust|45 of 46 said trust in the receiver matters; a trust badge was rated highest of four nudges.'], 14.5, 10)
+bullets(s, 7.6, 1.75, 5.1, 3.6, ['Redress|59 of the 91 victims who reported fraud could not recover their money.', 'Merchants|12 of 24 reported fake payment confirmations.', 'Trust|45 of 46 said trust in the receiver matters; a trust badge was rated highest of four nudges.'], 14.5, 10)
 box(s, 0.6, 5.7, 12.1, 0.85, NAVY)
 text(s, 0.85, 5.73, 11.6, 0.8, 'Documents (World Bank, RBI): trust linked to risk awareness and dispute resolution; consumer protection beside capability; protect credentials such as OTPs and PINs.', 14.5, True, WHITE, anchor=MSO_ANCHOR.MIDDLE)
 

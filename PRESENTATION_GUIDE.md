@@ -1,7 +1,7 @@
 # Group 31 presentation guide: three parts, speaking scripts and a crash course
 
 **Deck:** `Group_31_Final_Submission/slides/Group_31_Presentation_Final.pptx` (19 slides, speaker notes included)
-**Paper:** `Group_31_Final_Submission/Research_Report.pdf` (15 pages, 9 figures)
+**Paper:** `Group_31_Final_Submission/Research_Report.pdf` (16 pages, 9 figures)
 **Topic:** *Mobile Banking: Financial Inclusion vs Cybersecurity Risks*
 
 This file has five parts:
@@ -193,7 +193,7 @@ A **multilingual payment-safety companion**: short audio and visual explanations
 **Presenter: Rushal Verma. About 5 minutes.**
 
 ### Slide 1: Title (15 seconds)
-> "Good morning. We are Group 31. Our topic is mobile banking: financial inclusion versus cybersecurity risks. We used India's 2024 Global Findex survey, public app reviews and published interview studies, and we finish with an idea for entrepreneurs. I am Rushal, and my teammates are Vichanshu and Sudhanshu."
+> "Good morning. We are Group 31. Our topic is mobile banking: financial inclusion versus cybersecurity risks. We used the India survey in the World Bank's Global Findex Database 2025, fielded in 2024, public app reviews and published interview studies, and we finish with an idea for entrepreneurs. I am Rushal, and my teammates are Vichanshu and Sudhanshu."
 
 ### Slide 2: Inclusion brings new users, and new targets (45 seconds)
 > "India has brought most adults into the formal financial system. But three things are different: owning an account measures access, making digital payments measures activity, and being safe is a third thing. When millions of new users arrive, each is also a possible target and may not have the habits of experienced users. Our gap is that few national studies show adoption, device safeguards and scam exposure together, and fewer ask what a business could do about it. One term to remember: 'reported exposure' means someone says they got a call or message asking for money. It is not proof of fraud."
@@ -349,7 +349,7 @@ Fixed costs are INR 3 lakh a month and each institution contributes INR 0.40 lak
 **Q11. How big is the market?**
 We did not measure a total addressable market. As context, India had about 741 banks live on the UPI network in July 2026 (government factsheet), so 40 institutions in Year 3 would be about 5 percent. It is not a validated figure, and buyers could also be payment apps and fintechs.
 
-**Q12. Why is the paper only 12 pages?**
+**Q12. Why does the paper not show every table?**
 We kept it to the TA's structure and condensed the long tables into figures and short text, about 15 pages including references. The detailed tables, including the full 18-group table, and the extra analysis are in the results files and the notebook.
 
 **Q13. What is the main contribution?**
