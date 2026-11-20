@@ -149,24 +149,26 @@ for i, (big, small, c) in enumerate(items):
     stat(s, 0.6 + (i % 3) * 4.1, 1.75 + (i // 3) * 1.85, 3.9, big, small, c, 1.6)
 bullets(s, 0.6, 5.5, 12.1, 1.1, ['Also three institutional documents (World Bank, RBI). Public data only: no interviews, focus groups or surveys of our own. Names, emails and phone numbers are not stored.'], 14.5)
 
-# 6 ---------------------------------------------------------------- methods detail
-s = slide('3  Methodology', 'Analysis and coding reliability',
-          'Weighted shares, logistic model with approximate intervals (no design variables), Fisher test, Spearman across 18 groups. Reviews: keyword dictionaries then every fraud-keyword review read and coded; second passes check consistency. Be explicit: the first pass is a single coder; second passes are blind; only 40 Google Play reviews had a human outside the group; the 122-review second coder is reported blind to labels.')
-bullets(s, 0.6, 1.75, 5.6, 4.9, ['Survey|weighted shares; logistic model with sandwich errors; Kish design-effect check.',
-        'Groups|payment use vs lock vs exposure for 18 groups; Spearman rank correlation.',
-        'Tests|Fisher exact (lock vs sending money); chi-square with Holm (bank vs payment apps).',
-        'Reviews|dictionaries, then every fraud-keyword review read and placed in one of seven categories.',
-        'Finance|deterministic scenario model; all inputs are assumptions.'], 15, 10)
-rows = [['Check', 'Reviews', 'Agreement', 'Kappa'], ['AI blind pass, Google Play', '118', '94.9%', '0.93'], ['AI blind pass, App Store', '57', '82.5%', '0.78'], ['AI blind pass, bank apps', '65', '87.7%', '0.84'],
-        ['Human coder, Google Play sample', '40', '95.0%', '0.93'], ['Second coder (person, software-aided), App Store + bank', '122', '83.6%', '0.80']]
-tb = s.shapes.add_table(6, 4, Inches(6.5), Inches(1.9), Inches(6.2), Inches(3.4)).table
-for ci, w in enumerate([2.9, 1.0, 1.2, 1.1]): tb.columns[ci].width = Inches(w)
-for r in range(6):
-    for c in range(4):
-        cell = tb.cell(r, c); cell.text = rows[r][c]; pp = cell.text_frame.paragraphs[0]; pp.alignment = PP_ALIGN.LEFT if c == 0 else PP_ALIGN.CENTER
-        pp.runs[0].font.size = Pt(14); pp.runs[0].font.name = BODY; pp.runs[0].font.bold = (r == 0)
-        cell.fill.solid(); cell.fill.fore_color.rgb = NAVY if r == 0 else PALE; pp.runs[0].font.color.rgb = WHITE if r == 0 else INK
-text(s, 6.5, 5.45, 6.2, 0.9, 'Agreement is with the first pass (second coder: 102 of 122). First pass is a single coder. The second coder is a person who used software, including AI tools, as an aid but made each decision (as reported by the group).', 12, False, GREY)
+SHOW_RELIABILITY = False  # set True to bring back the 'Analysis and coding reliability' slide
+if SHOW_RELIABILITY:
+    # 6 ---------------------------------------------------------------- methods detail
+    s = slide('3  Methodology', 'Analysis and coding reliability',
+              'Weighted shares, logistic model with approximate intervals (no design variables), Fisher test, Spearman across 18 groups. Reviews: keyword dictionaries then every fraud-keyword review read and coded; second passes check consistency. Be explicit: the first pass is a single coder; second passes are blind; only 40 Google Play reviews had a human outside the group; the 122-review second coder is reported blind to labels.')
+    bullets(s, 0.6, 1.75, 5.6, 4.9, ['Survey|weighted shares; logistic model with sandwich errors; Kish design-effect check.',
+            'Groups|payment use vs lock vs exposure for 18 groups; Spearman rank correlation.',
+            'Tests|Fisher exact (lock vs sending money); chi-square with Holm (bank vs payment apps).',
+            'Reviews|dictionaries, then every fraud-keyword review read and placed in one of seven categories.',
+            'Finance|deterministic scenario model; all inputs are assumptions.'], 15, 10)
+    rows = [['Check', 'Reviews', 'Agreement', 'Kappa'], ['AI blind pass, Google Play', '118', '94.9%', '0.93'], ['AI blind pass, App Store', '57', '82.5%', '0.78'], ['AI blind pass, bank apps', '65', '87.7%', '0.84'],
+            ['Human coder, Google Play sample', '40', '95.0%', '0.93'], ['Second coder (person, software-aided), App Store + bank', '122', '83.6%', '0.80']]
+    tb = s.shapes.add_table(6, 4, Inches(6.5), Inches(1.9), Inches(6.2), Inches(3.4)).table
+    for ci, w in enumerate([2.9, 1.0, 1.2, 1.1]): tb.columns[ci].width = Inches(w)
+    for r in range(6):
+        for c in range(4):
+            cell = tb.cell(r, c); cell.text = rows[r][c]; pp = cell.text_frame.paragraphs[0]; pp.alignment = PP_ALIGN.LEFT if c == 0 else PP_ALIGN.CENTER
+            pp.runs[0].font.size = Pt(14); pp.runs[0].font.name = BODY; pp.runs[0].font.bold = (r == 0)
+            cell.fill.solid(); cell.fill.fore_color.rgb = NAVY if r == 0 else PALE; pp.runs[0].font.color.rgb = WHITE if r == 0 else INK
+    text(s, 6.5, 5.45, 6.2, 0.9, 'Agreement is with the first pass (second coder: 102 of 122). First pass is a single coder. The second coder is a person who used software, including AI tools, as an aid but made each decision (as reported by the group).', 12, False, GREY)
 
 # 7 ---------------------------------------------------------------- results: adoption
 s = slide('4  Results: access vs active use', 'Access is not the same as active digital use',

@@ -100,3 +100,6 @@ A chronological summary of the working sessions (not verbatim). Sections 1–7 c
 ## 19. Friend comparison and additions (tenth pass)
 - The assistant compared `Friend/` with the final folder and listed what to add; the user said "do the things". Done: entrepreneurial-finance literature (five verified sources) and framing, JEL codes, Data availability, a research-question answers table and a review-category figure, all within 12 pages in Word.
 - The user also supplied `Group_31_Dataset_Key_Findings.pdf` and asked for its graphs to be in the PPT. Two were missing (access vs use; device lock by group) and were added as native charts; the deck now has 19 slides.
+
+## 20. Slide 6 removed (for now)
+- The user asked to remove the coding-reliability slide. The deck has 18 slides; the guide was renumbered (Part 1 slides 1 to 5, Part 2 slides 6 to 11, Part 3 slides 12 to 18) and the slide's script moved to a backup section.

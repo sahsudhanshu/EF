@@ -1,6 +1,6 @@
 # Group 31 presentation guide: three parts, speaking scripts and a crash course
 
-**Deck:** `Group_31_Final_Submission/slides/Group_31_Presentation_Final.pptx` (19 slides, speaker notes included)
+**Deck:** `Group_31_Final_Submission/slides/Group_31_Presentation_Final.pptx` (18 slides, speaker notes included; the "Analysis and coding reliability" slide is removed for now)
 **Paper:** `Group_31_Final_Submission/Research_Report.pdf` (12 pages)
 **Topic:** *Mobile Banking: Financial Inclusion vs Cybersecurity Risks*
 
@@ -8,7 +8,7 @@ This file has five parts:
 
 1. [How the deck is split](#1-how-the-deck-is-split) (who presents which slides, and how long)
 2. [Crash course: the ideas you must understand](#2-crash-course-the-ideas-you-must-understand) (plain language, with worked examples)
-3. [Part 1 script](#3-part-1-script-slides-1-to-6) / [Part 2 script](#4-part-2-script-slides-7-to-12) / [Part 3 script](#5-part-3-script-slides-13-to-19)
+3. [Part 1 script](#3-part-1-script-slides-1-to-5) / [Part 2 script](#4-part-2-script-slides-6-to-11) / [Part 3 script](#5-part-3-script-slides-12-to-18)
 4. [Numbers cheat sheet](#6-numbers-cheat-sheet)
 5. [Questions the TA may ask, with answers](#7-questions-the-ta-may-ask-with-answers) and [what never to say](#8-what-never-to-say)
 
@@ -20,15 +20,15 @@ You can swap the names of the three presenters; the parts are written so any of 
 
 | Part | Suggested presenter | Slides | Theme | Time |
 |---|---|---|---|---|
-| **Part 1: Why and how** | Rushal Verma | 1 to 6 | The question, the literature, the data and the method | about 5 min |
-| **Part 2: What the survey shows** | Vichanshu Raj | 7 to 12 | Access, protection, exposure, groups, peers | about 5 min |
-| **Part 3: What users say, what it means, what to build** | Sudhanshu | 13 to 19 | App reviews, interview studies, discussion, venture, limits, conclusion | about 5 min |
+| **Part 1: Why and how** | Rushal Verma | 1 to 5 | The question, the literature, the data and the method | about 4 min |
+| **Part 2: What the survey shows** | Vichanshu Raj | 6 to 11 | Access, protection, exposure, groups, peers | about 5 min |
+| **Part 3: What users say, what it means, what to build** | Sudhanshu | 12 to 18 | App reviews, interview studies, discussion, venture, limits, conclusion | about 5 min |
 
 **Handover lines** (say these so the change of speaker feels natural):
 - Part 1 to Part 2: "So that is the question and the data. Vichanshu will now show what the survey found."
 - Part 2 to Part 3: "So the survey shows where inclusion and risk diverge. Sudhanshu will show what users say in their own words, and what we would build."
 
-**Everyone should know slides 2, 3, 6 and 19 well.** The TA may ask any of you about the overall question, the research questions, how the coding was checked, or the conclusion.
+**Everyone should know slides 2, 3 and 18 well, and section 2.12 (how the coding was checked), even though the coding-reliability slide is removed for now.** The TA may ask any of you about the overall question, the research questions, how the coding was checked, or the conclusion.
 
 ---
 
@@ -106,7 +106,7 @@ A proper survey analysis uses information about how the sample was drawn (strata
 
 Result: the payment-user result and the gender result survive even at factor 3; the tertiary-education result does **not**. That is why we call the model **exploratory**.
 
-### 2.10 Spearman rank correlation (slide 10)
+### 2.10 Spearman rank correlation (slide 9)
 
 We have 18 demographic groups (women, men, age bands, education levels, income quintiles, rural, urban, working, not working). For each we know three numbers: inclusion (payment use), risk (request exposure), protection (device lock). A **Spearman rank correlation** asks: if we rank the groups by inclusion, do they rank the same way on risk? It runs from -1 to +1.
 
@@ -137,7 +137,7 @@ Reviews are free text. We turned them into numbers in two steps:
 - A human coder outside the group re-coded 40 of the 118 Google Play reviews: 38 agreed (95.0%, kappa 0.93).
 - A further second coder, described by the group as **a person who used software, including AI tools, as an aid but made each coding decision**, coded all 122 App Store and bank-app fraud-keyword reviews: 83.6% agreement with the first pass (kappa 0.80).
 
-### 2.13 Chi-square test and the Holm adjustment (slide 13 background)
+### 2.13 Chi-square test and the Holm adjustment (background for slide 12)
 
 We compare bank apps with payment apps: are fraud keywords rarer in bank apps? A **chi-square test** answers that for each theme. Because we run six tests, the chance of a false alarm grows, so the **Holm adjustment** makes the cut-off stricter. After this, bank and payment apps differ for fraud keywords, failed payments, safety language and security friction, but **not** for support (p = 0.87) or account blocking (p = 0.12).
 
@@ -188,7 +188,7 @@ A **multilingual payment-safety companion**: short audio and visual explanations
 
 ---
 
-## 3. Part 1 script (slides 1 to 6)
+## 3. Part 1 script (slides 1 to 5)
 
 **Presenter: Rushal Verma. About 5 minutes.**
 
@@ -211,64 +211,62 @@ A **multilingual payment-safety companion**: short audio and visual explanations
 ### Slide 5: Seven public sources, no data of our own (60 seconds)
 > "We used only public data. One: the India Global Findex microdata, 3,000 adults surveyed in 2024, weighted so it represents the adult population. Two: published Findex country indicators for ten economies, so we can compare India with peers. Three, four and five: 14,088 public app reviews, 5,758 on Google Play and 2,090 on the App Store for five payment apps, and 6,240 for eight bank apps. Six: five published interview studies in India. Seven: three official documents from the World Bank and the Reserve Bank of India. We did not conduct interviews or surveys ourselves, and we did not keep reviewers' names, emails or phone numbers."
 
-### Slide 6: Analysis and coding reliability (75 seconds)
-> "For the survey we report weighted shares, a logistic regression, and a comparison across 18 groups. For the reviews we used keyword dictionaries and then read every review that contained a fraud-type word and placed it in one of seven categories. To check we were consistent we used second coders. A blind AI second pass agreed on 94.9 percent of Google Play reviews, 82.5 percent of App Store reviews and 87.7 percent of bank-app reviews. A human coder outside our group re-coded 40 Google Play reviews and agreed 95 percent of the time. A further second coder, a person who used software, including AI tools, as an aid but made each decision, coded all 122 App Store and bank-app reviews and agreed 83.6 percent with our first pass, kappa 0.80. Kappa corrects for agreement by chance, and values near 0.8 are considered strong. I will now hand over to Vichanshu, who will show what the survey found."
 
-*Be ready:* "Why did you need a second coder?" (to check our labels are reliable); "Why not interviews?" (not feasible; we used published studies and say so).
+> "That is the question and the data. Vichanshu will now show what the survey found."
 
 ---
 
-## 4. Part 2 script (slides 7 to 12)
+## 4. Part 2 script (slides 6 to 11)
 
 **Presenter: Vichanshu Raj. About 5 minutes.**
 
-### Slide 7: Access is not the same as active digital use (60 seconds)
+### Slide 6: Access is not the same as active digital use (60 seconds)
 > "Here are the first results. 89.0 percent of adults own an account, 66.5 percent own a phone, but only 48.5 percent made or received a digital payment. That is a 40.6 percentage-point gap between owning an account and using it digitally. On the right: 42.7 percent of women made or received a digital payment against 54.1 percent of men, an 11.5-point gap. The survey does not tell us why. It could be access, confidence or social factors. All of this is weighted, and refers to all 3,000 adults."
 
-### Slide 8: Device-lock adoption differs sharply by group (60 seconds)
+### Slide 7: Device-lock adoption differs sharply by group (60 seconds)
 > "Among phone owners, 57.7 percent report a PIN, password or fingerprint lock. But it varies a lot. 75.7 percent of 15 to 24 year-olds have one against only 22.9 percent of people aged 60 and over. 75.2 percent in the highest income quintile against 40.6 percent in the lowest. Men 62.7, women 50.3. These groups overlap, and the denominator is phone owners, not all adults. Remember that a lock protects the handset, not a person's judgment about a call."
 
-### Slide 9: Payment users report more unsolicited money requests (75 seconds)
+### Slide 8: Payment users report more unsolicited money requests (75 seconds)
 > "Now the key link between inclusion and risk. 13.1 percent of phone-owning payment users reported an unsolicited request for money, against 4.3 percent of non-users. After adjusting for age, gender, education, income, work and urban or rural residence, the odds ratio is 3.45, interval 2.24 to 5.30. In plain words: the odds were about three and a half times higher for payment users. Women had lower odds than men, 0.47. This is an association, not proof that digital payments cause scams, and requests are not verified fraud. We also tested robustness: the payment-user and gender results hold even if we assume strong clustering; the tertiary-education result does not. Finally, among 219 people who reported a request, 45 said they sent money; with a lock 25.0 percent, without 8.9 percent, but that difference is not statistically significant, p equals 0.11."
 
 *Key phrase:* "odds about three and a half times higher", not "three and a half times more likely".
 
-### Slide 10: Inclusion and exposure: a weak link across groups (75 seconds)
+### Slide 9: Inclusion and exposure: a weak link across groups (75 seconds)
 > "We then looked across 18 groups, such as women, men, age bands, education levels and income quintiles. Each dot is a group: horizontal is inclusion, vertical is reported exposure. The rank correlation is only 0.38, so the link is weak to moderate. Exposure is highest among tertiary-educated adults, 17.9 percent, who are the most included. But it is also high in the lowest income quintile, 12.5 percent, which is among the least included. It is lowest at ages 60 and over, 4.1 percent, and among women, 5.7 percent. Protection follows inclusion more closely, rank correlation 0.63. So risk is not just the price of inclusion; it clusters where inclusion outruns safeguards and where people have little margin for loss. These groups overlap, so this is descriptive."
 
-### Slide 11: Protection lags use at older ages (45 seconds)
+### Slide 10: Protection lags use at older ages (45 seconds)
 > "This chart puts payment use beside lock use for the same groups. The biggest gap is at ages 60 and over: payment use is 56.6 percent but only 22.9 percent have a lock, a gap of 33.7 points. For ages 15 to 24 it is reversed: 43.5 percent use payments and 75.7 percent have locks, minus 32.1 points. The denominators differ, so this tells us where to test guidance, not the precise size of a risk."
 
-### Slide 12: India: top-tier accounts, below-peer phone ownership (45 seconds)
+### Slide 11: India: top-tier accounts, below-peer phone ownership (45 seconds)
 > "Compared with other economies using published 2024 figures: India's account ownership of 89.0 percent is second only to China. Its phone ownership, 66.5 percent, is second lowest, above only Pakistan. Its lock share is 57.6 percent, in the middle. India's request share, 9.4 percent from our own data, is lower than the peers we could compare, which range from 12.7 to 32.4 percent. This may reflect fewer phone contacts, recall, or reporting. It is indicative only, because published totals come without sampling errors. Over to Sudhanshu."
 
 *Be ready:* the 9.4 is from our microdata because the World Bank website does not publish India's value.
 
 ---
 
-## 5. Part 3 script (slides 13 to 19)
+## 5. Part 3 script (slides 12 to 18)
 
 **Presenter: Sudhanshu. About 5 minutes.**
 
-### Slide 13: Reviews: rewards, refunds and blocks, not theft (75 seconds)
+### Slide 12: Reviews: rewards, refunds and blocks, not theft (75 seconds)
 > "We now look at what users say in their own words, using 14,088 public app reviews. We read every review that contained a fraud-type word. On Google Play payment apps, half of those, 50.8 percent, were about cashback or rewards not being paid. On the App Store it was 29.8 percent. For bank apps it was only 4.6 percent; there the biggest group, 38.5 percent, was about blocked accounts, mis-selling, unexpected charges or poor complaint handling. Reviews describing unauthorised access or theft were about 0.1 percent of all reviews. In bank apps, security prompts such as SIM binding, fingerprint set-up and root-detection checks were a recurring source of one-star reviews. Caution: reviews are self-selected, so this shows where trust breaks down, not how common scams are."
 
-### Slide 14: Published studies: social engineering, slow redress (60 seconds)
+### Slide 13: Published studies: social engineering, slow redress (60 seconds)
 > "Reviews rarely capture scam victims, so we also used five published interview studies from India. Social engineering, trust in the counterparty or bank, and low awareness appear in all five. Weak support and slow redress appear in four. Examples: 45 of 46 participants in one study said trust in the receiver matters; in another, 12 of 24 merchants reported fake payment confirmations; and in a survey of fraud victims, of 91 who reported fraud, 59 could not recover their money. The official documents agree: trust, consumer protection and protecting credentials like OTPs and PINs."
 
-### Slide 15: Risk concentrates where inclusion outruns safeguards (60 seconds)
+### Slide 14: Risk concentrates where inclusion outruns safeguards (60 seconds)
 > "Putting it together. First, a mixed answer: payment users report more requests, but across groups the link is weak and exposure is also high among the poorest. Second, safeguards lag at older ages. Third, friction is also a risk: security prompts can lock out legitimate users. Fourth, policy: track active and safe use not just accounts, evaluate awareness campaigns on behaviour, and make providers responsible for warnings, refunds and complaints."
 
-### Slide 16: Venture idea: a multilingual payment-safety companion (50 seconds)
+### Slide 15: Venture idea: a multilingual payment-safety companion (50 seconds)
 > "For entrepreneurs, this suggests a narrow pilot: a multilingual payment-safety companion. The institution pays; users pay nothing. It offers short audio and visual explanations, a pre-payment checklist and verified routes to support and official reporting. It does not hold money, ask for OTPs or PINs, or promise recovery. We propose months one and two for discovery, three to five for a controlled pilot, and scaling only after a paid commitment. No pilot has been run."
 
-### Slide 17: Break-even at 8 institutions, 13 while growing (60 seconds)
+### Slide 16: Break-even at 8 institutions, 13 while growing (60 seconds)
 > "A simple financial model, and these are assumptions, not findings. Charging INR 50,000 a month per institution, with INR 10,000 of variable cost, gives INR 40,000 contribution, an 80 percent margin. Winning a customer costs INR 2 lakh, paid back in 5 months. With fixed costs of INR 3 lakh a month, eight institutions break even in steady state, and thirteen while we are still winning one every month. The base case loses INR 32.8 lakh in Year 1, breaks even in Year 2 and earns 52.2 lakh in Year 3; the conservative case never breaks even in three years. A fee cut to INR 40,000 raises break-even from 8 to 10. A seed of INR 75 lakh covers the base case, but the conservative case needs 81.8 lakh by Year 2."
 
-### Slide 18: Limitations and next steps (40 seconds)
+### Slide 17: Limitations and next steps (40 seconds)
 > "Our limits: the survey is a snapshot and self-reported; requests are not verified fraud; intervals are approximate because the public file lacks design variables; reviews are self-selected and coded with AI help and only sample human checks; we did no interviews of our own; and the finance inputs are assumptions. Next steps: consent-based interviews with merchants, users and bank budget owners, an evaluated pilot, design-based estimates and peer-country data."
 
-### Slide 19: Conclusion (40 seconds)
+### Slide 18: Conclusion (40 seconds)
 > "To conclude: account access is broad, 89.0 percent, but only 48.5 percent use digital payments and 57.7 percent of phone owners have a lock. Payment users report more unsolicited requests, odds ratio 3.45, but across groups the link is weak. Reviews and published studies point to rewards, refunds, blocks, support and security prompts far more than reported theft. The opportunity is an institution-funded safety service, tested first through a pilot. The next step is evidence on willingness to pay, retention and effectiveness. Thank you. We are happy to take questions."
 
 ---
@@ -392,3 +390,15 @@ We show where users and merchants lack safe, supported access and propose an ins
 4. **15 minutes:** the TA question game: each person asks the other two five questions from section 7 and the answerer must reply in under 30 seconds.
 
 **Delivery tips:** look at the audience and not the slide; say the number and then what it means; pause after each slide title; do not read the small print; if you forget a number, give the idea first and check the cheat sheet afterwards.
+
+---
+
+## 10. Backup script: the removed coding-reliability slide
+
+### Removed for now (optional backup): Analysis and coding reliability (75 seconds)
+*This slide is not in the deck at the moment. Keep this script in case the TA asks, or if the slide is brought back (set `SHOW_RELIABILITY = True` in `build_short_deck.py`).*
+> "For the survey we report weighted shares, a logistic regression, and a comparison across 18 groups. For the reviews we used keyword dictionaries and then read every review that contained a fraud-type word and placed it in one of seven categories. To check we were consistent we used second coders. A blind AI second pass agreed on 94.9 percent of Google Play reviews, 82.5 percent of App Store reviews and 87.7 percent of bank-app reviews. A human coder outside our group re-coded 40 Google Play reviews and agreed 95 percent of the time. A further second coder, a person who used software, including AI tools, as an aid but made each decision, coded all 122 App Store and bank-app reviews and agreed 83.6 percent with our first pass, kappa 0.80. Kappa corrects for agreement by chance, and values near 0.8 are considered strong."
+
+*Be ready:* "Why did you need a second coder?" (to check our labels are reliable); "Why not interviews?" (not feasible; we used published studies and say so).
+
+

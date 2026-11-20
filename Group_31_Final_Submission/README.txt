@@ -5,7 +5,7 @@ Authors: Rushal Verma (IIT2024045), Vichanshu Raj (IIT2024083), Sudhanshu (IIT20
 THE SUBMISSION
 Research_Report.pdf        The paper, 12 pages (same file as report/Group_31_Research_Paper.pdf)
 report/                    The paper as PDF and editable Word file (TA's paper structure; Times New Roman 12)
-slides/                    Presentation, 19 slides with speaker notes (PPTX and PDF)
+slides/                    Presentation, 18 slides (the coding-reliability slide is removed for now; set SHOW_RELIABILITY = True in scripts/condensed/build_short_deck.py to restore it) with speaker notes (PPTX and PDF)
 
 SUPPORTING MATERIAL
 analysis.ipynb             Notebook that reproduces the results (outputs stored)
