@@ -161,7 +161,7 @@ def H1(t): return doc.add_heading(t, level=1)
 def H2(t): return doc.add_heading(t, level=2)
 
 
-T = dict(defs=1, fin=2, adopt=3, lock=4, model=5, send=6, gap=7, unit=8, proj=9, bridge=10, sens=11, peers=12, themes=13, manual=14, ios=15, studies=16, sthemes=17, canvas=18, alt=19, seed=20, risk=21)
+T = dict(defs=1, fin=2, adopt=3, lock=4, model=5, send=6, gap=7, unit=8, proj=9, bridge=10, sens=11, peers=12, themes=13, manual=14, ios=15, studies=16, sthemes=17, rq=18, canvas=19, alt=20, seed=21, risk=22)
 F = dict(gender=1, income=2, exposure=3, surplus=4, peers=5, themes=6)
 _t = [0]; _f = [0]
 
@@ -224,7 +224,7 @@ for typ, txt in (('begin', None), (None, 'PAGE'), ('end', None)):
 # ================================================================= TITLE BLOCK
 tp = doc.add_paragraph(style='Title'); tp.alignment = WD_ALIGN_PARAGRAPH.CENTER
 add_runs(tp, 'Mobile Banking, Financial Inclusion and Cybersecurity Risk in India: A Survey-Weighted Analysis of the 2024 Global Findex and an Institutional Payment-Safety Service Proposal', bold=True)
-P('Rushal Verma, Vichanshu Raj and Sudhanshu', align='c', after=0)
+P('Rushal Verma (IIT2024045), Vichanshu Raj (IIT2024083) and Sudhanshu (IIT2024081)', align='c', after=0)
 P('Group 31, Entrepreneurial Finance', align='c', after=0)
 P('20 November 2026', align='c')
 
@@ -614,6 +614,16 @@ P("For RQ2, payment users reported more unsolicited requests than non-users, and
   "for RQ3, the higher share of senders among locked phones in Table " + str(T['send']) + " rests on 45 senders and should not be read as a protective or harmful effect of locking. "
   "For RQ4, the largest mismatch is at the oldest ages, where payment use is relatively high (which may include receiving transfers, since the indicator counts receipts) while device protection is lowest; among the youngest the pattern is reversed. Because the two shares use different denominators, this identifies where to test guidance rather than measuring a precise risk gap. For RQ5, the app reviews show that user grievances are dominated by unpaid rewards (about half of fraud-keyword reviews), failed or unrefunded payments and weak support or account-blocking experiences, while reviews describing unauthorised access or theft are very rare (6 of 5,758). Two readings are plausible: genuine scam victims may not write app-store reviews, or the apps' reviewers focus on service failures. The reviews therefore do not measure scam prevalence, but they do show where trust breaks down (refunds, support and verification), which fits the trust and dispute-resolution themes in the documents {wbtrust}. They also show that safety controls can create friction: 104 reviews describe device-lock or security-alert prompts, mostly for one app, so a lock requirement that cannot be met or recognised can block legitimate use. The document review points the same way: guidance that links trust, dispute resolution, shared responsibility and credential protection supports a service built around understandable advice and verified routes to support {wbtrust,wbcp,rbi}. Its accessibility implication (audio, local-language and assisted channels) is our design inference from the group differences in Section 4, not a reported user preference. For RQ6, the model indicates that viability depends mainly on price, support cost and acquisition efficiency, not on the technical concept, in line with the economics of security investment {gl}.", align='j')
 
+P("Table " + str(T['rq']) + " summarises the answer to each research question, the main evidence and the main limit.", align='j')
+table('rq', 'Answers to the research questions', [
+    ['Question', 'Answer', 'Main evidence', 'Main limit'],
+    ['RQ1 Differences and peers', 'Ownership is high (89.0%) but digital payment use (48.5%) and device lock use (57.7%) are lower, and lower again for women and the lowest income quintile. India is second on accounts and second lowest on phones among seven economies.', 'Tables ' + str(T['adopt']) + ', ' + str(T['lock']) + ', ' + str(T['peers']), 'Peer values are published aggregates without sampling errors'],
+    ['RQ2 Payment use and requests', 'Payment users reported more unsolicited requests (13.1% against 4.3%); adjusted odds ratio 3.45 (2.24 to 5.30), robust to assumed extra design effects up to 3.', 'Table ' + str(T['model']) + ', Section 4.3', 'Association, not causation; requests are not verified fraud'],
+    ['RQ3 Device lock and sending money', 'No protective association: 25.0% of recipients with a lock and 8.9% without reported sending money.', 'Table ' + str(T['send']), 'Only 45 senders'],
+    ['RQ4 Largest gap', 'Payment use exceeds lock use most at ages 60 and above (+33.7 points); the reverse gap is largest at ages 15 to 24 (-32.1).', 'Table ' + str(T['gap']), 'Different denominators; descriptive only'],
+    ['RQ5 Reviews, documents and studies', 'Review grievances concern rewards, refunds, support and verification; unauthorised access is very rare in reviews. Five published studies describe social engineering, trust and slow redress.', 'Tables ' + str(T['themes']) + ' to ' + str(T['sthemes']), 'Self-selected reviews; secondary evidence from small samples'],
+    ['RQ6 Break-even', 'Eight paying institutions in steady state (13 while acquiring one a month); base case -32.80, 0.00 and +52.16 lakh over three years.', 'Tables ' + str(T['unit']) + ' to ' + str(T['sens']), 'All inputs are unvalidated assumptions'],
+], [1.1, 2.6, 1.3, 1.5], note="Source: authors' summary of Sections 4 and 5.")
 P("**Evidence beyond Google Play.** The App Store reviews repeat the Google Play pattern: unpaid rewards, failed payments, grievance handling and spam outnumber reviews of unauthorised access (2 of 2,090 in the first coding pass and 4 in the second), so the finding does not depend on one platform. "
   "The five published interview studies (Tables " + str(T['studies']) + " and " + str(T['sthemes']) + ") describe a different part of the problem. Social engineering through calls, links, OTP requests, fake payment requests, impersonation and tampered QR codes appears in all five studies, and trust in the counterparty or the bank appears in all five. "
   "This is consistent with the possibility that people who lose money to scams seldom write app-store reviews: the harms interview participants describe are largely absent from the review data, while support and redress failures appear in both sources. "

@@ -87,7 +87,7 @@ s = prs.slides.add_slide(blank); N[0] += 1
 box(s, 0, 0, 13.333, 7.5, NAVY); box(s, 0, 5.2, 13.333, 0.06, TEAL)
 text(s, 0.9, 1.3, 11.5, 1.9, 'Mobile Banking, Financial Inclusion and Cybersecurity Risk in India', 40, True, WHITE, HEAD)
 text(s, 0.9, 3.35, 11.5, 0.9, 'A survey-weighted analysis of the 2024 Global Findex and an institutional payment-safety service proposal', 20, False, RGBColor(0xC9, 0xD8, 0xE6))
-text(s, 0.9, 5.5, 8, 1.0, '', 18, False, WHITE, lines=['Rushal Verma  |  Vichanshu Raj  |  Sudhanshu', 'Group 31  |  Entrepreneurial Finance'])
+text(s, 0.9, 5.5, 8, 1.0, '', 18, False, WHITE, lines=['Rushal Verma (IIT2024045)  |  Vichanshu Raj (IIT2024083)', 'Sudhanshu (IIT2024081)', 'Group 31  |  Entrepreneurial Finance'])
 s.notes_slide.notes_text_frame.text = 'Introduce the topic: access to accounts is high in India, but is digital use safe and confident? We analyse the 2024 India Global Findex and test a venture idea.'
 
 # 2 ---------------------------------------------------------------- introduction

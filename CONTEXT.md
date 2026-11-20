@@ -3,7 +3,7 @@
 Share this file with anyone (or any AI session) picking up the work. Last updated 20 November 2026.
 
 ## 1. What this is
-- **Course:** Entrepreneurial Finance. **Group 31.** **Authors:** Rushal Verma, Vichanshu Raj, Sudhanshu (use "Sudhanshu" only; "Sah" removed on request).
+- **Course:** Entrepreneurial Finance. **Group 31.** **Authors:** Rushal Verma (IIT2024045), Vichanshu Raj (IIT2024083), Sudhanshu (IIT2024081) (use "Sudhanshu" only; "Sah" removed on request).
 - **Topic:** Mobile banking, financial inclusion and cybersecurity risk in India.
 - **Title:** *Mobile Banking, Financial Inclusion and Cybersecurity Risk in India: A Survey-Weighted Analysis of the 2024 Global Findex and an Institutional Payment-Safety Service Proposal.*
 - **Goal:** a term paper that follows the TA's required structure (`Paper structure.pdf`), plus a presentation. A friend's submission (folder `Friend/`) was the quality reference.
@@ -84,6 +84,11 @@ Rebuild commands (run from `C:\Users\Sudhanshu\Desktop\EF`): `python Group_31/re
 - **Notebook** now has App Store and sensitivity cells (outputs stored). **TA note** on progress-report differences: `Completion_Pack/TA_NOTE.md`; the paper also states the differences (1.4, 3.3).
 - **Human second coder done** (reported by the group as a person outside the group who did not see the first-pass labels): stratified sample of 40 of the 118 Google Play fraud-keyword reviews, 38/40 agreement with the first pass (95.0%, kappa 0.93), 39/40 with the AI second pass; 0 of 60 non-keyword reviews described fraud (`results/human_second_coder_partA.csv`, `_partB.csv`). Disagreements: A21 and A25. The coder's identity is not recorded in the repo. Human reliability rests on 40 reviews only; the 57 App Store reviews have no human check.
 - **Still not fixable by software:** no own fieldwork, all finance inputs are assumptions.
+
+## 7f. Added 20 Nov 2026 (sixth pass)
+- Student IDs on the paper, deck, IEEE report and README. Table 18 (answers to RQ1 to RQ6) added at the start of the Discussion; tables 19 to 22 renumbered; paper now 31 pages (LibreOffice render).
+- `report/IEEE_Report.docx/pdf`: 2-page condensed IEEE-style version built by `scripts/build_ieee_report.py` (10 pt two columns; the TA's Times New Roman 12 rule applies to the full paper).
+- Automated check: tables, numbering, fonts, caption order, abstract length and references all pass (117 checks).
 
 ## 8. Open items (human steps)
 1. Read the final PDF and slides once: names, dates, numbers, anything that reads oddly or cannot be defended.
