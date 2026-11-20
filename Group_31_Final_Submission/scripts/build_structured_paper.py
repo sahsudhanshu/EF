@@ -162,7 +162,7 @@ def H1(t): return doc.add_heading(t, level=1)
 def H2(t): return doc.add_heading(t, level=2)
 
 
-T = dict(defs=1, fin=2, adopt=3, lock=4, model=5, send=6, gap=7, incrisk=8, unit=9, proj=10, bridge=11, sens=12, peers=13, themes=14, manual=15, ios=16, bank=17, bankman=18, studies=19, sthemes=20, rq=21, canvas=22, alt=23, seed=24, risk=25)
+T = dict(defs=1, fin=2, adopt=3, lock=4, model=5, send=6, gap=7, incrisk=8, unit=9, proj=10, bridge=11, sens=12, peers=13, themes=14, manual=15, ios=16, bank=17, bankman=18, studies=19, sthemes=20, rq=21, canvas=22, alt=23, seed=24, risk=25, appcat=26, appdict=27)
 F = dict(gender=1, income=2, exposure=3, incrisk=4, surplus=5, peers=6, themes=7)
 _t = [0]; _f = [0]
 
@@ -362,6 +362,7 @@ P("**Exploratory logistic model.** The outcome is con21 (unsolicited request) am
   "The model is estimated by weighted maximum likelihood with an independent-observation sandwich covariance. The public file lacks strata and primary sampling unit identifiers, so the reported intervals are approximate and not design-based. As a sensitivity check, the Kish design effect from the weights alone and the effect of assuming additional clustering (variance inflated by factors of 1.5, 2 and 3) were computed.", align='j')
 P("**Peer comparison.** Published aggregates are set beside our India estimates without statistical testing, because sampling errors and country microdata are not available. India's unsolicited-request share is not published in the API, so the value from our microdata (9.4%) is used and marked.", align='j')
 P("**Inclusion and exposure by group.** For each of 18 demographic groups (sex, age, education, income quintile, residence and work) we place the weighted digital-payment share among all adults in the group (inclusion) beside the weighted share of phone owners who reported an unsolicited money request (risk) and the device-lock share (protection), and report Spearman rank correlations across groups. Groups overlap and the denominators differ, so this is descriptive and is not a statistical test.", align='j')
+P("**Significance tests.** Weighted shares are descriptive, and no design-based test is possible without strata or cluster identifiers. For the lock-status comparison among request recipients (RQ3) we report a Fisher exact test on the unweighted counts. For the review data we compare bank and payment apps with two-sample proportion tests (chi-square) for each of the six dictionary themes, with Holm adjustment for the six tests, and with Fisher exact tests for the share of fraud-keyword reviews about rewards and about blocked accounts, mis-selling or grievances. These tests treat reviews as independent observations from a self-selected source, so p-values indicate whether differences are larger than chance variation in the sample, not whether they generalise to all users.", align='j')
 P("**Qualitative analysis.** Five qualitative sources were analysed. First, passages in the three institutional documents {wbtrust,wbcp,rbi} on adoption barriers, protection mechanisms and responsibilities were extracted and grouped into themes. "
   "Second, the 5,758 app reviews were coded in two steps. A dictionary of regular expressions flagged five themes (fraud, scam or unauthorised transactions; money deducted or failed payment; support and complaint handling; account blocking, verification or login barriers; safety and trust language), and a review could carry several themes. "
   "Because keyword matches can mislead, all 118 reviews that matched the fraud keywords were then read in full and assigned to one of seven manually defined categories. A further dictionary counted reviews describing device-lock or security-alert prompts. "
@@ -451,7 +452,7 @@ table('model', 'Exploratory weighted logistic model for unsolicited money reques
 figure('exposure', 'figure3.png', "Unsolicited money requests by digital-payment use among phone owners (survey-weighted; users 173 of 1,283, non-users 46 of 862). Source: authors' calculations from {fxdata}.")
 
 H2('4.4 Sending money by device-lock status')
-P("For RQ3: among 219 request recipients, 25.0% of those whose phone had a lock (39 of 170) and 8.9% of those without (6 of 49) reported sending money (Table " + str(T['send']) + ").", align='j')
+P("For RQ3: among 219 request recipients, 25.0% of those whose phone had a lock (39 of 170) and 8.9% of those without (6 of 49) reported sending money (Table " + str(T['send']) + "). A Fisher exact test on the unweighted counts did not find the difference significant (p = 0.11).", align='j')
 table('send', 'Sending money among respondents who reported a request', [
     ['Lock status among request recipients', 'Sent money (count)', 'Valid n', 'Weighted share'],
     ['Phone has a lock', '39', '170', '25.0%'],
@@ -627,7 +628,9 @@ table('bankman', 'Manual classification of the 65 fraud-keyword bank-app reviews
     ['Total', '65', '100.0%', '65'],
 ], [3.6, 0.9, 0.9, 1.0], note="Source: authors' classification of {bankreviews}; first pass by one coder, blind AI second pass agreed on 57 of 65 (kappa 0.84).")
 P("A security-friction dictionary matched 149 bank-app reviews (2.4%; mean rating 1.59), against 306 of 7,848 payment-app reviews (3.9%; mean rating 2.09). Within the 149, 69 mentioned SIM or device binding, 46 biometric, fingerprint or lock prompts, 14 developer-option, root or unauthorised-app detection, 8 screen-sharing, remote-access or VPN blocks, and 14 security alerts or checks; a review can fall in more than one group. "
-  "The share was highest for HDFC Bank on the App Store (6.0%, n = 100).", align='j')
+  "The share was highest for HDFC Bank on the App Store (6.0%, n = 100). "
+  "Differences between bank and payment apps were significant after Holm adjustment (p < 0.001) for fraud keywords, money deducted or failed payment, safety and trust language and security-friction prompts, and not significant for support and complaint handling (p = 0.87) or account blocking, verification and login barriers (p = 0.12). "
+  "Among fraud-keyword reviews, rewards were far less common in bank apps (3 of 65 against 77 of 175 in the payment-app reviews of both stores; Fisher exact p < 0.001) and blocked accounts, mis-selling or grievances more common (25 of 65 against 21 of 175; p < 0.001).", align='j')
 
 H2('4.12 Published qualitative studies')
 P("Five published studies were analysed as secondary evidence (Table " + str(T['studies']) + "). Table " + str(T['sthemes']) + " shows which of eight themes each study reports. Counts are of studies, not respondents, and the figures quoted are those reported by the study authors.", align='j')
@@ -650,6 +653,11 @@ table('sthemes', 'Themes reported by the published studies (counts are of studie
     ['S7 Protective advice and design cues', '{mungara,asiaccs}', '2 of 5', 'Participants recalled mainly advice not to share OTPs or PINs, and most kept default settings {mungara}; a recipient trust badge was rated highest of four nudges (mean 8.26 of 10, against 4.78 with none) {asiaccs}'],
     ['S8 Merchant and business-user harms', '{jain,microsave}', '2 of 5', 'Merchants developed protective routines that added work and burden {jain}; business users kept using digital services after fraud but some switched providers {microsave}'],
 ], [1.7, 1.2, 0.6, 3.0], note="Source: authors' coding of the five studies, all from their full text. Survey percentages in {cis} refer to its own sample (3,784 users; 234 who had experienced online fraud).")
+
+H2('4.13 Sensitivity to language')
+P("The keyword dictionaries are English only and were kept unchanged so that all counts and classifications stay comparable. A Hindi and Hinglish extension (words for cheating, theft, looting and money cut, in Latin and Devanagari script; Appendix A) flagged 41 further reviews that the English dictionary had not: 23 Google Play and 3 App Store payment-app reviews and 13 Google Play and 2 App Store bank-app reviews. "
+  "One coder classified them with the same seven categories. Among the 23 Google Play payment-app reviews, 8 concerned money debited or failed payments, 6 unauthorised or unexplained debits, 5 rewards, 2 general accusations, 1 blocked accounts or grievances and 1 spam or ads; the 3 App Store payment-app reviews (1 blocked account or grievance, 1 general accusation, 1 praise) and the 15 bank-app reviews (8 blocked accounts, mis-selling or charges, 6 general accusations, 1 failed payment) contained no reports of unauthorised access. "
+  "With the extension the unauthorised or unexplained-debit reports in the Google Play payment-app reviews would rise from 6 to 12 of 5,758 (0.2%), and no other dataset would change in that category. The main counts in Sections 4.9 to 4.11 are unchanged.", align='j')
 
 # ================================================================= 5 DISCUSSION
 H1('5. Discussion')
@@ -675,7 +683,7 @@ table('rq', 'Answers to the research questions', [
     ['Central question: does more inclusion mean more cyber risk?', 'Partly. Payment users report more unsolicited requests (13.1% against 4.3%; odds ratio 3.45), but across groups the link is weak (rank correlation 0.38), exposure is also high in the lowest income quintile, and protection lags inclusion at older ages.', 'Tables ' + str(T['model']) + ' and ' + str(T['incrisk']) + ', Figure ' + str(F['incrisk']), 'Descriptive; groups overlap; requests are not verified fraud'],
     ['RQ1 Differences and peers', 'Ownership is high (89.0%) but digital payment use (48.5%) and device lock use (57.7%) are lower, and lower again for women and the lowest income quintile. India is second on accounts and second lowest on phones among seven economies.', 'Tables ' + str(T['adopt']) + ', ' + str(T['lock']) + ', ' + str(T['peers']), 'Peer values are published aggregates without sampling errors'],
     ['RQ2 Payment use and requests', 'Payment users reported more unsolicited requests (13.1% against 4.3%); adjusted odds ratio 3.45 (2.24 to 5.30), robust to assumed extra design effects up to 3.', 'Table ' + str(T['model']) + ', Section 4.3', 'Association, not causation; requests are not verified fraud'],
-    ['RQ3 Device lock and sending money', 'No protective association: 25.0% of recipients with a lock and 8.9% without reported sending money.', 'Table ' + str(T['send']), 'Only 45 senders'],
+    ['RQ3 Device lock and sending money', 'No protective association: 25.0% of recipients with a lock and 8.9% without reported sending money.', 'Table ' + str(T['send']), 'Only 45 senders; difference not significant (Fisher exact p = 0.11)'],
     ['RQ4 Largest gap', 'Payment use exceeds lock use most at ages 60 and above (+33.7 points); the reverse gap is largest at ages 15 to 24 (-32.1).', 'Table ' + str(T['gap']), 'Different denominators; descriptive only'],
     ['RQ5 Reviews, documents and studies', 'Payment-app grievances concern rewards, refunds and support; bank-app grievances concern account blocks, charges and security prompts; theft is very rare in both. Five published studies describe social engineering, trust and slow redress.', 'Tables ' + str(T['themes']) + ' to ' + str(T['sthemes']), 'Self-selected reviews; secondary evidence from small samples'],
     ['RQ6 Break-even', 'Eight paying institutions in steady state (13 while acquiring one a month); base case -32.80, 0.00 and +52.16 lakh over three years.', 'Tables ' + str(T['unit']) + ' to ' + str(T['sens']), 'All inputs are unvalidated assumptions'],
@@ -750,7 +758,7 @@ table('risk', 'Key venture risks and responses', [
 H2('5.4 Future scope and limitations')
 P("**Limitations.** The survey is cross-sectional and self-reported, so it cannot establish causation, timing or verified losses. Unsolicited requests are not confirmed fraud, and sending money is not a measured loss amount. "
   "Phone-owner and request-recipient analyses concern subsets of the sample, and subgroup cells such as the 45 senders are small. Intervals are approximate because design variables are missing; a sensitivity analysis (Section 4.3) shows that the payment-user and gender results survive large assumed clustering effects while the tertiary-education result does not. The data describe individuals, not enterprises. "
-  "The qualitative component rests on a secondary document review and on public app reviews, which are self-selected, cover seven weeks, come from five apps with unequal review counts, are English-language and keyword-coded by a single coder, checked by an AI second pass for all 118 fraud-keyword reviews and by a human coder for a sample of 40 (so human reliability rests on a small sample), and are not linked to Findex respondents. Bank-app reviews cover eight apps over about five months, the newest reviews only (HDFC Bank's App Store feed returned 100), and were checked only by an AI second pass (87.7% agreement). We conducted no interviews or surveys of our own: the interview evidence is secondary, drawn from five studies we selected through targeted searches, and the App Store reviews were checked only by an AI-assisted second pass (82.5% agreement). Peer values are published aggregates without sampling errors. All financial inputs are unvalidated assumptions with no churn, tax or financing flows.", align='j')
+  "The qualitative component rests on a secondary document review and on public app reviews, which are self-selected, cover seven weeks, come from five apps with unequal review counts, are English-language and keyword-coded by a single coder, checked by an AI second pass for all 118 fraud-keyword reviews and by a human coder for a sample of 40 (so human reliability rests on a small sample), and are not linked to Findex respondents. The keyword dictionaries are English only; a Hindi and Hinglish extension (Section 4.13) added 41 reviews and left the conclusions unchanged. Bank-app reviews cover eight apps over about five months, the newest reviews only (HDFC Bank's App Store feed returned 100), and were checked only by an AI second pass (87.7% agreement). We conducted no interviews or surveys of our own: the interview evidence is secondary, drawn from five studies we selected through targeted searches, and the App Store reviews were checked only by an AI-assisted second pass (82.5% agreement). Peer values are published aggregates without sampling errors. All financial inputs are unvalidated assumptions with no churn, tax or financing flows.", align='j')
 P("**Future scope.** Priority extensions are (i) consent-based interviews with merchants, first-time users and institutional budget owners to test willingness to pay; (ii) design-based estimation if strata and cluster identifiers become available; (iii) pooling Findex rounds {singer15,fx17,fx25} and extending the comparison from published aggregates to country-level microdata for peer economies; "
   "(iv) an evaluated pilot with pre-specified outcomes and a power calculation before treating verified loss as an outcome {burke}; and (v) extending the venture model with churn, taxes, receivable timing and month-by-month cash flow.", align='j')
 
@@ -773,6 +781,30 @@ for i, k in enumerate(order, 1):
     p.paragraph_format.space_after = Pt(4)
     p.paragraph_format.line_spacing = 1.0
     add_runs(p, f'[{i}] ' + REFS[k])
+
+# ================================================================= APPENDIX
+H1('Appendix A. Coding scheme')
+P("Table " + str(T['appcat']) + " gives the seven categories used to classify fraud-keyword reviews and Table " + str(T['appdict']) + " the keyword dictionaries. A review is coded by what the reviewer describes, not by the words fraud or scam. If a review fits two categories, the one with most words is used.", align='j')
+table('appcat', 'Categories for manual classification of fraud-keyword reviews', [
+    ['Letter', 'Category', 'Use when the review mainly describes'],
+    ['A', 'Reward, cashback or offer not honoured', 'A promised cashback, referral reward, coupon or offer that was not received or was smaller than shown, called a scam or fraud'],
+    ['B', 'Money debited, payment failed or refund missing', 'Money taken but a recharge or payment not completed, or a refund not returned'],
+    ['C', 'Blocked account, mis-selling or poor grievance handling', 'An account blocked, products or charges the customer did not agree to, complaints ignored, no way to reach support'],
+    ['D', 'Spam, permissions, privacy or intrusive security controls', 'Notifications, ads or calls, mandatory permissions, data being sold, security prompts that block legitimate use'],
+    ['E', 'General accusation, no specific incident', 'Calls the app or bank a fraud, fake or thief without describing a specific incident'],
+    ['F', 'Praise or no complaint', 'A positive review, or one that mentions fraud only to praise the app'],
+    ['G', 'Unauthorised access, theft or hacking (reported or feared)', 'Money or data taken without permission, an account hacked, a scam message received, or a fear of these'],
+], [0.6, 2.2, 3.7], note="Source: authors' codebook. The same codebook was given to the AI second pass and to the human coder.")
+table('appdict', 'Keyword dictionaries (case-insensitive; words are stems or phrases)', [
+    ['Dictionary', 'Words and phrases'],
+    ['Fraud, scam or unauthorised transactions', 'fraud, scam, scammer, cheat, hack, phishing, unauthorised, stolen, fake, spam, looted, duped, thief, theft'],
+    ['Money deducted or failed payment', 'money, amount, payment or balance followed by deducted, debited, cut, stuck, failed or pending; deducted; debited; refund; transaction failed or pending; payment failed'],
+    ['Support and complaint handling', 'customer care, support or service; support; complain; helpline; grievance; no response; not respond; ticket; escalate'],
+    ['Account blocking, verification or login barriers', 'block, KYC, verify, OTP, device binding, re-login, login issue or problem, SIM, restrict, suspend'],
+    ['Safety and trust language', 'safe, secure, security, trust, reliable, privacy'],
+    ['Security-friction prompts (bank-app analysis and payment-app comparison)', 'device binding or lock, screen lock, SIM, rooted or root, developer options, screen sharing, mirroring or recording, remote access, VPN, biometric, fingerprint, face ID, lock or unlock, two-factor, 2FA, security check, alert, risk, reason or restriction, unsafe'],
+    ['Hindi and Hinglish extension (sensitivity check only)', 'dhokha, dhoka, dhokebaaz, chor, chori, thag, loot, lootera, farzi, jhootha, paise or paisa or amount followed by kat or cut, kat gaye, cut gaya; Devanagari equivalents for cheating, thief, looting, fake and money cut'],
+], [2.4, 4.1], note="Source: authors' dictionaries (scripts analysis_extra.py, analysis_appstore.py, analysis_bankapps.py and analysis_hinglish.py).")
 
 doc.core_properties.title = 'Mobile Banking: Financial Inclusion vs Cybersecurity Risks'
 doc.core_properties.author = 'Group 31'

@@ -24,7 +24,7 @@ The TA confirmed there is **no page limit** and to use a **standard citation sty
 | `Completion_Pack/` | Plan to finish (`PLAN.md`), proofreading record, human second-coder pack (`second_coder/`) and interview pack (`interviews/`) |
 | `Friend/` | Friend's submission, reference only |
 
-Final deliverables: `Group_31_Final_Submission/Research_Report.pdf` (36 pages in the LibreOffice render; 25 tables, 7 figures, 54 references) and `slides/Group_31_Presentation_Final.pptx` (21 slides with speaker notes).
+Final deliverables: `Group_31_Final_Submission/Research_Report.pdf` (39 pages in the LibreOffice render; 27 tables, 7 figures, 54 references, Appendix A) and `slides/Group_31_Presentation_Final.pptx` (21 slides with speaker notes).
 Rebuild commands (run from `C:\Users\Sudhanshu\Desktop\EF`): `python Group_31/revised/build_structured_paper.py` then export the DOCX to PDF with Word; `python Group_31/revised/build_structured_deck.py`. The final folder was assembled by a helper script kept in the session scratchpad, not in the project.
 
 ## 4. Research questions (as in the paper)
@@ -96,6 +96,13 @@ Rebuild commands (run from `C:\Users\Sudhanshu\Desktop\EF`): `python Group_31/re
 - **New web data:** reviews of eight bank mobile-banking apps (`scripts/fetch_bankapps.py`, `analysis_bankapps.py`): 6,240 reviews (4,279 Google Play, 1,961 App Store), 65 fraud-keyword reviews classified (first pass plus blind AI second pass: 57/65 = 87.7%, kappa 0.84; no human check); 149 security-friction reviews (SIM binding 69, biometrics 46, developer or root checks 14). Compared with 7,848 payment-app reviews (Tables 17 and 18, Section 4.11). Reddit remains blocked and unused.
 - **Paper now:** Tables 1 to 25, Figures 1 to 7; Section 4.12 is the published studies (Tables 19 and 20); Table 21 answers the research questions including a central inclusion-vs-risk row.
 - **Check by hand:** Table 20 (published studies) and the bank-app classification (`results/bankapps_fraud_manual_codes.csv`).
+
+## 7h. Fixes after the audit, 20 Nov 2026 (eighth pass)
+- **Audit result:** all eight analysis scripts re-run to identical results in a clean copy; `analysis.ipynb` runs end to end.
+- **Significance tests** (`scripts/analysis_tests.py`, `results/significance_tests.csv`): RQ3 lock vs sending money Fisher exact p = 0.11 (not significant); bank vs payment apps differ significantly (Holm p < 0.001) for fraud keywords, failed payments, safety language and security friction, but not for support (p = 0.87) or blocking (p = 0.12); rewards 3/65 vs 77/175 and blocks/grievances 25/65 vs 21/175 (both p < 0.001).
+- **Hinglish sensitivity** (`scripts/analysis_hinglish.py`): the English dictionary stays the main one; an extension flagged 41 more reviews (classified by one coder); unauthorised or unexplained-debit reports in Play payment-app reviews would rise from 6 to 12 of 5,758. Section 4.13.
+- **Appendix A** (Tables 26 and 27): the seven categories and all dictionaries. README now says the builder scripts run only from the full project layout.
+- **Human checks still pending (prepared, not done):** `Completion_Pack/second_coder_round2/` (122 App Store and bank-app reviews; the answer key is in a git-ignored private folder and must stay local) and `Completion_Pack/table20_check/` (verify Table 20 and Table 19 figures).
 
 ## 8. Open items (human steps)
 1. Read the final PDF and slides once: names, dates, numbers, anything that reads oddly or cannot be defended.

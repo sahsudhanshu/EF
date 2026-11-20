@@ -1,0 +1,10 @@
+test,method,statistic,p_raw,p_holm
+"RQ3: sent money, lock (39/170) vs no lock (6/49)",Fisher exact (unweighted),2.134,0.11273126692880664,
+"Bank vs payment apps, theme: Fraud, scam or unauthorised transactions (65/6240 vs 175/7848)","chi-square, 2x2",29.31,6.17657785166888e-08,2.470631140667552e-07
+"Bank vs payment apps, theme: Money deducted or failed payment (26/6240 vs 165/7848)","chi-square, 2x2",73.87,8.363555078720431e-18,5.018133047232258e-17
+"Bank vs payment apps, theme: Support and complaint handling (345/6240 vs 439/7848)","chi-square, 2x2",0.03,0.8673656983455321,0.8673656983455321
+"Bank vs payment apps, theme: Account blocking, verification or login  (370/6240 vs 527/7848)","chi-square, 2x2",3.6,0.05783068746961083,0.11566137493922166
+"Bank vs payment apps, theme: Safety and trust language (213/6240 vs 436/7848)","chi-square, 2x2",36.3,1.6951456642870817e-09,8.475728321435408e-09
+"Bank vs payment apps, theme: Security-friction prompts (device bindin (149/6240 vs 306/7848)","chi-square, 2x2",25.4,4.6541076258382037e-07,1.3962322877514611e-06
+Fraud-keyword reviews about rewards or cashback not honoured: bank 3/65 vs payment (Play + App Store) 77/175,Fisher exact,0.062,4.531292748524458e-10,
+"Fraud-keyword reviews about blocked account, mis-selling or grievance: bank 25/65 vs payment (Play + App Store) 21/175",Fisher exact,4.583,1.2242470589585224e-05,

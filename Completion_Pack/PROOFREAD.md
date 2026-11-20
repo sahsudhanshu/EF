@@ -26,3 +26,6 @@ Also check: the PIB factsheet figure (741 live banks, July 2026) at https://pib.
 
 ## Added 20 Nov 2026: topic alignment
 Check by hand: Table 8 and Figure 4 (inclusion vs exposure by group, from `results/inclusion_risk_by_group.csv`); Table 17 and 18 (bank-app themes and the manual classification of 65 reviews, `results/bankapps_fraud_manual_codes.csv`, first pass plus blind AI second pass only); the eight bank apps and store identifiers in `scripts/fetch_bankapps.py`.
+
+## Added after the audit
+Human check packs now exist: `second_coder_round2/` (re-code 122 reviews, then run `compute_agreement_round2.py` with the private key) and `table20_check/` (fill `TABLE20_CHECK_SHEET.csv`). Report the results to Claude to update the paper.

@@ -12,7 +12,7 @@ data/                      wdi_peers.csv, app_reviews.csv, appstore_reviews.csv,
 figures/                   The six charts used in the paper
 results/                   Weighted results, logistic model, audit file, review coding (first pass, blind AI second pass, human second coder on 40 reviews), peer table, finance model outputs
 scripts/                   analysis_group31.py (survey), analysis_extra.py (peers + reviews), manual_coding_fraud_reviews.py,
-                           analysis_appstore.py (App Store reviews), analysis_sensitivity.py (design-effect sensitivity), fetch_bankapps.py + analysis_bankapps.py (bank mobile-banking app reviews), analysis_inclusion_risk.py (inclusion vs risk by group), revision_finance.py (finance model), build_structured_paper.py / build_structured_deck.py / build_ieee_report.py (document builders)
+                           analysis_appstore.py (App Store reviews), analysis_sensitivity.py (design-effect sensitivity), fetch_bankapps.py + analysis_bankapps.py (bank mobile-banking app reviews), analysis_inclusion_risk.py (inclusion vs risk by group), analysis_hinglish.py (Hindi/Hinglish sensitivity check), analysis_tests.py (significance tests), revision_finance.py (finance model), build_structured_paper.py / build_structured_deck.py / build_ieee_report.py (document builders)
 
 DATA NOT INCLUDED
 The India household microdata (World Bank, India - The Global Findex Database 2025, 2024 survey, ref. IND_2024_FINDEX_v02_M,
@@ -31,3 +31,8 @@ results/Group_31_design_sensitivity.csv shows the logistic-model intervals after
 
 TOPIC
 Mobile banking: financial inclusion vs cybersecurity risks. The quantitative core compares inclusion (account ownership, digital payment use) with cybersecurity risk (reported unsolicited money requests, device protection) for individuals and for 18 groups (results/inclusion_risk_by_group.csv, figures/figure7_inclusion_vs_risk.png). Qualitative evidence: 14,088 public reviews of 13 payment and bank apps (Google Play and App Store; results/bankapps_*, appstore_*, review_*), institutional documents, and five published interview studies.
+
+RUNNING THE SCRIPTS
+- analysis_*.py, fetch_*.py and revision_finance.py run from THIS folder (python scripts/<name>.py); analysis_group31.py and analysis_sensitivity.py need the microdata file (see DATA NOT INCLUDED). Suggested order: fetch_data.py, scripts/fetch_appstore.py, scripts/fetch_bankapps.py, analysis_group31.py, analysis_extra.py, manual_coding_fraud_reviews.py, revision_finance.py, analysis_appstore.py, analysis_bankapps.py, analysis_inclusion_risk.py, analysis_hinglish.py, analysis_sensitivity.py, analysis_tests.py. analysis.ipynb runs the main ones.
+- build_structured_paper.py, build_structured_deck.py and build_ieee_report.py are copies kept for transparency. They do NOT run from this folder: they expect the full project layout (Group_31/revised/ with its figures, and this folder at Group_31_Final_Submission/) and are run from the project root, e.g. python Group_31/revised/build_structured_paper.py. The finished Word, PDF and PowerPoint files are in report/ and slides/.
+- Re-fetching reviews returns the newest reviews at that time, so counts will differ from the paper's snapshots (data/*.csv hold the snapshots used).

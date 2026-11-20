@@ -1,0 +1,22 @@
+{
+  "Play payment apps": {
+    "reviews": 5758,
+    "english_fraud_keyword": 118,
+    "extra_hinglish_only": 23
+  },
+  "App Store payment apps": {
+    "reviews": 2090,
+    "english_fraud_keyword": 57,
+    "extra_hinglish_only": 3
+  },
+  "Play bank apps": {
+    "reviews": 4279,
+    "english_fraud_keyword": 46,
+    "extra_hinglish_only": 13
+  },
+  "App Store bank apps": {
+    "reviews": 1961,
+    "english_fraud_keyword": 19,
+    "extra_hinglish_only": 2
+  }
+}
