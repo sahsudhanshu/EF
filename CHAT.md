@@ -1,6 +1,6 @@
 # Chat log: how the Group 31 term paper was finished
 
-A chronological summary of the working session (not verbatim). For the project state see `CONTEXT.md`.
+A chronological summary of the working sessions (not verbatim). Sections 1–7 cover the first session; sections 8–17 cover the later passes. For the project state see `CONTEXT.md`.
 
 ## Starting point
 - The user shared an earlier summary of the project: a 16-page paper (`Group_31_Term_Paper_Revised`), a presentation built before the financial content, the progress report, and a friend's submission as a quality reference.
@@ -48,7 +48,45 @@ A chronological summary of the working session (not verbatim). For the project s
 - Python packages were installed on the user's machine with `pip --user`.
 - The financial model is illustrative; the NPCI count comes from a search snippet with no stated date.
 
+## 8. Verification pass (second session)
+- Re-ran the analysis scripts and checked the paper against the result files: tables against `results/`, table and figure numbering, Times New Roman 12, caption placement, abstract length (150–200 words) and at least 30 references. Corrections: a wrong Discussion claim about older adults' digital use, and a slide that listed five research questions instead of six.
+
+## 9. Names and the first plan
+- The user asked to use "Sudhanshu" only (not "Sah") and to turn three pending human steps (real interviews, a human second coder, a final read) into a plan. A corrected progress report was saved beside the original, which was left untouched.
+- Interviews were not feasible, so the group chose secondary evidence instead, and the user said not to worry about app-store terms of service because the work is being published. Reddit was blocked and was **not** bypassed.
+
+## 10. Secondary qualitative evidence
+- Scraped public Apple App Store (India) reviews of the five payment apps (2,090) and later of six bank apps (1,961 on App Store; 4,279 on Google Play).
+- Synthesised five published interview and focus-group studies into eight themes S1–S8 (Table 20; counts are of studies, not respondents).
+- Blind second passes were run by fresh subagents who did not see the first labels: Play 118 reviews (94.9%, kappa 0.93), App Store 57 (82.5%, 0.78), bank apps 65 (87.7%, 0.84).
+
+## 11. Weaknesses fixed
+- The user pasted a list of weak points and small things; the assistant fixed them: a design-effect sensitivity check, stale single-coder statements in the deck, notebook and README, and a UPI market anchor sourced from the PIB factsheet (741 live banks, July 2026).
+- The user approved the first push ("Push anyway"). The repository is public and already held the microdata and an earlier answer key; the user chose to continue.
+
+## 12. Human second coder
+- The user asked what a second coder is and what to check in Table 17, then returned results for a human, blind coder on 40 Play reviews: 38/40 = 95.0%, kappa 0.93, and 0 of 60 non-fraud reviews missed. The paper reports this on the user's word; the coder's identity is not recorded in the repository, so the group should be ready to back it up.
+
+## 13. Student IDs, summary table and IEEE report
+- Added IDs (Rushal IIT2024045, Sudhanshu IIT2024081, Vichanshu IIT2024083), a research-question summary table and a two-page IEEE-style report. A remote commit with an identical tree forced a `git rebase origin/main`; there was no force push.
+
+## 14. Topic correction
+- The user said the actual topic is **"Mobile banking: financial inclusion vs cybersecurity risks"**. The title, framing, analysis, data and scraping were realigned (plan in `Completion_Pack/TOPIC_ALIGNMENT_PLAN.md`): a new inclusion-versus-risk table and figure by 18 groups (Spearman 0.38 and 0.63), and bank-app reviews added next to payment-app reviews.
+
+## 15. Audit and the last additions
+- The user asked what was left, then asked for a proper audit. All eight analysis scripts reproduced identical results in a clean copy and the notebook ran end to end.
+- Added significance tests (RQ3 Fisher p = 0.11; bank versus payment themes with Holm correction), a Hindi/Hinglish sensitivity check (41 extra reviews; unauthorised-type reports in Play payment apps 6 → 12 of 5,758), Appendix A with the coding scheme, and the human-check packs. 153 automated checks pass.
+- Pushed as commit 51f78b6. The new second-coder answer key lives in a git-ignored private folder and was not uploaded.
+
+## 16. Style and process notes from the user
+- The user did not want to be asked about the deadline; it was dropped.
+- Every push was approved explicitly. No force pushes. Access blocks (Reddit) were not bypassed.
+
+## 17. This request
+- The user asked for a context file and a chat file in Markdown and to push everything. `CONTEXT.md` and `CHAT.md` were brought up to date and pushed.
+
 ## Open at the end of the session
-- Final read of the PDF and slides by the group.
-- Audit of `results/review_fraud_manual_codes.csv`.
-- Optional cleanup of old drafts in `Group_31/` (the user decides).
+- A person re-codes the 122 reviews in `Completion_Pack/second_coder_round2/` (about 1 hour); then run `compute_agreement_round2.py` and update the paper with the numbers.
+- A person fills `Completion_Pack/table20_check/TABLE20_CHECK_SHEET.csv` (30–45 minutes); corrections go into the paper, slides and result files.
+- Final read in Word and PowerPoint, then export the PDFs from Word in place of the LibreOffice versions.
+- Optional: the group's own interviews (`Completion_Pack/interviews/`).

@@ -104,12 +104,18 @@ Rebuild commands (run from `C:\Users\Sudhanshu\Desktop\EF`): `python Group_31/re
 - **Appendix A** (Tables 26 and 27): the seven categories and all dictionaries. README now says the builder scripts run only from the full project layout.
 - **Human checks still pending (prepared, not done):** `Completion_Pack/second_coder_round2/` (122 App Store and bank-app reviews; the answer key is in a git-ignored private folder and must stay local) and `Completion_Pack/table20_check/` (verify Table 20 and Table 19 figures).
 
+## 7i. State at the last push (20 Nov 2026)
+- `main` at commit 51f78b6, then this update of `CONTEXT.md` and `CHAT.md`. Paper 39 pages (LibreOffice render), 27 tables, 7 figures, 54 references, Appendix A; deck 21 slides; IEEE report 2 pages; notebook 30 cells; 153 automated checks pass.
+- Review coding: all classification by an AI first coder with blind AI second passes, except 40 Google Play reviews checked by a human blind coder (95.0%, kappa 0.93; reported on the user's word). App Store and bank-app reviews have no human check yet. Table 20 was extracted by AI reading and is unverified by a person.
+- The round-2 answer key (`Completion_Pack/second_coder_round2/PRIVATE_DO_NOT_SHARE/`) is git-ignored; never commit it.
+- `CHAT.md` is the narrative log of the sessions.
+
 ## 8. Open items (human steps)
-1. Read the final PDF and slides once: names, dates, numbers, anything that reads oddly or cannot be defended.
-2. Audit the review classification file (and optionally have a second person re-code a sample).
-3. Decide whether to keep the app-review scraping and the numbered citation style.
-4. Optional: delete old drafts and test files in `Group_31/` (nothing was deleted; the submission folder only holds copies).
-5. If the course expects primary qualitative work, real interviews are needed; they were not done.
+1. Re-code `Completion_Pack/second_coder_round2/PartC_coding_sheet_BLANK.csv` (122 reviews, about 1 hour), run `compute_agreement_round2.py` with the private key and update the paper with the numbers.
+2. Fill `Completion_Pack/table20_check/TABLE20_CHECK_SHEET.csv` (30–45 minutes) and apply corrections to Table 20 and Table 19 figures, the slides and results files.
+3. Final read of the paper and slides in Word and PowerPoint; export PDFs from Word (current PDFs are LibreOffice renders).
+4. Optional: the group's own interviews (`Completion_Pack/interviews/`); cleanup of old drafts in `Group_31/` (nothing deleted so far).
+5. Known limits to keep stated: finance inputs are unvalidated assumptions; intervals are not design-based; app-store coding is partly AI-assisted.
 
 ## 9. Technical notes
 - Python (miniconda 3.14). Packages installed with `pip --user` for this work: pandas, numpy, matplotlib, nbformat, nbclient, ipykernel, google-play-scraper. A live Jupyter kernel failed in the tool environment, so `analysis.ipynb` stores outputs from running each script; it can be re-run normally.
