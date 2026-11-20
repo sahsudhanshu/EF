@@ -1,0 +1,13 @@
+theme,reviews,share_pct,mean_rating,one_star_share_pct,store
+"Fraud, scam or unauthorised transactions",19,1.0,1.42,89.5,App Store
+Money deducted or failed payment,9,0.5,2.33,66.7,App Store
+Support and complaint handling,115,5.9,1.6,80.9,App Store
+"Account blocking, verification or login barriers",141,7.2,1.33,86.5,App Store
+Safety and trust language,82,4.2,2.93,46.3,App Store
+"Security-friction prompts (device binding, SIM, root, VPN, screen sharing, biometrics)",57,2.9,1.65,75.4,App Store
+"Fraud, scam or unauthorised transactions",46,1.1,1.13,93.5,Google Play
+Money deducted or failed payment,17,0.4,1.41,76.5,Google Play
+Support and complaint handling,230,5.4,1.6,79.6,Google Play
+"Account blocking, verification or login barriers",229,5.4,1.52,78.2,Google Play
+Safety and trust language,131,3.1,2.56,54.2,Google Play
+"Security-friction prompts (device binding, SIM, root, VPN, screen sharing, biometrics)",92,2.2,1.55,78.3,Google Play

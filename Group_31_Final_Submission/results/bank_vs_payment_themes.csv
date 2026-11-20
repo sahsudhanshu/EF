@@ -1,0 +1,7 @@
+theme,bank_reviews,bank_share_pct,bank_mean_rating,payment_reviews,payment_share_pct,payment_mean_rating
+"Fraud, scam or unauthorised transactions",65,1.0,1.22,175,2.2,1.41
+Money deducted or failed payment,26,0.4,1.73,165,2.1,1.43
+Support and complaint handling,345,5.5,1.6,439,5.6,1.51
+"Account blocking, verification or login barriers",370,5.9,1.45,527,6.7,1.65
+Safety and trust language,213,3.4,2.7,436,5.6,3.45
+"Security-friction prompts (device binding, SIM, root, VPN, screen sharing, biometrics)",149,2.4,1.59,306,3.9,2.09

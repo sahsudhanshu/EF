@@ -1,0 +1,25 @@
+{
+  "n_reviews": 6240,
+  "by_store": {
+    "Google Play": 4279,
+    "App Store": 1961
+  },
+  "apps": "{('App Store', 'Axis Mobile'): 493, ('App Store', 'HDFC Bank'): 100, ('App Store', 'ICICI iMobile'): 470, ('App Store', 'Kotak 811'): 180, ('App Store', 'PNB ONE'): 291, ('App Store', 'bob World'): 427, ('Google Play', 'Axis Mobile'): 624, ('Google Play', 'Canara ai1'): 689, ('Google Play', 'ICICI iMobile'): 671, ('Google Play', 'IDFC FIRST'): 413, ('Google Play', 'Kotak Bank'): 804, ('Google Play', 'bob World'): 1078}",
+  "date_min": "2026-06-05",
+  "date_max": "2026-11-19",
+  "mean_rating": 2.49,
+  "any_theme_pct": 14.6,
+  "fraud_theme_mean_rating": 1.22,
+  "non_fraud_mean_rating": 2.5,
+  "friction_by_app": {
+    "Axis Mobile": 2.2,
+    "Canara ai1": 1.3,
+    "HDFC Bank": 6.0,
+    "ICICI iMobile": 3.4,
+    "IDFC FIRST": 0.7,
+    "Kotak 811": 1.1,
+    "Kotak Bank": 3.6,
+    "PNB ONE": 2.7,
+    "bob World": 1.9
+  }
+}

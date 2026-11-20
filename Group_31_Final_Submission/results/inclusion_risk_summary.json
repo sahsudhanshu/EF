@@ -1,0 +1,20 @@
+{
+  "n_groups": 18,
+  "spearman_payment_vs_exposure": 0.38,
+  "spearman_payment_vs_lock": 0.63,
+  "highest_exposure_groups": [
+    [
+      "Tertiary",
+      17.9
+    ],
+    [
+      "Quintile 1 (lowest)",
+      12.5
+    ],
+    [
+      "Men",
+      11.8
+    ]
+  ],
+  "note": "Groups overlap; descriptive only; payment use and lock use have different denominators from exposure."
+}

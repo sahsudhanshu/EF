@@ -85,8 +85,8 @@ def source(s, t):
 # 1 ---------------------------------------------------------------- title
 s = prs.slides.add_slide(blank); N[0] += 1
 box(s, 0, 0, 13.333, 7.5, NAVY); box(s, 0, 5.2, 13.333, 0.06, TEAL)
-text(s, 0.9, 1.3, 11.5, 1.9, 'Mobile Banking, Financial Inclusion and Cybersecurity Risk in India', 40, True, WHITE, HEAD)
-text(s, 0.9, 3.35, 11.5, 0.9, 'A survey-weighted analysis of the 2024 Global Findex and an institutional payment-safety service proposal', 20, False, RGBColor(0xC9, 0xD8, 0xE6))
+text(s, 0.9, 1.3, 11.5, 1.9, 'Mobile Banking: Financial Inclusion vs Cybersecurity Risks', 40, True, WHITE, HEAD)
+text(s, 0.9, 3.35, 11.5, 0.9, "Evidence from India's 2024 Global Findex, public app reviews and published interview studies, with implications for entrepreneurs", 20, False, RGBColor(0xC9, 0xD8, 0xE6))
 text(s, 0.9, 5.5, 8, 1.0, '', 18, False, WHITE, lines=['Rushal Verma (IIT2024045)  |  Vichanshu Raj (IIT2024083)', 'Sudhanshu (IIT2024081)', 'Group 31  |  Entrepreneurial Finance'])
 s.notes_slide.notes_text_frame.text = 'Introduce the topic: access to accounts is high in India, but is digital use safe and confident? We analyse the 2024 India Global Findex and test a venture idea.'
 
@@ -139,7 +139,7 @@ stat(s, 4.7, 1.8, 3.9, 'Weighted', 'all percentages use the survey weight; n is 
 stat(s, 8.8, 1.8, 3.9, 'Logistic', 'adjusted model on 2,145 phone owners (approximate intervals)', AMBER)
 bullets(s, 0.6, 3.7, 12.1, 2.9, [
     'Design|weighted descriptives (RQ1, RQ4), adjusted association (RQ2), lock-status comparison (RQ3), document and review coding (RQ5), financial scenarios (RQ6).',
-    'Qualitative|World Bank and RBI documents, 5,758 Google Play and 2,090 App Store reviews, and five published interview studies; no interviews of our own.',
+    'Qualitative|World Bank and RBI documents, 14,088 reviews of 13 payment and bank apps (Google Play and App Store), and five published interview studies; no interviews of our own.',
     'Ethics|public de-identified data, results framed as reports not verified fraud, finance figures labelled illustrative.'], 16)
 
 # 6 ---------------------------------------------------------------- results 1
@@ -196,6 +196,16 @@ stat(s, 9.3, 1.9, 3.4, '+33.7', 'points: ages 60+ (payment use above lock use)',
 stat(s, 9.3, 3.65, 3.4, '−32.1', 'points: ages 15–24 (lock use above payment use)', BLUE)
 source(s, 'Different denominators (all adults vs phone owners); the difference is descriptive. Source: authors\' calculations.')
 
+# 9z -------------------------------------------------------------- inclusion vs risk
+s = slide('4.5  Results: inclusion vs risk', 'Does more inclusion mean more cyber risk? Partly',
+          'Each point is a demographic group. X: share who made or received a digital payment. Y: share of phone owners who reported an unsolicited money request. Rank correlation across 18 groups: 0.38 (payment use vs exposure), 0.63 (payment use vs lock use). Highest exposure: tertiary education 17.9, lowest income quintile 12.5, men 11.8. Lowest: ages 60+ 4.1, women 5.7. Older adults: payment use 56.6 vs lock use 22.9. Descriptive; groups overlap.')
+pic(s, 'figure7_inclusion_vs_risk.png', 0.5, 1.6, 7.4)
+bullets(s, 8.2, 1.7, 4.7, 4.8, ['Individuals|payment users report more requests than non-users (13.1% vs 4.3%; odds ratio 3.45).',
+        'Groups|the link is weak (rank correlation 0.38): exposure is highest among the tertiary-educated and the poorest.',
+        'Protection|lock use rises with inclusion (0.63) except at older ages: payment use 56.6% vs lock use 22.9%.',
+        'Reading|risk concentrates where inclusion outruns safeguards, not evenly with inclusion.'], 14)
+source(s, 'Descriptive; groups overlap; requests are not verified fraud. Source: authors\' calculations, Global Findex 2025 India microdata.')
+
 # 9a -------------------------------------------------------------- peers
 s = slide('4.7  Results: peer economies', 'India: top-tier accounts, below-peer phone ownership',
           'World Bank Findex 2025 aggregates for 2024. India account 89.0 (second to China 89.4), phone 66.5 (second lowest), lock 57.6, unsolicited requests 9.4 (our microdata; lowest among economies with a value). Indicative only.')
@@ -231,11 +241,26 @@ bullets(s, 8.6, 3.7, 4.2, 2.9, ['Ratings|fraud-keyword reviews average 1.36 star
         'Method|keyword coding, then all 118 fraud-keyword reviews read, then re-coded blind (94.9% AI; 95.0% human, n=40).'], 13)
 source(s, 'Self-selected public reviews; not a measure of scam prevalence. Source: authors\' coding of Google Play reviews.')
 
+# 9y -------------------------------------------------------------- bank apps
+s = slide('4.11  Results: bank apps', 'Bank apps: blocks, charges and security prompts',
+          '6,240 reviews of eight bank apps (Google Play 4,279; App Store 1,961), 5 Jun to 19 Nov 2026. Fraud keywords 1.0% (payment apps 2.2%). 65 fraud-keyword reviews read: 25 blocked account/charges/grievance, 14 general, 13 spam or security controls, 4 payments, 3 rewards, 3 praise, 3 unauthorised access (4 in blind second pass; 57 of 65 agreed, kappa 0.84). Security-friction dictionary: 149 reviews (2.4%); SIM or device binding 69, biometrics 46, developer or root checks 14.')
+stat(s, 0.6, 1.75, 2.9, '6,240', 'reviews of eight bank mobile-banking apps on two stores', TEAL)
+stat(s, 3.7, 1.75, 2.9, '38.5%', 'of fraud-keyword reviews are about blocked accounts, charges or grievances', BLUE)
+stat(s, 6.8, 1.75, 2.9, '3 to 4', 'of 6,240 reviews describe unauthorised access or theft', AMBER)
+stat(s, 9.9, 1.75, 2.8, '149', 'reviews describe security-friction prompts (SIM binding, biometrics)', NAVY)
+bullets(s, 0.6, 3.6, 6.0, 3.0, ['Different complaint|bank apps: blocks, charges, support; payment apps: cashback and refunds (50.8%).',
+        'Fraud words rarer|1.0% of bank-app reviews vs 2.2% of payment-app reviews.',
+        'Ratings|bank apps average 2.49 stars; fraud-keyword reviews 1.22.'], 15)
+bullets(s, 6.9, 3.6, 5.9, 3.0, ['Friction|SIM binding 69, biometric prompts 46, developer or root checks 14.',
+        'Highest friction share|HDFC Bank on the App Store (6.0%, n = 100).',
+        'Reading|inclusion vs risk shows up here as friction and weak redress, not theft.'], 15)
+source(s, 'Self-selected public reviews, newest only; classification by one coder plus a blind AI second pass. Source: Google Play and Apple App Store reviews.')
+
 # 9d -------------------------------------------------------------- beyond Google Play
-s = slide('4.10-4.11  Results: more evidence', 'App Store reviews and published interview studies',
+s = slide('4.10, 4.12  Results: more evidence', 'App Store reviews and published interview studies',
           'App Store: 2,090 reviews, same five apps, 30 Apr to 18 Nov 2026. 57 fraud-keyword reviews: 17 rewards, 11 failed payments, 10 blocked/support, 7 spam, 6 general, 4 praise, 2 unauthorised access (4 in a blind second pass, 82.5% agreement). Published studies: Mungara 2025 (26 interviews), Bajaj 2026 (46), Jain 2021 (24 merchants, 10 agents), Aadil 2023 (50 users, 10 officials), Sengupta 2025 (18 interviews, 7 focus groups, survey of 3,784). Secondary evidence, not our interviews.')
 stat(s, 0.6, 1.75, 2.9, '2,090', 'App Store reviews of the same five apps; mean rating 3.31', TEAL)
-stat(s, 3.7, 1.75, 2.9, '2 to 4', 'of 2,090 reviews describe unauthorised access or theft (0.1-0.2%)', AMBER)
+stat(s, 3.7, 1.75, 2.9, '2 to 4', 'of 2,090 reviews describe unauthorised access or theft', AMBER)
 stat(s, 6.8, 1.75, 2.9, '5', 'published interview studies analysed as secondary evidence', BLUE)
 stat(s, 9.9, 1.75, 2.8, '5 of 5', 'studies report that trust shapes decisions', NAVY)
 bullets(s, 0.6, 3.6, 6.0, 3.0, ['Same pattern on iOS|rewards, failed payments, support and spam outnumber theft reports.',
@@ -316,7 +341,7 @@ s = slide('6  Conclusion', 'Broad inclusion; safe use is the opportunity',
           'Restate: 89.0 vs 48.5; payment users report more requests, OR 3.45; test a pilot before scaling; next step is willingness-to-pay evidence.')
 bullets(s, 0.6, 1.8, 7.4, 4.6, ['Access|89.0% own accounts, but 48.5% made or received a digital payment.',
         'Protection|57.7% of phone owners have a lock; lower for women, older and lower-income adults.',
-        'Exposure|payment users report more unsolicited requests (13.1% vs 4.3%; odds ratio 3.45).',
+        'Exposure|payment users report more unsolicited requests (13.1% vs 4.3%; odds ratio 3.45), but across groups the link is weak (rank correlation 0.38).',
         'Opportunity|a staged, institution-funded pilot; viable only if price, cost and renewal assumptions hold.'], 17)
 box(s, 8.4, 1.85, 4.3, 4.3, NAVY)
 text(s, 8.7, 2.1, 3.7, 3.8, 'Next step: pilot evidence on willingness to pay, retention and effectiveness.', 24, True, WHITE, HEAD, anchor=MSO_ANCHOR.MIDDLE)

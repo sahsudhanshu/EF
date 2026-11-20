@@ -5,7 +5,7 @@ Share this file with anyone (or any AI session) picking up the work. Last update
 ## 1. What this is
 - **Course:** Entrepreneurial Finance. **Group 31.** **Authors:** Rushal Verma (IIT2024045), Vichanshu Raj (IIT2024083), Sudhanshu (IIT2024081) (use "Sudhanshu" only; "Sah" removed on request).
 - **Topic:** Mobile banking, financial inclusion and cybersecurity risk in India.
-- **Title:** *Mobile Banking, Financial Inclusion and Cybersecurity Risk in India: A Survey-Weighted Analysis of the 2024 Global Findex and an Institutional Payment-Safety Service Proposal.*
+- **Title:** *Mobile Banking: Financial Inclusion vs Cybersecurity Risks*. Subtitle: *Evidence from India's 2024 Global Findex, public app reviews and published interview studies, with implications for entrepreneurs.* (Changed 20 Nov 2026: the group confirmed the actual topic is "Mobile banking: financial inclusion vs cybersecurity risks"; see `Completion_Pack/TOPIC_ALIGNMENT_PLAN.md`.)
 - **Goal:** a term paper that follows the TA's required structure (`Paper structure.pdf`), plus a presentation. A friend's submission (folder `Friend/`) was the quality reference.
 
 ## 2. The TA's rules (the only hard requirements)
@@ -24,7 +24,7 @@ The TA confirmed there is **no page limit** and to use a **standard citation sty
 | `Completion_Pack/` | Plan to finish (`PLAN.md`), proofreading record, human second-coder pack (`second_coder/`) and interview pack (`interviews/`) |
 | `Friend/` | Friend's submission, reference only |
 
-Final deliverables: `Group_31_Final_Submission/Research_Report.pdf` (30 pages in the LibreOffice render; 21 tables, 6 figures, 53 references) and `slides/Group_31_Presentation_Final.pptx` (19 slides with speaker notes).
+Final deliverables: `Group_31_Final_Submission/Research_Report.pdf` (36 pages in the LibreOffice render; 25 tables, 7 figures, 54 references) and `slides/Group_31_Presentation_Final.pptx` (21 slides with speaker notes).
 Rebuild commands (run from `C:\Users\Sudhanshu\Desktop\EF`): `python Group_31/revised/build_structured_paper.py` then export the DOCX to PDF with Word; `python Group_31/revised/build_structured_deck.py`. The final folder was assembled by a helper script kept in the session scratchpad, not in the project.
 
 ## 4. Research questions (as in the paper)
@@ -89,6 +89,13 @@ Rebuild commands (run from `C:\Users\Sudhanshu\Desktop\EF`): `python Group_31/re
 - Student IDs on the paper, deck, IEEE report and README. Table 18 (answers to RQ1 to RQ6) added at the start of the Discussion; tables 19 to 22 renumbered; paper now 31 pages (LibreOffice render).
 - `report/IEEE_Report.docx/pdf`: 2-page condensed IEEE-style version built by `scripts/build_ieee_report.py` (10 pt two columns; the TA's Times New Roman 12 rule applies to the full paper).
 - Automated check: tables, numbering, fonts, caption order, abstract length and references all pass (117 checks).
+
+## 7g. Topic alignment 20 Nov 2026 (seventh pass)
+- **Topic confirmed by the group:** "Mobile banking: financial inclusion vs cybersecurity risks". Title changed everywhere (paper, slides, IEEE report, notebook, README, metadata); the venture proposal is no longer in the title (it stays as Section 5.3). Plan: `Completion_Pack/TOPIC_ALIGNMENT_PLAN.md`.
+- **New quantitative analysis:** inclusion vs risk by group (`scripts/analysis_inclusion_risk.py`; Table 8, Figure 4): 18 groups, rank correlation 0.38 (payment use vs exposure) and 0.63 (payment use vs lock use); exposure highest among tertiary-educated (17.9%) and the lowest income quintile (12.5%), lowest at ages 60+ (4.1%).
+- **New web data:** reviews of eight bank mobile-banking apps (`scripts/fetch_bankapps.py`, `analysis_bankapps.py`): 6,240 reviews (4,279 Google Play, 1,961 App Store), 65 fraud-keyword reviews classified (first pass plus blind AI second pass: 57/65 = 87.7%, kappa 0.84; no human check); 149 security-friction reviews (SIM binding 69, biometrics 46, developer or root checks 14). Compared with 7,848 payment-app reviews (Tables 17 and 18, Section 4.11). Reddit remains blocked and unused.
+- **Paper now:** Tables 1 to 25, Figures 1 to 7; Section 4.12 is the published studies (Tables 19 and 20); Table 21 answers the research questions including a central inclusion-vs-risk row.
+- **Check by hand:** Table 20 (published studies) and the bank-app classification (`results/bankapps_fraud_manual_codes.csv`).
 
 ## 8. Open items (human steps)
 1. Read the final PDF and slides once: names, dates, numbers, anything that reads oddly or cannot be defended.

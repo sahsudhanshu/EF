@@ -1,0 +1,19 @@
+dimension,group,payment_use_pct,payment_n,request_exposure_pct,exposure_n,lock_use_pct,lock_n
+Sex,Women,42.7,1526,5.7,920,50.3,919
+Sex,Men,54.1,1474,11.8,1225,62.7,1222
+Age,15–24,43.5,722,8.3,497,75.7,497
+Age,25–39,51.3,1134,11.1,894,62.7,893
+Age,40–59,46.6,858,9.8,599,43.6,597
+Age,60+,56.6,286,4.1,155,22.9,154
+Education,Primary or less,40.7,1680,8.4,1011,41.2,1007
+Education,Secondary,62.7,1016,9.0,853,79.9,853
+Education,Tertiary,74.5,304,17.9,281,89.1,281
+Income,Quintile 1 (lowest),34.8,515,12.5,300,40.6,298
+Income,Quintile 2,38.0,562,6.7,348,45.5,347
+Income,Quintile 3,43.4,603,7.8,410,54.9,410
+Income,Quintile 4,58.6,608,8.4,463,62.0,463
+Income,Quintile 5 (highest),67.4,712,11.1,624,75.2,623
+Residence,Rural,48.2,2040,9.8,1389,55.0,1386
+Residence,Urban,49.0,960,8.5,756,62.5,755
+Work,In workforce,54.9,1793,10.1,1421,58.5,1417
+Work,Out of workforce,38.9,1207,7.9,724,56.0,724
