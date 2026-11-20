@@ -135,7 +135,7 @@ Reviews are free text. We turned them into numbers in two steps:
 - First pass: one coder.
 - Blind AI second pass on all three review sets.
 - A human coder outside the group re-coded 40 of the 118 Google Play reviews: 38 agreed (95.0%, kappa 0.93).
-- A further second coder, described by the group as **a person assisted by coding software**, coded all 122 App Store and bank-app fraud-keyword reviews: 83.6% agreement with the first pass (kappa 0.80).
+- A further second coder, described by the group as **a person who used software, including AI tools, as an aid but made each coding decision**, coded all 122 App Store and bank-app fraud-keyword reviews: 83.6% agreement with the first pass (kappa 0.80).
 
 ### 2.13 Chi-square test and the Holm adjustment (slide 13 background)
 
@@ -212,7 +212,7 @@ A **multilingual payment-safety companion**: short audio and visual explanations
 > "We used only public data. One: the India Global Findex microdata, 3,000 adults surveyed in 2024, weighted so it represents the adult population. Two: published Findex country indicators for ten economies, so we can compare India with peers. Three, four and five: 14,088 public app reviews, 5,758 on Google Play and 2,090 on the App Store for five payment apps, and 6,240 for eight bank apps. Six: five published interview studies in India. Seven: three official documents from the World Bank and the Reserve Bank of India. We did not conduct interviews or surveys ourselves, and we did not keep reviewers' names, emails or phone numbers."
 
 ### Slide 6: Analysis and coding reliability (75 seconds)
-> "For the survey we report weighted shares, a logistic regression, and a comparison across 18 groups. For the reviews we used keyword dictionaries and then read every review that contained a fraud-type word and placed it in one of seven categories. To check we were consistent we used second coders. A blind AI second pass agreed on 94.9 percent of Google Play reviews, 82.5 percent of App Store reviews and 87.7 percent of bank-app reviews. A human coder outside our group re-coded 40 Google Play reviews and agreed 95 percent of the time. A further second coder, a person assisted by coding software, coded all 122 App Store and bank-app reviews and agreed 83.6 percent with our first pass, kappa 0.80. Kappa corrects for agreement by chance, and values near 0.8 are considered strong. I will now hand over to Vichanshu, who will show what the survey found."
+> "For the survey we report weighted shares, a logistic regression, and a comparison across 18 groups. For the reviews we used keyword dictionaries and then read every review that contained a fraud-type word and placed it in one of seven categories. To check we were consistent we used second coders. A blind AI second pass agreed on 94.9 percent of Google Play reviews, 82.5 percent of App Store reviews and 87.7 percent of bank-app reviews. A human coder outside our group re-coded 40 Google Play reviews and agreed 95 percent of the time. A further second coder, a person who used software, including AI tools, as an aid but made each decision, coded all 122 App Store and bank-app reviews and agreed 83.6 percent with our first pass, kappa 0.80. Kappa corrects for agreement by chance, and values near 0.8 are considered strong. I will now hand over to Vichanshu, who will show what the survey found."
 
 *Be ready:* "Why did you need a second coder?" (to check our labels are reliable); "Why not interviews?" (not feasible; we used published studies and say so).
 
@@ -334,7 +334,7 @@ No, they are self-selected. We use them for unprompted user language and to see 
 It was not feasible in a term project, and we did not want to collect personal data without review. We used five published India interview studies instead, labelled as secondary evidence, and list own interviews as future work.
 
 **Q7. Who coded the reviews? How do you know it is reliable?**
-One coder did the first pass. A blind AI second pass agreed on 94.9, 82.5 and 87.7 percent. A human outside the group re-coded 40 Google Play reviews with 95 percent agreement. A further second coder, a person assisted by coding software, coded 122 App Store and bank-app reviews with 83.6 percent agreement. The full classifications are in our results folder so they can be audited.
+One coder did the first pass. A blind AI second pass agreed on 94.9, 82.5 and 87.7 percent. A human outside the group re-coded 40 Google Play reviews with 95 percent agreement. A further second coder, a person who used software including AI tools as an aid but made each decision, coded 122 App Store and bank-app reviews with 83.6 percent agreement. The full classifications are in our results folder so they can be audited.
 
 **Q8. What is kappa?**
 Agreement corrected for chance. Our values of 0.78 to 0.93 are considered strong.
@@ -378,7 +378,7 @@ We show where users and merchants lack safe, supported access and propose an ins
 - "3.45 times more **likely**". Say "odds about 3.45 times as high".
 - "The reviews show how common scams are". They show where trust breaks down.
 - "Our finance numbers are forecasts". They are illustrative assumptions.
-- "A human checked all the coding". Only **40** Google Play reviews had a human outside the group; the **122** App Store and bank-app reviews had a second coder described as a person assisted by software.
+- "A human checked all the coding". Only **40** Google Play reviews had a human outside the group; the **122** App Store and bank-app reviews had a second coder described as a person who used software, including AI tools, as an aid but made each decision.
 - "We interviewed users". We did not; we used five published studies.
 - Any number you do not remember. Say "I would check the exact figure in our paper" and look at the cheat sheet.
 

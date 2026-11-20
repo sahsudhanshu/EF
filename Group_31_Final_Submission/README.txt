@@ -24,6 +24,6 @@ conditions. To rerun the notebook, download it and save it as data/Findex_Microd
 NOTES
 - Re-fetching app reviews returns the newest reviews at that time, so counts will differ from the paper; data/ holds the snapshot used.
 - Review coding: first pass by one coder; blind AI second passes; a human coder outside the group re-coded 40 Google Play reviews;
-  a further second coder (a person assisted by coding software, as reported by the group) re-coded 122 App Store and bank-app reviews.
+  a further second coder (a person who used software, including AI tools, as an aid but made each coding decision, as reported by the group) re-coded 122 App Store and bank-app reviews.
   The private answer key is not part of this folder.
 - Finance inputs are illustrative assumptions, not findings.
