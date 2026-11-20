@@ -128,7 +128,7 @@ for i, (k, q) in enumerate(rqs):
     box(s, x + 1.0, y, 5.0, 1.1, PALE); text(s, x + 1.15, y + 0.08, 4.75, 0.95, q, 14.5, False, INK, anchor=MSO_ANCHOR.MIDDLE)
 
 # 4 ---------------------------------------------------------------- literature
-s = slide('2  Literature review', '31 academic sources, one gap',
+s = slide('2  Literature review', '35 academic sources, one gap',
           'Four strands: inclusion and mobile money (Suri and Jack, Jack and Suri), adoption and trust (Davis, Luarn and Lin), security behaviour (Dhamija, Button, Bada, Burke), cyber risk economics (Anderson and Moore, Kopp). The gap is a recent national India view that joins them with a venture lens.')
 cols = [('Inclusion and mobile money', 'M-PESA helped households share risk and lifted about 2% out of poverty. Benefits arise when services are used, not just owned.'),
         ('Adoption and trust', 'Usefulness, ease, credibility and self-efficacy drive mobile banking use. Safety is a condition for continued use.'),
