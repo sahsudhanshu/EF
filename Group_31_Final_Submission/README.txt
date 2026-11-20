@@ -1,31 +1,13 @@
-GROUP 31 - ENTREPRENEURIAL FINANCE TERM PAPER
-Mobile Banking: Financial Inclusion vs Cybersecurity Risks
-Authors: Rushal Verma (IIT2024045), Sudhanshu (IIT2024081), Vichanshu Raj (IIT2024083)
+GROUP 31 - Entrepreneurial Finance term paper
+Mobile Banking: Financial Inclusion vs Cybersecurity Risks in India
+Rushal Verma (IIT2024045), Sudhanshu (IIT2024081), Vichanshu Raj (IIT2024083)
 
-THE SUBMISSION
-Research_Report.pdf        The paper, 16 pages with 9 figures (APA author-year citations) (same file as report/Group_31_Research_Paper.pdf)
-report/                    The paper as PDF and editable Word file (TA's paper structure; Times New Roman 12)
-slides/                    Presentation, 19 slides with speaker notes (PPTX and PDF)
+Research_Report.pdf   The paper (PDF; Word version in report/)
+report/               Paper (Word and PDF)
+slides/               Presentation (PowerPoint and PDF)
+analysis.ipynb        Notebook that reproduces the results
+fetch_data.py         Downloads the open data
+data/  figures/  results/  scripts/   Data, charts, result tables and code
 
-SUPPORTING MATERIAL
-analysis.ipynb             Notebook that reproduces the results (outputs stored)
-fetch_data.py              Downloads the open data: Findex 2025 country aggregates (World Bank API) and public app reviews
-data/                      Peer indicators and public app reviews (no usernames; emails and phone numbers masked)
-figures/                   Charts used in the paper and slides
-results/                   Weighted results, model, audit file, significance tests, review coding, second-coder agreement, finance model
-scripts/                   Analysis, fetching and coding scripts; scripts/condensed/ holds the builders for the paper and slides
-                           (they run from the full project layout and read references_source.txt)
-
-DATA NOT INCLUDED
-The India household microdata (World Bank, India - The Global Findex Database 2025, 2024 survey, ref. IND_2024_FINDEX_v02_M,
-DOI 10.48529/c9vy-pq51, https://microdata.worldbank.org/index.php/catalog/7916) is not included because of the World Bank's access
-conditions. To rerun the notebook, download it and save it as data/Findex_Microdata_2025_updateIndia.dta.
-
-NOTES
-- Re-fetching app reviews returns the newest reviews at that time, so counts will differ from the paper; data/ holds the snapshot used.
-- Review coding: first pass by one coder; blind AI second passes; a human coder outside the group re-coded 40 Google Play reviews;
-  a further second coder (a person who used software, including AI tools, as an aid but made each coding decision, as reported by the group) re-coded 122 App Store and bank-app reviews.
-  The private answer key is not part of this folder.
-- Finance inputs are illustrative assumptions, not findings.
-
-UPDATE (final audit): scripts/analysis_lock_prompts.py now produces results/review_device_lock_prompts.json (the 104 device-lock / security-alert prompt reviews in Section 4.5), and results/hinglish_extra_coded.csv stores the single-coder classification of the 41 Hindi/Hinglish extra reviews (so the 6 to 12 sensitivity figure can be audited).
+The World Bank India microdata is not included here (access terms): download it from the World Bank microdata library
+(Global Findex Database 2025, India, ref. IND_2024_FINDEX_v02_M) and save it as data/Findex_Microdata_2025_updateIndia.dta to re-run.

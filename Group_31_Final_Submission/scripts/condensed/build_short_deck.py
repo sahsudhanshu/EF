@@ -272,7 +272,7 @@ for i, (a, b) in enumerate(th):
     x = 0.6 + (i % 2) * 3.4; y = 1.75 + (i // 2) * 0.95
     box(s, x, y, 3.25, 0.82, PALE); box(s, x, y, 0.08, 0.82, TEAL if i < 4 else BLUE)
     text(s, x + 0.2, y + 0.04, 2.1, 0.75, a, 13, True, NAVY, anchor=MSO_ANCHOR.MIDDLE); text(s, x + 2.2, y + 0.04, 1.0, 0.75, b, 15, True, TEAL, HEAD, PP_ALIGN.RIGHT, MSO_ANCHOR.MIDDLE)
-bullets(s, 7.6, 1.75, 5.1, 3.6, ['Redress|59 of the 91 victims who reported fraud could not recover their money.', 'Merchants|12 of 24 reported fake payment confirmations.', 'Trust|45 of 46 said trust in the receiver matters; a trust badge was rated highest of four nudges.'], 14.5, 10)
+bullets(s, 7.6, 1.75, 5.1, 3.6, ['Redress|59 of the 91 victims who reported fraud to authorities could not recover their money.', 'Merchants|12 of 24 reported fake payment confirmations.', 'Trust|45 of 46 said trust in the receiver matters; a trust badge was rated highest of four nudges.'], 14.5, 10)
 box(s, 0.6, 5.7, 12.1, 0.85, NAVY)
 text(s, 0.85, 5.73, 11.6, 0.8, 'Documents (World Bank, RBI): trust linked to risk awareness and dispute resolution; consumer protection beside capability; protect credentials such as OTPs and PINs.', 14.5, True, WHITE, anchor=MSO_ANCHOR.MIDDLE)
 
