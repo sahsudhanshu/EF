@@ -10,7 +10,7 @@ fetch_data.py              Downloads the open data: Findex 2025 country aggregat
                            (scripts/fetch_appstore.py downloads the Apple App Store reviews: data/appstore_reviews.csv)
 data/                      wdi_peers.csv, app_reviews.csv, appstore_reviews.csv (usernames not stored; emails/phone numbers masked)
 figures/                   The six charts used in the paper
-results/                   Weighted results, logistic model, audit file, review coding (first pass and blind second pass), peer table, finance model outputs
+results/                   Weighted results, logistic model, audit file, review coding (first pass, blind AI second pass, human second coder on 40 reviews), peer table, finance model outputs
 scripts/                   analysis_group31.py (survey), analysis_extra.py (peers + reviews), manual_coding_fraud_reviews.py,
                            analysis_appstore.py (App Store reviews), analysis_sensitivity.py (design-effect sensitivity), revision_finance.py (finance model), build_structured_paper.py / build_structured_deck.py (document builders)
 

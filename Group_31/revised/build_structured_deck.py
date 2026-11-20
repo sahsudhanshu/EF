@@ -306,7 +306,7 @@ bullets(s, 7.4, 1.8, 5.3, 4.8, ['Price|a 20% lower fee raises the requirement fr
 s = slide('5.4  Future scope', 'Limitations and next steps', 'Be upfront: no verified losses, no causation, interval caveat, no commercial validation.')
 box(s, 0.6, 1.8, 5.95, 4.5, PALE); text(s, 0.85, 1.95, 5.4, 0.5, 'Limitations', 20, True, NAVY, HEAD)
 bullets(s, 0.85, 2.55, 5.5, 3.7, ['Cross-sectional, self-reported survey; no causal claims.', 'Requests are not verified fraud; sending money is not a loss amount.',
-        'Approximate intervals; app reviews are self-selected and single-coded.', 'Individuals, not businesses; finance inputs unvalidated.'], 15)
+        'Approximate intervals; app reviews are self-selected; coding checked by an AI pass and a small human sample.', 'Individuals, not businesses; finance inputs unvalidated.'], 15)
 box(s, 6.75, 1.8, 5.95, 4.5, PALE); text(s, 7.0, 1.95, 5.4, 0.5, 'Next steps', 20, True, NAVY, HEAD)
 bullets(s, 7.0, 2.55, 5.5, 3.7, ['Consent-based interviews with merchants, users and budget owners (none yet).', 'Extend the India comparison to peer-country microdata.',
         'Evaluated pilot with pre-set outcomes and a power calculation.', 'Extend the model with churn, tax and monthly cash flow.'], 15)
