@@ -241,7 +241,7 @@ H1('4. Results')
 P("Percentages are survey-weighted unless stated; counts and n are unweighted. This section reports findings without interpretation.")
 H2('4.1 Adoption, exposure and device protection')
 P("Account ownership was 89.0% and digital payment use 48.5% (a 40.6-point difference); phone ownership was 66.5%. Women's payment use was 42.7% and men's 54.1%. Of phone owners with valid answers, 57.7% reported a device lock. Lock use was 50.3% for women and 62.7% for men, 75.7% at ages 15 to 24 and 22.9% at 60 and above, and 40.6% in the lowest income quintile and 75.2% in the highest. "
-  "Among phone owners 9.4% reported an unsolicited request (13.1% of payment users, 4.3% of non-users), and 21.0% of the 219 recipients reported sending money (Table 1).")
+  "Among phone owners 9.4% reported an unsolicited request (13.1% of payment users, 4.3% of non-users), and 21.0% of the 219 recipients reported sending money (Table 1; Figures 1 and 2).")
 table('ind', 'Adoption, exposure and device protection (weighted)', [
     ['Indicator and group', 'Positive / valid n', 'Weighted share'],
     ['Account ownership | digital payment, all adults', '2,710 | 1,539 / 3,000', '89.0% | 48.5%'],
@@ -254,21 +254,25 @@ table('ind', 'Adoption, exposure and device protection (weighted)', [
     ['Request, payment users | non-users', '173 / 1,283 | 46 / 862', '13.1% | 4.3%'],
     ['Sent money, request recipients', '45 / 219', '21.0%'],
 ], [3.0, 2.0, 1.5], note="Source: authors' calculations from {37}. Positive counts are unweighted.")
+figure('acc', 'pfig_access_gender.png', "Account ownership, phone ownership and digital payment use among all adults, and digital payment use and phone lock by gender (survey-weighted). Source: authors' calculations from {37}.", 6.2)
+figure('lock', 'pfig_lock_groups.png', "Device-lock use among phone owners by group (survey-weighted; teal and amber bars show the two highest and lowest groups). Source: authors' calculations from {37}.", 6.0)
 H2('4.2 Adjusted association and lock status')
 P("In the adjusted model (2,145 phone owners; 219 positive) the odds ratio for payment users versus non-users was 3.45 (approximate 95% interval 2.24 to 5.30) and for women versus men 0.47 (0.32 to 0.69); tertiary versus primary education or less was 1.70 (1.03 to 2.80), and age, income, workforce and urban residence had intervals including 1.00 (Table 2). With variance inflated for an assumed extra design effect of 3, the payment-user interval was 1.64 to 7.26 and the women interval 0.24 to 0.92, but the tertiary interval included 1.00 from an extra effect of 1.5. "
-  "For RQ3, 25.0% of recipients whose phone had a lock (39 of 170) and 8.9% of those without (6 of 49) reported sending money; the Fisher exact test gave p = 0.11.")
+  "For RQ3, 25.0% of recipients whose phone had a lock (39 of 170) and 8.9% of those without (6 of 49) reported sending money; the Fisher exact test gave p = 0.11 (Figure 3).")
 table('model', 'Exploratory weighted logistic model for unsolicited requests', [
     ['Predictor and comparison', 'Adjusted odds ratio', 'Approx. 95% interval'],
     ['Payment user versus non-user', '3.45', '2.24 to 5.30'],
     ['Woman versus man', '0.47', '0.32 to 0.69'],
     ['Tertiary versus primary education or less', '1.70', '1.03 to 2.80'],
 ], [3.0, 1.5, 2.0], note="Source: authors' calculations from {37}. Intervals assume independent respondents and are not design-based.")
+figure('exp', 'pfig_exposure.png', "Reported unsolicited money requests by digital payment use, and sending money after a request by lock status (survey-weighted percentages; counts are unweighted). Source: authors' calculations from {37}.", 6.2)
 H2('4.3 Inclusion, exposure and protection by group')
-P("Payment use exceeded lock use most at ages 60 and above (56.6% against 22.9%; +33.7 points) and fell short of it most at ages 15 to 24 (43.5% against 75.7%; −32.1). Across 18 overlapping groups the rank correlation was 0.38 between payment use and exposure and 0.63 between payment use and lock use (Figure 1). "
+P("Payment use exceeded lock use most at ages 60 and above (56.6% against 22.9%; +33.7 points) and fell short of it most at ages 15 to 24 (43.5% against 75.7%; −32.1; Figure 5). Across 18 overlapping groups the rank correlation was 0.38 between payment use and exposure and 0.63 between payment use and lock use (Figure 4). "
   "Exposure was highest among tertiary-educated adults (17.9%, payment use 74.5%), the lowest income quintile (12.5%, payment use 34.8%) and men (11.8%), and lowest at ages 60 and above (4.1%) and among women (5.7%).")
 figure('inc', 'figure7_inclusion_vs_risk.png', "Inclusion and reported exposure by group (survey-weighted; each point is a group). Source: authors' calculations from {37}.", 3.5)
+figure('gap', 'pfig_gap_groups.png', "Digital payment use (all adults) beside phone-lock use (phone owners) by group. Source: authors' calculations from {37}; the two shares have different denominators.", 6.2)
 H2('4.4 Peer economies')
-P("Among the seven economies in Table 3, India's account ownership (89.0%) was second to China's (89.4%) and its phone ownership (66.5%) second lowest, above Pakistan (62.9%). India's lock share (57.6%) compared with 46.4% to 78.0% for peers. "
+P("Among the seven economies in Table 3 and Figure 6, India's account ownership (89.0%) was second to China's (89.4%) and its phone ownership (66.5%) second lowest, above Pakistan (62.9%). India's lock share (57.6%) compared with 46.4% to 78.0% for peers. "
   "India's request share (9.4%, our microdata; the API publishes no value) compared with 12.7% to 32.4% for peers.")
 table('peer', 'India compared with peer economies, 2024 (percent)', [
     ['Economy', 'Account', 'Own phone', 'Phone lock', 'Request'],
@@ -279,19 +283,23 @@ table('peer', 'India compared with peer economies, 2024 (percent)', [
     ['South Africa', '81.1', '87.0', '68.5', '13.5'],
     ['Lower middle income | World', '70.4 | 78.7', '75.1 | 85.7', '57.1 | n/a', '15.0 | n/a'],
 ], [2.3, 1.0, 1.1, 1.1, 1.0], note="Source: {38}. Account and phone: % of adults; lock and request: % of phone owners. † Our weighted microdata estimate (n = 2,145). n/a = not published.")
+figure('peers', 'figure5.png', "India and peer economies on account ownership, phone ownership, phone lock and unsolicited requests (2024). Source: {38}; India's request share from authors' calculations.", 4.6)
 H2('4.5 Public app reviews')
 P("The datasets hold 5,758 Google Play and 2,090 App Store reviews of five payment apps and 6,240 reviews of eight bank apps (mean ratings 2.90, 3.31 and 2.49). Fraud-keyword reviews were 2.0%, 2.7% and 1.0% of reviews (mean ratings 1.36, 1.51 and 1.22); support, account-blocking and safety-language themes were each 3% to 8% of reviews in every dataset, and failed payments 0.4% to 2.3%. "
-  "After every fraud-keyword review was read, 50.8% of Google Play payment-app reviews concerned rewards or cashback not honoured, against 29.8% on the App Store and 4.6% for bank apps, while 38.5% of bank-app reviews concerned blocked accounts, mis-selling, charges or poor grievance handling (Figure 2). "
+  "After every fraud-keyword review was read, 50.8% of Google Play payment-app reviews concerned rewards or cashback not honoured, against 29.8% on the App Store and 4.6% for bank apps, while 38.5% of bank-app reviews concerned blocked accounts, mis-selling, charges or poor grievance handling (Figure 7). "
   "Reviews of unauthorised access or theft numbered 6 (0.1%), 2 (0.1%) and 3 (below 0.1%). Security-friction prompts matched 2.4% of bank-app reviews (mean rating 1.59) and 3.9% of payment-app reviews (2.09); 104 Google Play payment-app reviews (1.8%) described device-lock prompts, mostly for BHIM. "
   "Bank and payment apps differed after Holm adjustment (p < 0.001) for fraud keywords, failed payments, safety language and security friction, but not for support (p = 0.87) or account blocking (p = 0.12). "
   "The second coder labelled 8 of the 122 App Store and bank-app reviews as unauthorised access or theft (first pass 5; about 0.1% of 8,330 reviews); 10 of its 20 disagreements with the first pass were reviews the first pass had labelled general accusations. A Hindi and Hinglish extension (41 more reviews) would raise unauthorised or unexplained-debit reports on Google Play from 6 to 12 (0.2%).")
 figure('cat', 'figure8_review_categories.png', "Classification of fraud-keyword reviews by category and dataset. Source: authors' first-pass classification of {39,47,48}; second-pass agreement is in Section 3.5.", 5.1)
 H2('4.6 Institutional documents and published studies')
 P("The documents yield three themes: trust linked with risk awareness and timely dispute resolution {40}; consumer protection alongside financial capability {41}; and RBI calls for awareness campaigns and protection of credentials such as OTPs and PINs {42}. "
-  "Of eight themes in the five published studies, social engineering, trust in the counterparty or bank, and low awareness appeared in all five; weak support or redress and reliance on family or informal channels in four; differences by gender, age or vulnerability in three; and protective advice and design cues and merchant harms in two each. Examples: 45 of 46 participants said trust in the receiver matters {50}; 12 of 24 merchants reported fake payment confirmations {51}; and of 91 victims who reported fraud, 59 could not recover their money {53}.")
+  "Of eight themes in the five published studies, social engineering, trust in the counterparty or bank, and low awareness appeared in all five; weak support or redress and reliance on family or informal channels in four; differences by gender, age or vulnerability in three; and protective advice and design cues and merchant harms in two each. Examples: 45 of 46 participants said trust in the receiver matters {50}; 12 of 24 merchants reported fake payment confirmations {51}; and of 91 victims who reported fraud, 59 could not recover their money {53} (Figure 8).")
+figure('stud', 'pfig_studies.png', "Themes reported by the five published interview studies (counts are of studies, not respondents). Source: authors' coding of {49,50,51,52,53}.", 5.8)
 H2('4.7 Illustrative financial model outputs')
 P("Contribution per institution is INR 40,000 a month (80%) and simple acquisition payback is 5 months. Steady-state break-even is 8 paying institutions, or 13 when one new institution is acquired each month. The base case records a deficit of INR 32.80 lakh in Year 1, zero in Year 2 and a surplus of INR 52.16 lakh in Year 3; the conservative case is in deficit throughout (INR 36.80, 30.00 and 17.44 lakh) and the optimistic case reaches INR 48.80 and 173.16 lakh in Years 2 and 3. "
-  "Cutting the fee to INR 40,000 raises break-even to 10 institutions, raising variable cost to INR 15,000 raises it to 9, and an acquisition cost of INR 3 lakh extends payback to 7.5 months; across all fee and cost combinations tested the requirement is 6 to 12.")
+  "Cutting the fee to INR 40,000 raises break-even to 10 institutions, raising variable cost to INR 15,000 raises it to 9, and an acquisition cost of INR 3 lakh extends payback to 7.5 months; across all fee and cost combinations tested the requirement is 6 to 12 (Figure 9).")
+
+figure('fin', 'pfig_finance.png', "Illustrative annual operating surplus or deficit by scenario (INR lakh; assumptions, not findings; no churn, tax or financing flows). Source: authors' calculations.", 5.8)
 
 # ============================================================ 5 DISCUSSION
 H1('5. Discussion')

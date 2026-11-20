@@ -103,3 +103,6 @@ A chronological summary of the working sessions (not verbatim). Sections 1–7 c
 
 ## 20. Slide 6 removed (for now)
 - The user asked to remove the coding-reliability slide. The deck has 18 slides; the guide was renumbered (Part 1 slides 1 to 5, Part 2 slides 6 to 11, Part 3 slides 12 to 18) and the slide's script moved to a backup section.
+
+## 21. More figures in the paper
+- The user asked for more figures and said not to worry about page count. Six new charts were added (nine figures in total); the paper is 15 pages in Word.

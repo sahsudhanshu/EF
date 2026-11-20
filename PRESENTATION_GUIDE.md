@@ -1,7 +1,7 @@
 # Group 31 presentation guide: three parts, speaking scripts and a crash course
 
 **Deck:** `Group_31_Final_Submission/slides/Group_31_Presentation_Final.pptx` (18 slides, speaker notes included; the "Analysis and coding reliability" slide is removed for now)
-**Paper:** `Group_31_Final_Submission/Research_Report.pdf` (12 pages)
+**Paper:** `Group_31_Final_Submission/Research_Report.pdf` (15 pages, 9 figures)
 **Topic:** *Mobile Banking: Financial Inclusion vs Cybersecurity Risks*
 
 This file has five parts:
@@ -347,7 +347,7 @@ Fixed costs are INR 3 lakh a month and each institution contributes INR 0.40 lak
 We did not measure a total addressable market. As context, India had about 741 banks live on the UPI network in July 2026 (government factsheet), so 40 institutions in Year 3 would be about 5 percent. It is not a validated figure, and buyers could also be payment apps and fintechs.
 
 **Q12. Why is the paper only 12 pages?**
-We condensed it to 12 pages so it follows the TA's structure and stays focused. The detailed tables, including the full 18-group table, and the extra analysis are in the results files and the notebook.
+We kept it to the TA's structure and condensed the long tables into figures and short text, about 15 pages including references. The detailed tables, including the full 18-group table, and the extra analysis are in the results files and the notebook.
 
 **Q13. What is the main contribution?**
 A transparent picture of where access and safe use diverge in India, combining a national survey with what users say, and a testable venture idea with explicit assumptions.

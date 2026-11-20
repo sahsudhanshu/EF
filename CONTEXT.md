@@ -138,3 +138,5 @@ Rebuild commands (run from `C:\Users\Sudhanshu\Desktop\EF`): `python Group_31/re
 - **Not added:** a 3-page IEEE-format version (the friend has one; removed from our folder at the user's request).
 
 - **Slide removed for now (20 Nov 2026):** "Analysis and coding reliability" is out of the deck (18 slides). It can be restored by setting `SHOW_RELIABILITY = True` in `build_short_deck.py`. `PRESENTATION_GUIDE.md` was renumbered and keeps the slide's script as a backup (section 10).
+
+- **Figures added to the paper (20 Nov 2026):** the user said page count no longer matters. The paper now has **9 figures** (access and gender; device lock by group; exposure and sending money; inclusion vs exposure by group; payment use vs lock; peer economies; review categories; published-study themes; finance scenarios) and is **15 pages** in Word. New charts are made by `scripts/condensed/make_paper_figures.py` (Times New Roman, same numbers as the tables) and saved as `figures/pfig_*.png`. The 12-page limit no longer applies.
