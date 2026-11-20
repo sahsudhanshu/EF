@@ -106,3 +106,6 @@ A chronological summary of the working sessions (not verbatim). Sections 1–7 c
 
 ## 21. More figures in the paper
 - The user asked for more figures and said not to worry about page count. Six new charts were added (nine figures in total); the paper is 15 pages in Word.
+
+## 22. Slide 6 restored
+- The user asked to include the coding-reliability slide again. The deck is back to 19 slides and the guide to its original numbering.

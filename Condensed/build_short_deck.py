@@ -149,7 +149,7 @@ for i, (big, small, c) in enumerate(items):
     stat(s, 0.6 + (i % 3) * 4.1, 1.75 + (i // 3) * 1.85, 3.9, big, small, c, 1.6)
 bullets(s, 0.6, 5.5, 12.1, 1.1, ['Also three institutional documents (World Bank, RBI). Public data only: no interviews, focus groups or surveys of our own. Names, emails and phone numbers are not stored.'], 14.5)
 
-SHOW_RELIABILITY = False  # set True to bring back the 'Analysis and coding reliability' slide
+SHOW_RELIABILITY = True  # False hides the 'Analysis and coding reliability' slide
 if SHOW_RELIABILITY:
     # 6 ---------------------------------------------------------------- methods detail
     s = slide('3  Methodology', 'Analysis and coding reliability',
