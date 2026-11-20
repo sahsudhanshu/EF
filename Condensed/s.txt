@@ -1,0 +1,671 @@
+                  Mobile Banking: Financial Inclusion vs Cybersecurity Risks
+
+ Evidence from India's 2024 Global Findex, public app reviews and published interview studies,
+                                     with implications for entrepreneurs
+
+     Rushal Verma (IIT2024045), Vichanshu Raj (IIT2024083) and Sudhanshu (IIT2024081)
+                         Group 31, Entrepreneurial Finance | 20 November 2026
+
+Abstract
+
+This study asks whether the spread of mobile banking and digital payments in India comes with
+higher cybersecurity risk, for whom, and what this implies for entrepreneurs serving first-time
+digital users. We analyse the 2024 India Global Findex survey of 3,000 adults with survey
+weights and an exploratory logistic model, compare India with peer economies, code 14,088
+public reviews of 13 payment and bank apps from two app stores, and synthesise five published
+interview studies. Account ownership was 89.0%, but only 48.5% made or received a digital
+payment and 57.7% of phone owners reported a device lock. Payment users reported more
+unsolicited money requests than non-users (13.1% against 4.3%; adjusted odds ratio 3.45), yet
+exposure was also high in the lowest income quintile and protection lagged inclusion at older
+ages. Reviews rarely described theft; complaints concerned rewards, refunds, account blocks and
+security prompts. An illustrative model for an institution-funded safety service breaks even at
+eight paying institutions. The data cannot show causation, and the commercial assumptions need
+pilot validation.
+
+Keywords: financial inclusion; mobile banking; digital payments; cybersecurity; fraud exposure;
+Global Findex; entrepreneurial finance; India. JEL codes: G21, G23, L26, O16.
+
+1. Introduction
+
+Access to formal finance is linked with household resilience, enterprise formation and poverty
+reduction [1, 2], and mobile phones and digital payments have changed how it is delivered [3, 4],
+in India with public digital identity and payment infrastructure [5, 6]. For a small merchant, a
+first-time business owner or any digital customer, an account helps only if it can be used reliably
+and without undue risk. Financial inclusion here means use of formal financial services: account
+ownership measures access, digital payment use measures activity. Reported cybersecurity
+exposure means a report of an unsolicited call or message asking for money, a sign of a possible
+scam attempt and not verified fraud. The World Bank's Global Findex is the main cross-country
+source for the first two measures [7, 8, 9].
+
+Problem and gap. Mobile banking can bring people into the formal system, but each new user is
+also a possible target and may lack the safeguards of experienced users; deception exploits
+ordinary behaviour [10, 11], and trust shapes adoption [12, 13]. The literature is strong on
+mobile-money benefits and on phishing, but rarely joins them in a recent national survey of
+India, and little work turns such patterns into an entrepreneurial question: what service could be
+built, who would pay, and what would make it viable. We ask where inclusion and cybersecurity
+risk move together, where they do not, and what institutions and entrepreneurs could do.
+
+Research questions. RQ1: How do account ownership, digital payment use and device
+protection differ by gender, age and income, and how does India compare with peer economies?
+RQ2: Are payment users more likely than non-users to report unsolicited money requests, after
+adjustment? RQ3: Among people who report a request, is a device lock associated with fewer
+reporting that they sent money? RQ4: Which groups show the largest gap between digital
+payment use and device protection? RQ5: What do public app reviews, institutional documents
+and published interview studies reveal about fraud grievances, security friction and support?
+
+                                                          1
+RQ6: What price, cost and customer numbers would let an institution-funded safety service
+break even?
+
+2. Literature review
+
+This review covers inclusion and mobile money, adoption and trust, security behaviour and
+fraud, and cyber-risk economics (35 academic sources), and ends with the gap this study fills.
+
+2.1 Inclusion, mobile money and development
+
+Deeper finance disproportionately raises the incomes of the poorest [14], and account access
+supports inclusive growth depending on how accounts are used [1]. Measurement advanced with
+the Global Findex [7] and its rounds [8, 9], which separated ownership from usage. The best
+causal evidence is from Kenya: M-PESA helped households share risk [15] and lifted around 2%
+of households out of poverty, more in female-headed households [2]. Mobile transfers improved
+diets in Niger [16], debit cards raised savings in Mexico [17], diffusion varies by institutional
+context [18], and digital inclusion is linked with growth [19]. In India, biometric payments
+reduced leakage [5] and demonetisation was used to study digital payments [6]; gains are not
+automatic, as microcredit raised business investment but not average consumption [20]. Benefits
+arise when services are used, so this study measures use, not ownership alone.
+
+2.2 Entrepreneurial finance, adoption, trust and fintech
+
+Entrepreneurial finance starts from information asymmetry: lenders ration credit even in
+equilibrium because higher rates worsen the mix of borrowers [21]; small and young firms rely
+on different sources as they grow and become more transparent [22]; access to finance constrains
+small-firm growth [23]; and binding liquidity constraints keep would-be entrepreneurs out of
+business [24]. Digital data can ease this constraint, since simple digital-footprint variables match
+or exceed credit-bureau scores in predicting default, including for unscorable customers [25].
+Inclusion therefore matters for entrepreneurship, but the same digital channels expose small
+merchants to the fraud described below. Adoption depends on perceived usefulness and ease of
+use [26]; for mobile banking, credibility, self-efficacy and cost shape intention [12]. Fintech
+changes industry structure and user expectations [4] and is a driver of inclusion that needs digital
+identity and interoperable payments [27], but digital finance has persistent unresolved issues
+[13]. Safety and trust are conditions for continued use, not extras.
+
+2.3 Security behaviour, phishing and fraud
+
+Users reject protections that conflict with their tasks [28]. Well-designed fake websites deceive
+many participants [10]; awareness of phishing risk is unrelated to perceived vulnerability, so
+people manage familiar risks but not unfamiliar ones [29]; and fraud victims are diverse, with
+scams exploiting authority, small sums, pressure and trust [11, 30]. Awareness campaigns often
+fail to change behaviour [31], though short online education reduced fraud susceptibility in a
+U.S. experiment, lasting three months only with a reminder [32].
+
+2.4 Cyber risk, incentives and the research gap
+
+Security is under-provided because incentives and externalities separate those who bear losses
+from those who can prevent them [33]; optimal spending depends on vulnerability and potential
+loss [34]; and cyber risk is a market failure and source of instability [35]. Three conclusions
+follow: inclusion benefits depend on use [1, 2, 15]; adoption depends on trust while security
+failures exploit ordinary behaviour [10, 11, 12]; and safety is a shared responsibility that markets
+under-supply [33, 35]. Missing is a recent national view for India that places adoption, device
+
+                                                          2
+protection and reported scam exposure side by side, adds what users say in their own words, and
+links the pattern to a venture and its viability. This study addresses that gap.
+
+3. Methodology
+
+3.1 Research design
+
+The design is cross-sectional, observational and descriptive-analytical: weighted descriptives and
+group comparisons (RQ1, RQ4); a weighted logistic model (RQ2) and lock-status comparison
+(RQ3); a peer comparison; qualitative analysis of documents, app reviews and published
+interview studies (RQ5); and a deterministic financial model (RQ6). Justification: a population
+survey is the only source recording adoption and exposure for the same adults; interviews of our
+own were not feasible, so published studies serve as secondary evidence; and scenario modelling
+is the standard test of a venture before commercial data exist.
+
+3.2 Sampling method and participants
+
+We use the India file of the Global Findex Database 2025 (survey year 2024,
+IND_2024_FINDEX_v02_M) [36]: 3,000 respondents aged 15 or older, a nationally
+representative adult sample drawn by the World Bank and Gallup. All percentages use the survey
+weight (wgt); n and counts are unweighted. The data describe individuals, not businesses.
+Justification: it is the standard public inclusion benchmark and the only source linking
+payments to phone-safety items in India.
+
+3.3 Data collection methods
+
+Seven public sources were used: the India Findex microdata [36]; Findex 2025 country
+indicators for India and nine peers [37]; Google Play reviews of five payment apps (PhonePe,
+Google Pay, Paytm, BHIM, SBI YONO; 5,758 reviews, 2 Oct to 19 Nov 2026) [38]; App Store
+reviews of the same apps (2,090; 30 Apr to 18 Nov) [39]; reviews of eight bank apps in both
+stores (6,240; 5 Jun to 19 Nov) [40]; three institutional documents [41, 42, 43]; and five
+published interview studies [44, 45, 46, 47, 48] found by targeted search on 20 November 2026
+(not a systematic review). Reviews were collected with google-play-scraper and Apple's public
+feed; only app, date, rating and text were kept (no names, emails or phone numbers), and reviews
+under 15 characters and duplicates were removed. We conducted no interviews or surveys of our
+own. Justification: public data permit reproduction, reviews give unprompted user language,
+and published studies supply victim and merchant experience that reviews rarely contain.
+
+3.4 Materials and instruments
+
+Python (pandas, numpy, matplotlib) was used; scripts, an audit file and the coding scheme are in
+the submission folder. Variables: account, anydigpayment (made or received a digital payment in
+the past year), con1 (phone), con18 (lock; 2,141 valid), con21 (unsolicited request; 2,145 phone
+owners) and con22 (sent money; 219 recipients).
+
+3.5 Data analysis
+
+Survey. A weighted share is the sum of weights of positive responses over the sum of weights of
+valid responses, with each subgroup using its own denominator. For RQ2 the outcome is a
+reported request among phone owners, with payment use, gender, age, education, income
+quintile, workforce status and urban residence as predictors, estimated by weighted maximum
+likelihood with an independent-observation sandwich covariance; the public file has no strata or
+cluster identifiers, so intervals are approximate, and a Kish design effect and assumed extra
+effects of 1.5, 2 and 3 serve as sensitivity checks. For RQ4 each group's payment-use share (all
+
+                                                          3
+adults) is set beside its lock share (phone owners) and, for the central question, its exposure
+across 18 groups with Spearman rank correlations; denominators differ, so this is descriptive.
+RQ3 uses a Fisher exact test on unweighted counts, and peer values are compared without tests.
+
+Qualitative. Document passages on trust, shared responsibility and credential protection were
+grouped into themes. Reviews were coded in two steps: dictionaries flagged five themes (fraud,
+failed payment, support, account blocking or verification, safety language) plus security-friction
+prompts for bank apps, then every fraud-keyword review was read and placed in one of seven
+categories by one coder. Blind AI second passes agreed on 112 of 118 Google Play reviews
+(94.9%, kappa 0.93), 47 of 57 App Store reviews (82.5%, 0.78) and 57 of 65 bank-app reviews
+(87.7%, 0.84). A human coder outside the group, blind to the labels, re-coded 40 of the 118
+Google Play reviews (38 agreed, 95.0%, kappa 0.93). A further second coder (a person assisted
+by coding software, as reported by the group), who coded all 122 App Store and bank-app fraud-
+keyword reviews without seeing the first-pass labels, agreed with the first pass on 102 (83.6%,
+kappa 0.80; App Store 80.7%, 0.76; bank apps 86.2%, 0.81) and with the AI second pass on 104
+(85.2%, 0.82). Bank and payment apps were compared by chi-square tests (Holm adjustment).
+Published-study findings were mapped to eight themes from the full texts by one coder; counts
+are of studies, not respondents.
+
+Financial model. The model is deterministic and illustrative; no input comes from Findex. Base
+assumptions are a fee of INR 50,000 per institution per month, variable cost INR 10,000,
+acquisition cost INR 2 lakh and fixed cost INR 3 lakh a month (growing 20% a year), with fees
+of INR 40,000 and 60,000 in the conservative and optimistic scenarios. Customers grow linearly
+from zero with no churn; tax, interest and prelaunch spending are excluded. Amounts are in INR
+lakh (1 lakh = INR 100,000).
+
+3.6 Ethical considerations
+
+De-identified public microdata are used under the World Bank's access terms and not
+redistributed; reviews are public with no usernames stored; published studies are summarised,
+not reproduced. Exposure is reported as reports, not verified fraud, and commercial figures are
+illustrative with no partner, investor or willingness to pay claimed. Future interviews or pilots
+would need informed consent and would not collect credentials.
+
+4. Results
+
+Percentages are survey-weighted unless stated; counts and n are unweighted. This section reports
+findings without interpretation.
+
+4.1 Adoption, exposure and device protection
+
+Account ownership was 89.0% and digital payment use 48.5% (a 40.6-point difference); phone
+ownership was 66.5%. Women's payment use was 42.7% and men's 54.1%. Of phone owners
+with valid answers, 57.7% reported a device lock. Lock use was 50.3% for women and 62.7%
+for men, 75.7% at ages 15 to 24 and 22.9% at 60 and above, and 40.6% in the lowest income
+quintile and 75.2% in the highest. Among phone owners 9.4% reported an unsolicited request
+(13.1% of payment users, 4.3% of non-users), and 21.0% of the 219 recipients reported sending
+money (Table 1).
+
+Table 1: Adoption, exposure and device protection (weighted)
+
+Indicator and group                       Positive / valid n     Weighted share
+Account ownership | digital payment, all  2,710 | 1,539 / 3,000  89.0% | 48.5%
+adults
+
+                                              4
+Indicator and group                       Positive / valid n              Weighted share
+                                                                          42.7% | 54.1%
+Digital payment, women | men              679 / 1,526 | 860 / 1,474       57.7%
+                                                                          50.3% | 62.7%
+Phone lock, all phone owners              1,321 / 2,141                   75.7% | 22.9%
+                                                                          40.6% | 75.2%
+Phone lock, women | men                   505 / 919 | 816 / 1,222
+                                                                          9.4%
+Phone lock, ages 15-24 | 60+              385 / 497 | 38 / 154            13.1% | 4.3%
+                                                                          21.0%
+Phone lock, lowest | highest income       135 / 298 | 473 / 623
+quintile
+
+Request, phone owners                     219 / 2,145
+
+Request, payment users | non-users        173 / 1,283 | 46 / 862
+
+Sent money, request recipients            45 / 219
+
+Source: authors' calculations from [36]. Positive counts are unweighted.
+
+4.2 Adjusted association and lock status
+
+In the adjusted model (2,145 phone owners; 219 positive) the odds ratio for payment users versus
+non-users was 3.45 (approximate 95% interval 2.24 to 5.30) and for women versus men 0.47
+(0.32 to 0.69); tertiary versus primary education or less was 1.70 (1.03 to 2.80), and age, income,
+workforce and urban residence had intervals including 1.00 (Table 2). With variance inflated for
+an assumed extra design effect of 3, the payment-user interval was 1.64 to 7.26 and the women
+interval 0.24 to 0.92, but the tertiary interval included 1.00 from an extra effect of 1.5. For RQ3,
+25.0% of recipients whose phone had a lock (39 of 170) and 8.9% of those without (6 of 49)
+reported sending money; the Fisher exact test gave p = 0.11.
+
+Table 2: Exploratory weighted logistic model for unsolicited requests
+
+Predictor and comparison                  Adjusted odds            Approx. 95% interval
+
+                                          ratio
+
+Payment user versus non-user              3.45                     2.24 to 5.30
+
+Woman versus man                          0.47                     0.32 to 0.69
+
+Tertiary versus primary education or less 1.70                     1.03 to 2.80
+
+Source: authors' calculations from [36]. Intervals assume independent respondents and are not
+design-based.
+
+4.3 Inclusion, exposure and protection by group
+
+Payment use exceeded lock use most at ages 60 and above (56.6% against 22.9%; +33.7 points)
+and fell short of it most at ages 15 to 24 (43.5% against 75.7%; -32.1). Across 18 overlapping
+groups the rank correlation was 0.38 between payment use and exposure and 0.63 between
+payment use and lock use (Figure 1). Exposure was highest among tertiary-educated adults
+(17.9%, payment use 74.5%), the lowest income quintile (12.5%, payment use 34.8%) and men
+(11.8%), and lowest at ages 60 and above (4.1%) and among women (5.7%).
+
+                                          5
+Figure 1: Inclusion and reported exposure by group (survey-weighted; each point is a
+group). Source: authors' calculations from [36].
+
+4.4 Peer economies
+
+Among the seven economies in Table 3, India's account ownership (89.0%) was second to
+China's (89.4%) and its phone ownership (66.5%) second lowest, above Pakistan (62.9%). India's
+lock share (57.6%) compared with 46.4% to 78.0% for peers. India's request share (9.4%, our
+microdata; the API publishes no value) compared with 12.7% to 32.4% for peers.
+
+Table 3: India compared with peer economies, 2024 (percent)
+
+Economy                 Account Own phone Phone lock Request
+
+India                   89.0     66.5  57.6                     9.4
+
+China                   89.4     96.6  n/a                      n/a
+
+Indonesia | Bangladesh  56.3 | 43.3 80.3 | 82.4 69.1 | 47.5 18.5 | 12.7
+
+Pakistan | Brazil       27.3 | 86.4 62.9 | 92.1 46.4 | 78.0 18.8 | 32.4
+
+South Africa            81.1     87.0  68.5                     13.5
+
+Lower middle income | World 70.4 | 78.7 75.1 | 85.7 57.1 | n/a  15.0 | n/a
+
+Source: [37]. Account and phone: % of adults; lock and request: % of phone owners.  Our
+weighted microdata estimate (n = 2,145). n/a = not published.
+
+4.5 Public app reviews
+
+The datasets hold 5,758 Google Play and 2,090 App Store reviews of five payment apps and
+6,240 reviews of eight bank apps (mean ratings 2.90, 3.31 and 2.49). Fraud-keyword reviews
+were 2.0%, 2.7% and 1.0% of reviews (mean ratings 1.36, 1.51 and 1.22); support, account-
+blocking and safety-language themes were each 3% to 8% of reviews in every dataset, and failed
+payments 0.4% to 2.3%. After every fraud-keyword review was read, 50.8% of Google Play
+payment-app reviews concerned rewards or cashback not honoured, against 29.8% on the App
+Store and 4.6% for bank apps, while 38.5% of bank-app reviews concerned blocked accounts,
+mis-selling, charges or poor grievance handling (Figure 2). Reviews of unauthorised access or
+theft numbered 6 (0.1%), 2 (0.1%) and 3 (below 0.1%). Security-friction prompts matched 2.4%
+of bank-app reviews (mean rating 1.59) and 3.9% of payment-app reviews (2.09); 104 Google
+Play payment-app reviews (1.8%) described device-lock prompts, mostly for BHIM. Bank and
+payment apps differed after Holm adjustment (p < 0.001) for fraud keywords, failed payments,
+safety language and security friction, but not for support (p = 0.87) or account blocking (p =
+0.12). The second coder labelled 8 of the 122 App Store and bank-app reviews as unauthorised
+access or theft (first pass 5; about 0.1% of 8,330 reviews); 10 of its 20 disagreements with the
+first pass were reviews the first pass had labelled general accusations. A Hindi and Hinglish
+
+                              6
+extension (41 more reviews) would raise unauthorised or unexplained-debit reports on Google
+Play from 6 to 12 (0.2%).
+
+Figure 2: Classification of fraud-keyword reviews by category and dataset. Source:
+authors' first-pass classification of [38, 39, 40]; second-pass agreement is in Section 3.5.
+4.6 Institutional documents and published studies
+The documents yield three themes: trust linked with risk awareness and timely dispute resolution
+[41]; consumer protection alongside financial capability [42]; and RBI calls for awareness
+campaigns and protection of credentials such as OTPs and PINs [43]. Of eight themes in the five
+published studies, social engineering, trust in the counterparty or bank, and low awareness
+appeared in all five; weak support or redress and reliance on family or informal channels in four;
+differences by gender, age or vulnerability in three; and protective advice and design cues and
+merchant harms in two each. Examples: 45 of 46 participants said trust in the receiver matters
+[45]; 12 of 24 merchants reported fake payment confirmations [46]; and of 91 victims who
+reported fraud, 59 could not recover their money [48].
+4.7 Illustrative financial model outputs
+Contribution per institution is INR 40,000 a month (80%) and simple acquisition payback is 5
+months. Steady-state break-even is 8 paying institutions, or 13 when one new institution is
+acquired each month. The base case records a deficit of INR 32.80 lakh in Year 1, zero in Year 2
+and a surplus of INR 52.16 lakh in Year 3; the conservative case is in deficit throughout (INR
+36.80, 30.00 and 17.44 lakh) and the optimistic case reaches INR 48.80 and 173.16 lakh in Years
+2 and 3. Cutting the fee to INR 40,000 raises break-even to 10 institutions, raising variable cost
+to INR 15,000 raises it to 9, and an acquisition cost of INR 3 lakh extends payback to 7.5
+months; across all fee and cost combinations tested the requirement is 6 to 12.
+5. Discussion
+Inclusion versus cybersecurity risk. Payment users reported more unsolicited requests than
+non-users and the association survived adjustment, so inclusion in digital payments goes with
+greater reachability by scammers, plausibly because digital users are reachable through more
+channels [30]. Across groups the link was weak to moderate (rank correlation 0.38): exposure
+was highest among the most included (tertiary-educated) but also in the lowest income quintile,
+and lowest among older adults and women. Protection rose with inclusion (0.63) except among
+older adults, whose payment use far exceeds lock use. Risk therefore concentrates where
+inclusion outruns safeguards and where people have little margin for loss. A lock limits access to
+
+                                                          7
+a handset, not deception [10, 11, 28]; the RQ3 comparison rests on 45 senders and is not
+significant.
+
+Reviews, studies and documents. Review complaints concern rewards, refunds, support, blocks
+and security prompts far more than theft, on both platforms. This does not measure scam
+prevalence: victims may not write reviews, and the interview studies describe the social
+engineering, trust and slow redress that reviews rarely capture; support and redress failures
+appear in both sources, consistent with the documents [41, 42, 43]. In bank apps the tension
+shows up as friction and weak redress more than fraud: SIM binding, biometric and root-
+detection prompts were a recurring source of one-star reviews. Against peers, India has near-top
+account ownership but below-peer phone ownership and digital payment use and the lowest
+reported request share among economies with a value; recall, reporting and phone-based contact
+may explain this, and the comparison sets a sample estimate against published values without
+sampling error. Table 4 summarises the answers to the research questions.
+
+Table 4: Answers to the research questions
+
+Question                   Answer and main limit
+
+Central: more inclusion,   Partly: users report more requests (13.1% vs 4.3%; OR 3.45) but
+more cyber risk?           the group-level link is weak (0.38). Descriptive.
+
+RQ1 Differences and        Ownership 89.0%, digital payment 48.5%, lock 57.7%; lower for
+peers                      women and the lowest income quintile. Peer values lack sampling
+                           errors.
+
+RQ2 Payment use and        Adjusted OR 3.45 (2.24 to 5.30); robust to extra design effects up
+requests                   to 3. Association, not causation.
+
+RQ3 Lock and sending       No protective association (25.0% with lock, 8.9% without); p =
+money                      0.11; 45 senders.
+
+RQ4 Largest gap            Ages 60+ (+33.7 points) and ages 15 to 24 (-32.1). Different
+                           denominators.
+
+RQ5 Reviews,               Grievances are rewards, refunds, support, blocks, prompts; theft is
+documents, studies         rare. Self-selected reviews; small studies.
+
+RQ6 Break-even             Eight institutions (13 while growing); base case -32.80, 0.00,
+                           +52.16 lakh. Inputs are assumptions.
+
+Source: authors' summary of Sections 4 and 5.
+
+5.1 Academic implications
+
+The study joins the economics of inclusion [1, 2, 15] with the behavioural study of scams [10,
+11, 31] and with entrepreneurial finance [21, 23], pairing national statistics with safety indicators
+and user-generated text to show where access and safe use diverge. It shows how to label
+intervals when design variables are missing and suggests that technology-acceptance models [12,
+26] include perceived safety and device safeguards.
+
+5.2 Policy implications
+
+Each implication is a hypothesis to test. Inclusion targets should track active and safe use, not
+only ownership [41, 42]. Awareness efforts such as the RBI's [43] should be judged on behaviour
+change and designed for older, lower-income and women users, since generic campaigns often
+fail and education persisted in one experiment only with reminders [31, 32]. Providers should
+own warnings, refunds and complaint handling, regulators clear reporting channels, and users
+credential hygiene [35]; security prompts should be tested so they do not lock out users.
+
+                                               8
+5.3 Managerial implications
+
+The results suggest a narrow pilot of a multilingual payment-safety companion distributed
+through banks, payment providers or merchant networks, paid for by the institution and free to
+users: short audio and visual explanations, a pre-payment checklist and verified routes to support
+and official reporting. It would not hold money, guarantee recovery or ask for an OTP or PIN. In
+canvas terms the institution is the customer, revenue is a recurring subscription and costs are a
+small fixed team, delivery and acquisition. Campaigns [43], in-app warnings, the national
+helpline and in-house builds already cover parts of the problem, so the service must add
+measurable value through local-language journeys with comprehension checks and faster routes
+to verified support. Proposed plan: months 1-2 discovery with one sponsor, months 3-5 a
+controlled pilot with prespecified outcomes, scale from month 6 only after a paid commitment.
+No pilot has been run.
+
+Financial interpretation. Eight institutions cover fixed costs only in steady state; about 13 are
+needed while growing. A 20% lower fee adds two institutions, and the base case has no cushion
+in Year 2, so churn or slow sales would produce a deficit; the conservative case does not break
+even in three years. An illustrative INR 75 lakh seed (staged equity or grant) would cover the
+Year 1 deficit (32.80), prelaunch build (10.00) and pilot evaluation (5.00), a working-capital
+reserve (12.00) and contingency (15.20), but in the conservative case deficits plus prelaunch
+costs reach INR 81.80 lakh by Year 2 and exceed it. Main risks are weak willingness to pay,
+support cost above the margin and dependence on one partner; these conclusions follow security-
+investment economics [33, 34] and hold only if prices and costs are validated with real buyers.
+
+5.4 Future scope and limitations
+
+Limitations. The survey is cross-sectional and self-reported; requests are not verified fraud, cells
+such as the 45 senders are small, intervals are approximate (the tertiary-education result does not
+survive assumed clustering), and the data describe individuals, not enterprises. Reviews are self-
+selected, cover different windows, and were keyword-coded by one coder with AI second passes
+and second-coder checks on samples; a Hindi and Hinglish extension changed no conclusion. We
+conducted no interviews or surveys of our own, and the five published studies were selected by
+us and are small. Peer values are aggregates without sampling errors, and all financial inputs are
+unvalidated assumptions without churn, tax or financing flows.
+
+Future scope. Priorities are consent-based interviews to test willingness to pay, design-based
+estimation, peer-country microdata, an evaluated and powered pilot [32], and a venture model
+with churn and cash flow.
+
+6. Conclusion
+
+This paper asked whether the spread of mobile banking in India comes with higher cybersecurity
+risk, and for whom. Account ownership is widespread (89.0%), but digital payment use (48.5%)
+and device protection (57.7%) are lower and unevenly distributed by gender, age and income.
+Payment users reported more unsolicited requests than non-users (13.1% against 4.3%; odds
+ratio 3.45), yet across groups exposure rose only weakly with inclusion, was high among the
+poorest, and protection lagged inclusion at older ages: risk concentrates where inclusion outruns
+safeguards. App reviews on both platforms and five published studies show that grievances
+concern rewards, refunds, account blocks, support and security prompts far more than reported
+theft, while social engineering and slow redress dominate the interview evidence. For
+entrepreneurs and institutions the evidence supports a staged pilot of an accessible, institution-
+funded safety service; the illustrative model breaks even at eight paying institutions but is highly
+
+                                                          9
+sensitive to price, support and acquisition costs and is not evidence of demand. Pilot evidence on
+willingness to pay and effectiveness is the next step.
+
+Data availability. The India household microdata are available from the World Bank microdata
+library [36] under its access terms and are not redistributed here. Country indicators come from
+the World Bank open data API [37]. The app-review snapshots, scripts, results tables and
+notebook are in the submission folder (data/, scripts/, results/, analysis.ipynb).
+
+References
+
+[1] Demirgüç-Kunt, A., Klapper, L., & Singer, D. (2017). Financial inclusion and inclusive
+      growth: A review of recent empirical evidence (Policy Research Working Paper No. 8040).
+      World Bank. https://doi.org/10.1596/1813-9450-8040
+
+[2] Suri, T., & Jack, W. (2016). The long-run poverty and gender impacts of mobile money.
+      Science, 354(6317), 1288-1292. https://doi.org/10.1126/science.aah5309
+
+[3] Aker, J. C., & Mbiti, I. M. (2010). Mobile phones and economic development in Africa.
+      Journal of Economic Perspectives, 24(3), 207-232. https://doi.org/10.1257/jep.24.3.207
+
+[4] Gomber, P., Kauffman, R. J., Parker, C., & Weber, B. W. (2018). On the Fintech revolution:
+      Interpreting the forces of innovation, disruption, and transformation in financial services.
+      Journal of Management Information Systems, 35(1), 220-265.
+      https://doi.org/10.1080/07421222.2018.1440766
+
+[5] Muralidharan, K., Niehaus, P., & Sukhtankar, S. (2016). Building state capacity: Evidence
+      from biometric smartcards in India. American Economic Review, 106(10), 2895-2929.
+      https://doi.org/10.1257/aer.20141346
+
+[6] Agarwal, S., Ghosh, P., Li, J., & Ruan, T. (2020). Digital payments and consumption:
+      Evidence from the 2016 demonetization in India. SSRN.
+      https://doi.org/10.2139/ssrn.3641508
+
+[7] Demirgüç-Kunt, A., & Klapper, L. (2012). Measuring financial inclusion: The Global Findex
+      Database (Policy Research Working Paper No. 6025). World Bank.
+      https://doi.org/10.1596/1813-9450-6025
+
+[8] Demirgüç-Kunt, A., Klapper, L., Singer, D., & Ansar, S. (2018). The Global Findex Database
+      2017: Measuring financial inclusion and the fintech revolution. World Bank.
+      https://doi.org/10.1596/978-1-4648-1259-0
+
+[9] World Bank. (2025). The Global Findex Database 2025: Connectivity and financial inclusion
+      in the digital economy. https://www.worldbank.org/en/publication/globalfindex/report
+
+[10] Dhamija, R., Tygar, J. D., & Hearst, M. (2006). Why phishing works. In Proceedings of the
+      SIGCHI Conference on Human Factors in Computing Systems (pp. 581-590). ACM.
+      https://doi.org/10.1145/1124772.1124861
+
+[11] Button, M., Nicholls, C. M., Kerr, J., & Owen, R. (2014). Online frauds: Learning from
+      victims why they fall for these scams. Australian & New Zealand Journal of Criminology,
+      47(3), 391-408. https://doi.org/10.1177/0004865814521224
+
+[12] Luarn, P., & Lin, H.-H. (2005). Toward an understanding of the behavioral intention to use
+      mobile banking. Computers in Human Behavior, 21(6), 873-891.
+      https://doi.org/10.1016/j.chb.2004.03.003
+
+[13] Ozili, P. K. (2018). Impact of digital finance on financial inclusion and stability. Borsa
+      Istanbul Review, 18(4), 329-340. https://doi.org/10.1016/j.bir.2017.12.003
+
+[14] Beck, T., Demirgüç-Kunt, A., & Levine, R. (2004). Finance, inequality, and poverty: Cross-
+      country evidence (NBER Working Paper No. 10979). https://doi.org/10.3386/w10979
+
+                                                         10
+[15] Jack, W., & Suri, T. (2014). Risk sharing and transactions costs: Evidence from Kenya's
+      mobile money revolution. American Economic Review, 104(1), 183-223.
+      https://doi.org/10.1257/aer.104.1.183
+
+[16] Aker, J. C., Boumnijel, R., McClelland, A., & Tierney, N. (2016). Payment mechanisms and
+      antipoverty programs: Evidence from a mobile money cash transfer experiment in Niger.
+      Economic Development and Cultural Change, 65(1), 1-37. https://doi.org/10.1086/687578
+
+[17] Bachas, P., Gertler, P., Higgins, S., & Seira, E. (2021). How debit cards enable the poor to
+      save more. Journal of Finance, 76(4), 1913-1957. https://doi.org/10.1111/jofi.13021
+
+[18] Lashitew, A. A., van Tulder, R., & Liasse, Y. (2019). Mobile phones for financial inclusion:
+      What explains the diffusion of mobile money innovations? Research Policy, 48(5), 1201-
+      1215. https://doi.org/10.1016/j.respol.2018.12.010
+
+[19] Khera, P., Ng, S., Ogawa, S., & Sahay, R. (2021). Is digital financial inclusion unlocking
+      growth? (IMF Working Paper No. 2021/167). International Monetary Fund.
+      https://doi.org/10.5089/9781513584669.001
+
+[20] Banerjee, A., Duflo, E., Glennerster, R., & Kinnan, C. (2015). The miracle of microfinance?
+      Evidence from a randomized evaluation. American Economic Journal: Applied Economics,
+      7(1), 22-53. https://doi.org/10.1257/app.20130533
+
+[21] Stiglitz, J. E., & Weiss, A. (1981). Credit rationing in markets with imperfect information.
+      American Economic Review, 71(3), 393-410.
+
+[22] Berger, A. N., & Udell, G. F. (1998). The economics of small business finance: The roles of
+      private equity and debt markets in the financial growth cycle. Journal of Banking &
+      Finance, 22(6-8), 613-673. https://doi.org/10.1016/S0378-4266(98)00038-7
+
+[23] Beck, T., & Demirgüç-Kunt, A. (2006). Small and medium-size enterprises: Access to
+      finance as a growth constraint. Journal of Banking & Finance, 30(11), 2931-2943.
+      https://doi.org/10.1016/j.jbankfin.2006.05.009
+
+[24] Evans, D. S., & Jovanovic, B. (1989). An estimated model of entrepreneurial choice under
+      liquidity constraints. Journal of Political Economy, 97(4), 808-827.
+      https://doi.org/10.1086/261629
+
+[25] Berg, T., Burg, V., Gombovi, A., & Puri, M. (2018). On the rise of FinTechs: Credit
+      scoring using digital footprints (NBER Working Paper No. 24551).
+      https://doi.org/10.3386/w24551
+
+[26] Davis, F. D. (1989). Perceived usefulness, perceived ease of use, and user acceptance of
+      information technology. MIS Quarterly, 13(3), 319-340. https://doi.org/10.2307/249008
+
+[27] Arner, D. W., Buckley, R. P., Zetzsche, D. A., & Veidt, R. (2020). Sustainability, FinTech
+      and financial inclusion. European Business Organization Law Review, 21(1), 7-35.
+      https://doi.org/10.1007/s40804-020-00183-y
+
+[28] Adams, A., & Sasse, M. A. (1999). Users are not the enemy. Communications of the ACM,
+      42(12), 40-46. https://doi.org/10.1145/322796.322806
+
+[29] Downs, J. S., Holbrook, M. B., & Cranor, L. F. (2006). Decision strategies and
+      susceptibility to phishing. In Proceedings of the Second Symposium on Usable Privacy and
+      Security (p. 79). ACM. https://doi.org/10.1145/1143120.1143131
+
+[30] Anderson, K. B., Durbin, E., & Salinger, M. A. (2008). Identity theft. Journal of Economic
+      Perspectives, 22(2), 171-192. https://doi.org/10.1257/jep.22.2.171
+
+[31] Bada, M., Sasse, A. M., & Nurse, J. R. C. (2019). Cyber security awareness campaigns:
+      Why do they fail to change behaviour? arXiv:1901.02672. https://arxiv.org/abs/1901.02672
+
+[32] Burke, J., Kieffer, C., Mottola, G., & Perez-Arce, F. (2022). Can educational interventions
+      reduce susceptibility to financial fraud? Journal of Economic Behavior & Organization,
+      198, 250-266. https://doi.org/10.1016/j.jebo.2022.03.028
+
+                                                         11
+[33] Anderson, R., & Moore, T. (2006). The economics of information security. Science,
+      314(5799), 610-613. https://doi.org/10.1126/science.1130992
+
+[34] Gordon, L. A., & Loeb, M. P. (2002). The economics of information security investment.
+      ACM Transactions on Information and System Security, 5(4), 438-457.
+      https://doi.org/10.1145/581271.581274
+
+[35] Kopp, E., Kaffenberger, L., & Wilson, C. (2017). Cyber risk, market failures, and financial
+      stability (IMF Working Paper No. 2017/185). International Monetary Fund.
+      https://doi.org/10.5089/9781484313787.001
+
+[36] Development Research Group, Finance and Private Sector Development Unit, World Bank.
+      (2025). India - The Global Findex Database 2025, 2024 survey (Ref.
+      IND_2024_FINDEX_v02_M) [Microdata]. https://doi.org/10.48529/c9vy-pq51
+
+[37] World Bank. (2025). Global Findex Database 2025 country indicators (account.t.d, con1,
+      con18.s, con21.s; 2024) [Data set]. World Bank Data API, source 28.
+
+[38] Google Play Store. (2026). Public reviews of PhonePe, Google Pay, Paytm, BHIM and SBI
+      YONO, India, 2 Oct to 19 Nov 2026 [Data set collected by the authors; usernames not
+      stored].
+
+[39] Apple Inc. (2026). App Store customer reviews feed, India: PhonePe, Google Pay, Paytm,
+      BHIM and YONO SBI, 30 Apr to 18 Nov 2026 [Data set collected by the authors; names
+      not stored].
+
+[40] Google Play Store and Apple App Store. (2026). Public reviews of eight bank apps, India, 5
+      Jun to 19 Nov 2026 [Data set collected by the authors; names not stored].
+
+[41] World Bank. (n.d.). Trust. In Inclusive digital financial services: A reference guide for
+      policymakers and regulators. digitalfinance.worldbank.org
+
+[42] World Bank. (n.d.). Financial inclusion and consumer protection. Responsible Financial
+      Access. responsiblefinance.worldbank.org
+
+[43] Reserve Bank of India. (2020, June 22). Increasing instances of payment frauds: Enhancing
+      public awareness campaigns through multiple channels (RBI/2019-20/256).
+
+[44] Mungara, D., Ramulu, H. S., & Acar, Y. (2025). Security and privacy advice for UPI users
+      in India. In Proceedings of the 34th USENIX Security Symposium (pp. 6085-6103).
+      USENIX Association.
+      https://www.usenix.org/conference/usenixsecurity25/presentation/mungara
+
+[45] Bajaj, N., De, S., Sharma, K., Page, X., Knijnenburg, B., & Mondal, M. (2026). "To pay or
+      not to pay?": Understanding user decision-making and influence of nudges in UPI apps. In
+      Proceedings of the ACM Asia Conference on Computer and Communications Security (pp.
+      1632-1648). ACM. https://doi.org/10.1145/3779208.3785285
+
+[46] Jain, P., Varanasi, R. A., & Dell, N. (2021). "Who is protecting us? No one!" Vulnerabilities
+      experienced by low-income Indian merchants using digital payments. In ACM SIGCAS
+      Conference on Computing and Sustainable Societies (pp. 261-274). ACM.
+      https://doi.org/10.1145/3460112.3471961
+
+[47] Aadil, A., Ahuja, G., Sah, R., & Dhumal, S. (2023). Decoding the extent and exposure of
+      financial fraud among DFS customers (MSC Policy Brief No. 28). MicroSave Consulting.
+
+[48] Sengupta, A., Furtado, C., Agrawal, G., Sekhar, N., Sneha, P. P., & Kharbanda, V. (2025).
+      Navigating the digitalisation of finance: User experiences of risks and harms. Centre for
+      Internet and Society. cis-india.org
+
+                                                         12
+

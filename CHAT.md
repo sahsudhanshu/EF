@@ -90,3 +90,13 @@ A chronological summary of the working sessions (not verbatim). Sections 1–7 c
 - A person fills `Completion_Pack/table20_check/TABLE20_CHECK_SHEET.csv` (30–45 minutes); corrections go into the paper, slides and result files.
 - Final read in Word and PowerPoint, then export the PDFs from Word in place of the LibreOffice versions.
 - Optional: the group's own interviews (`Completion_Pack/interviews/`).
+
+
+## 18. Shorter paper, new deck, final folder (ninth pass)
+- The user asked to cut the paper to 10 to 12 pages and rebuild the PPT. The assistant wrote a condensed builder, trimmed the prose, dropped six references (keeping 31 academic sources) and used 0.9 in top and bottom margins to land on exactly 12 pages in Word; checks: every reference cited, table captions above and figure captions below, Times New Roman 12. A new 18-slide deck was built with native charts and speaker notes and checked slide by slide.
+- The user pasted the round-2 second coder's results (83.6% agreement with the first pass, kappa 0.80). The assistant re-ran the agreement script to verify them and added them to the paper. Asked who coded, the user said it was done by a person using software; the paper says "a person assisted by coding software, as reported by the group".
+- The user then said to remove the extended paper and use only the 12-page one. The final folder now holds only the 12-page paper and the 18-slide deck (extended paper, IEEE report and their builders removed from the folder; originals remain elsewhere in the repo and in git history), plus a refreshed README and notebook.
+
+## 19. Friend comparison and additions (tenth pass)
+- The assistant compared `Friend/` with the final folder and listed what to add; the user said "do the things". Done: entrepreneurial-finance literature (five verified sources) and framing, JEL codes, Data availability, a research-question answers table and a review-category figure, all within 12 pages in Word.
+- The user also supplied `Group_31_Dataset_Key_Findings.pdf` and asked for its graphs to be in the PPT. Two were missing (access vs use; device lock by group) and were added as native charts; the deck now has 19 slides.

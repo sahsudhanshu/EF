@@ -1,0 +1,28 @@
+ALL vs first pass: 102/122 = 83.6%, Cohen kappa 0.799
+ALL vs AI blind second pass: 104/122 = 85.2%, Cohen kappa 0.822
+App Store vs first pass: 46/57 = 80.7%, Cohen kappa 0.760
+App Store vs AI blind second pass: 50/57 = 87.7%, Cohen kappa 0.846
+Bank apps vs first pass: 56/65 = 86.2%, Cohen kappa 0.812
+Bank apps vs AI blind second pass: 54/65 = 83.1%, Cohen kappa 0.773
+
+Disagreements with the first pass:
+  C003 (App Store): first=Unauthorised access, theft | human=Blocked account, mis-selli
+  C005 (Bank apps): first=General accusation, no spe | human=Blocked account, mis-selli
+  C011 (Bank apps): first=General accusation, no spe | human=Blocked account, mis-selli
+  C015 (Bank apps): first=General accusation, no spe | human=Blocked account, mis-selli
+  C025 (Bank apps): first=General accusation, no spe | human=Unauthorised access, theft
+  C029 (App Store): first=Blocked account, mis-selli | human=Spam, permissions, privacy
+  C036 (App Store): first=General accusation, no spe | human=Blocked account, mis-selli
+  C044 (Bank apps): first=General accusation, no spe | human=Blocked account, mis-selli
+  C048 (Bank apps): first=General accusation, no spe | human=Unauthorised access, theft
+  C052 (App Store): first=General accusation, no spe | human=Unauthorised access, theft
+  C067 (App Store): first=Blocked account, mis-selli | human=Money debited, payment fai
+  C070 (App Store): first=General accusation, no spe | human=Spam, permissions, privacy
+  C074 (Bank apps): first=General accusation, no spe | human=Blocked account, mis-selli
+  C081 (App Store): first=Money debited, payment fai | human=Reward, cashback or offer 
+  C086 (Bank apps): first=Money debited, payment fai | human=Blocked account, mis-selli
+  C087 (App Store): first=Spam, permissions, privacy | human=Reward, cashback or offer 
+  C089 (Bank apps): first=Money debited, payment fai | human=Blocked account, mis-selli
+  C095 (App Store): first=Blocked account, mis-selli | human=Reward, cashback or offer 
+  C102 (App Store): first=Blocked account, mis-selli | human=Unauthorised access, theft
+  C109 (App Store): first=Blocked account, mis-selli | human=Money debited, payment fai
